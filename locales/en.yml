@@ -6,3 +6,9 @@ team:
 
 contact:
     title: "Antistatique is located in Lausanne, Switzerland."
+
+menu:
+    home: Home
+    team: Team
+    blog: Blog
+    contact: Contact

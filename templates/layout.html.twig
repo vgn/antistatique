@@ -50,17 +50,17 @@ _gaq.push(['_trackPageview']);
 
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li class="active">
-                            <a href="/">Home</a>
+                        <li {% if is_current_route('homepage') or is_current_route('homepage_i18n') %}class="active"{% endif %}>
+                            <a href="{{ path('homepage') }}">{{ 'menu.home' | trans }}</a>
                         </li>
-                        <li class="">
-                            <a href="/team">L'équipe</a>
+                        <li {% if is_current_route('team') %}class="active"{% endif %}>
+                            <a href="{{ path('team') }}">{{ 'menu.team' | trans }}</a>
                         </li>
-                        <li class="">
-                            <a href="/blog">Blog</a>
+                        <li>
+                            <a href="/blog">{{ 'menu.blog' | trans }}</a>
                         </li>
-                        <li class="">
-                            <a href="/contact">Contact</a>
+                        <li {% if is_current_route('contact') %}class="active"{% endif %}>
+                            <a href="{{ path('contact') }}">{{ 'menu.contact' | trans }}</a>
                         </li>
                     </ul>
                 </div>
