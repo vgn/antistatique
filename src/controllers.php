@@ -18,14 +18,8 @@ $app->get('/{_locale}/', function () use ($app) {
 })
 ->bind('homepage_i18n')
 ->assert('_locale', '(fr|en)');
-
 ;
 
-$app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html.twig', array());
-})
-->bind('homepage')
-;
 
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
