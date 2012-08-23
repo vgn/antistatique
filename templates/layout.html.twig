@@ -49,20 +49,7 @@ _gaq.push(['_trackPageview']);
                 <a class="brand" href="/"><img src="{{ app.request.basepath }}/assets/img/logo-antistatique.png" width="200" height="40"></a>
 
                 <div class="nav-collapse collapse pull-right">
-                    <ul class="nav">
-                        <li {% if is_current_route('homepage') or is_current_route('homepage_i18n') %}class="active"{% endif %}>
-                            <a href="{{ path('homepage') }}">{{ 'menu.home' | trans }}</a>
-                        </li>
-                        <li {% if is_current_route('team') %}class="active"{% endif %}>
-                            <a href="{{ path('team') }}">{{ 'menu.team' | trans }}</a>
-                        </li>
-                        <li>
-                            <a href="/blog">{{ 'menu.blog' | trans }}</a>
-                        </li>
-                        <li {% if is_current_route('contact') %}class="active"{% endif %}>
-                            <a href="{{ path('contact') }}">{{ 'menu.contact' | trans }}</a>
-                        </li>
-                    </ul>
+                    {% include '_menu.html.twig' %}
                 </div>
             </div>
         </section>
@@ -80,12 +67,7 @@ _gaq.push(['_trackPageview']);
                     &copy; Antistatique – <a href="/contact">Lausanne</a> – +41 21 623 63 03 – hello@antistatique.net
                 </div>
                 <div class="span6">
-                    <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="index.html">Accueil</a></li>
-                    <li><a href="artisans.html">L'Équipe</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                    {% include '_menu.html.twig' %}
                 </div>
             </div>
         </section>
