@@ -1,6 +1,6 @@
 <ul class="nav">
     <li {% if is_current_route('homepage') or is_current_route('homepage_i18n') %}class="active"{% endif %}>
-        <a href="{{ path('homepage') }}">{{ 'menu.home' | trans }}</a>
+        <a href="{{ path('homepage_i18n') }}">{{ 'menu.home' | trans }}</a>
     </li>
     <li {% if is_current_route('team') %}class="active"{% endif %}>
         <a href="{{ path('team') }}">{{ 'menu.team' | trans }}</a>
