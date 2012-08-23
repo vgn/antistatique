@@ -41,4 +41,22 @@ class ApplicationTest extends WebTestCase
 
         $this->assertTrue($client->getResponse()->isOk());
     }
+
+    public function testHomepageI18nFr()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/fr/');
+
+        $this->assertTrue($client->getResponse()->isOk());
+        $this->assertTrue($crawler->filter('html:contains("Bonjour")')->count() > 0, 'Return hello in french');
+    }
+
+    public function testHomepageI18nEn()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/en/');
+
+        $this->assertTrue($client->getResponse()->isOk());
+        $this->assertTrue($crawler->filter('html:contains("Hi")')->count() > 0, 'Return hello in english');
+    }
 }
