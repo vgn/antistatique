@@ -1,5 +1,5 @@
 {
-    "hash": "737fd6e50cc88b93e9c46d2433dd1f97",
+    "hash": "6d6c91bce1096f554382ff56d1761263",
     "packages": [
         {
             "package": "monolog/monolog",
@@ -268,6 +268,18 @@
             "version": "dev-master",
             "source-reference": "69dc85f85945f5f21379600dba924b175d50e1a8",
             "commit-date": "1345654068"
+        },
+        {
+            "package": "symfony/yaml",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/yaml",
+            "version": "dev-master",
+            "source-reference": "6b3eb66a7c4495dcaa35a64dd93c8ba8c29f35d8",
+            "commit-date": "1344325256"
         },
         {
             "package": "twig/twig",

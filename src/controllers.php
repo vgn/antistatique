@@ -13,6 +13,14 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+$app->get('/{_locale}/', function () use ($app) {
+    return $app['twig']->render('index.html.twig', array());
+})
+->bind('homepage_i18n')
+->assert('_locale', '(fr|en)');
+;
+
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
