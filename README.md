@@ -30,6 +30,10 @@ Sometimes, after a pull, you need to update the project dependency:
 
     $ php composer.phar install
 
+clear cache (Twig templates):
+
+    $ rm -r cache/*
+
 # Tests
 
 To run the test suite, you need [composer](http://getcomposer.org) and [PHPUnit](https://github.com/sebastianbergmann/phpunit).
