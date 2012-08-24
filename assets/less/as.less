@@ -5,6 +5,7 @@
 
 // AS Colors
 @magenta:               #d0106b;
+@vieuxRose:             #e68faf;
 
 // Links
 // -------------------------
@@ -15,7 +16,7 @@
 // Typography
 // -------------------------
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@serifFontFamily:       "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @headingsFontFamily:    @serifFontFamily; // empty to use BS default, @baseFontFamily
@@ -56,7 +57,7 @@
 @navbarInverseBorder:                    @magenta;
 
 @navbarInverseText:                      @white;
-@navbarInverseLinkColor:                 lighten(@magenta, 40%);
+@navbarInverseLinkColor:                 lighten(@magenta, 45%);
 @navbarInverseLinkColorHover:            @white;
 @navbarInverseLinkColorActive:           @white;
 @navbarInverseLinkBackgroundHover:       transparent;
@@ -100,18 +101,40 @@
     margin-top: @navbarHeight;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-style: italic;
+    font-weight: normal;
+}
+
 .hero{
     background-color: @magenta;
     color: @white;
+    padding: 1em 0 2em 0;
     h1{
         font-size: 60px;
         font-style: italic;
-        font-weight: normal;
-        line-height: 1.4em;
+        line-height: 1.1em;
+        margin-bottom: 0.3em;
+        color: @vieuxRose;
+        a{
+          color: @vieuxRose;
+          text-decoration: underline;
+          &:hover{
+            color: @white;
+          }
+        }
     }
-    a{
-        text-decoration: underline;
-        color: @white;
+    .action-contact{
+        font-family: @serifFontFamily;
+        font-style: italic;
+        font-size: 26px;
+        border-bottom: 1px solid @navbarInverseLinkColor;
+        color: @navbarInverseLinkColor;
+        &:hover{
+          text-decoration: none;
+          color: @white;
+          border-bottom-color: @white;
+        }
     }
 }
 
