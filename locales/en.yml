@@ -1,2 +1,14 @@
 homepage: 
-    title: Hi
+    title: Hi, we are Antistatique. A swiss web agency.
+
+team:
+    title: Antistatique team
+
+contact:
+    title: "Antistatique is located in Lausanne, Switzerland."
+
+menu:
+    home: Home
+    team: Team
+    blog: Blog
+    contact: Contact

@@ -59,4 +59,27 @@ class ApplicationTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isOk());
         $this->assertTrue($crawler->filter('html:contains("Hi")')->count() > 0, 'Return hello in english');
     }
+
+    public function testContact()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/fr/contact');
+
+        $this->assertTrue($client->getResponse()->isOk());
+        $this->assertTrue($crawler->filter('html:contains("Lausanne")')->count() > 0, 'contain Lausanne keywords');
+        $this->assertTrue($crawler->filter('html:contains("Sébeillon 9b")')->count() > 0, 'contain street');
+        $this->assertTrue($crawler->filter('html:contains("hello@antistatique.net")')->count() > 0, 'contain our email address');
+        $this->assertTrue($crawler->filter('html:contains("21 623 63 03")')->count() > 0, 'contain our phone');
+    }
+
+    public function testTeam()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/fr/team');
+
+        $this->assertTrue($client->getResponse()->isOk());
+        $this->assertTrue($crawler->filter('html:contains("Alberto")')->count() > 0, 'contain Alberto');
+        $this->assertTrue($crawler->filter('html:contains("Gilles")')->count() > 0, 'contain Gilles');
+        $this->assertTrue($crawler->filter('html:contains("Marc")')->count() > 0, 'contain Marc');
+    }
 }

@@ -6,6 +6,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
+$localeRegExp = '(fr|en)'; 
 
 $app->get('/', function () use ($app) {
     return $app['twig']->render('index.html.twig', array());
@@ -17,7 +18,21 @@ $app->get('/{_locale}/', function () use ($app) {
     return $app['twig']->render('index.html.twig', array());
 })
 ->bind('homepage_i18n')
-->assert('_locale', '(fr|en)');
+->assert('_locale', $localeRegExp);
+;
+
+$app->get('/{_locale}/team', function () use ($app) {
+    return $app['twig']->render('team.html.twig', array());
+})
+->bind('team')
+->assert('_locale', $localeRegExp);
+;
+
+$app->get('/{_locale}/contact', function () use ($app) {
+    return $app['twig']->render('contact.html.twig', array());
+})
+->bind('contact')
+->assert('_locale', $localeRegExp);
 ;
 
 

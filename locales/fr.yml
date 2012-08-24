@@ -1,2 +1,14 @@
 homepage: 
-    title: Bonjour
+    title: "Bonjour, nous sommes l'agence web Antistatique"
+
+team:
+    title: L'équipe Antistatique
+
+contact:
+    title: "L'agence web Antistatique se situe à Lausanne, contactez-nous !"
+
+menu:
+    home: Accueil
+    team: L'Équipe
+    blog: Blog
+    contact: contact
