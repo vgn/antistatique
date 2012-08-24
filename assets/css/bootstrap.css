@@ -144,6 +144,9 @@ h6 {
   font-style: italic;
   font-weight: normal;
 }
+.work {
+  background-color: black;
+}
 .hero {
   background-color: #d0106b;
   color: #ffffff;
@@ -154,10 +157,10 @@ h6 {
   font-style: italic;
   line-height: 1.1em;
   margin-bottom: 0.3em;
-  color: #e68faf;
+  color: #e36da5;
 }
 .hero h1 a {
-  color: #e68faf;
+  color: #e36da5;
   text-decoration: underline;
 }
 .hero h1 a:hover {
