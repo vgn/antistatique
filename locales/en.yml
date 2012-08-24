@@ -12,3 +12,9 @@ menu:
     team: Team
     blog: Blog
     contact: Contact
+
+footer:
+    newsletter:
+        submit: Subscribe
+        error: "<strong>Oops !</strong> An error occurred. Please check your email address and retry."
+        success: "<strong>Thanks !</strong> See you soon"

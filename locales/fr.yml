@@ -12,3 +12,9 @@ menu:
     team: L'Équipe
     blog: Blog
     contact: contact
+
+footer:
+    newsletter:
+        submit: Inscription
+        error: "<strong>Aie !</strong> Une erreur est survenue, merci de vérifier votre adresse email et de réessayer."
+        success: "<strong>Merci !</strong> Nous nous réjouissons de vous avoir parmis nos lecteurs."
