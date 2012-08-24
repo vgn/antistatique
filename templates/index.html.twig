@@ -2,6 +2,10 @@
 
 {% block title %}{{ 'homepage.title' | trans }}{% endblock %}
 
+{% block head_scripts %}
+    <script src="http://platform.twitter.com/anywhere.js?id={{ app.twitter.api_key }}&v=1" type="text/javascript"></script>
+{% endblock %}
+
 {% block content %}
     <section id="baseline" class="hero">
         <div class="container">
@@ -69,14 +73,14 @@
     <section id="connect">
         <div class="container">
             <div id="tweet" data-twitter-username="{{ app.twitter.username }}" data-twitter-hashtag="{{ app.twitter.hashtag }}">
-                <blockquote cite="http://twitter.com/antistatique">
+                <blockquote cite="http://twitter.com/{{ app.twitter.username }}">
                     chargement ...
                 </blockquote>
                 <p>
                     Sur 
-                    <a href="http://twitter.com/antistatique">
+                    <a class="twitter-link" href="http://twitter.com/{{ app.twitter.username }}" title="@{{ app.twitter.username }}">
                         twitter
-                    </a> 
+                    </a>
                     le 
                     <time datetime="2012-08-23" pubdate="pubdate">
                         <a href="http://twitter.com/antistatique/status/238651013966479361">
@@ -85,6 +89,15 @@
                     </time>
                 </p>
             </div>
+            <script type="text/javascript">
+                twttr.anywhere(function (T) {
+                    T("#tweet .twitter-link").hovercards({
+                        username: function(node) {
+                            return node.title;
+                        }
+                    });
+                });
+            </script>
         </div>
     </section>
 

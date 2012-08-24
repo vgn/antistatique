@@ -47,6 +47,12 @@ jQuery(function($) {
                     .find('time').attr('datetime', tweet.created_at).end()
                     .find('time a').html(dateUserFriendly).attr('href', tweetUrl)
                 ;
+
+                if (typeof window.twttr !== "undefined") {
+                    twttr.anywhere(function (T) {
+                        T("#tweet blockquote").hovercards();
+                    });
+                }
             }
         }
     );
