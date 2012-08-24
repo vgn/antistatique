@@ -43,5 +43,5 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
     $page = 404 == $code ? '404.html' : '500.html';
 
-    return new Response($app['twig']->render($page, array('code' => $code)), $code);
+    return new Response(file_get_contents(__DIR__.'/../templates/'.$page), $code);
 });
