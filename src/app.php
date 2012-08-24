@@ -8,11 +8,10 @@ use Silex\Provider\TranslationServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 
 $app = new Application();
-$app->register(new UrlGeneratorServiceProvider());
-$app->register(new ValidatorServiceProvider());
 $app->register(new TranslationServiceProvider(), array(
     'locale_fallback' => 'fr',
 ));
+
 $app['translator'] = $app->share($app->extend('translator', function($translator, $app) {
     $translator->addLoader('yaml', new YamlFileLoader());
 
@@ -21,6 +20,9 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
 
     return $translator;
 }));
+
+$app->register(new UrlGeneratorServiceProvider());
+$app->register(new ValidatorServiceProvider());
 
 $app->register(new TwigServiceProvider(), array(
     'twig.path'    => array(__DIR__.'/../templates'),
