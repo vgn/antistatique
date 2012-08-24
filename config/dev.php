@@ -11,3 +11,8 @@ $app['debug'] = true;
 $app->register(new MonologServiceProvider(), array(
     'monolog.logfile' => __DIR__.'/../antistatique.log',
 ));
+
+$app['twitter'] = array(
+    'username' => 'gil_les',
+    'hashtag' => '#kiri',
+);
