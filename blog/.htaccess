@@ -1,0 +1,12 @@
+RewriteRule ^index.php/feed/rss2  http://antistatique.net/blog/feed/ [L,R=302]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /blog
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /blog/index.php [L]
+</IfModule>
+
+# END WordPress
