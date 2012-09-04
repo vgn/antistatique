@@ -13,12 +13,12 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ app.request.basepath }}/image/favicon.ico" />
 
-    <link href="{{ app.request.basepath }}/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="{{ app.request.basepath }}/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="{{ app.request.basepath }}/assets/css/style.css" rel="stylesheet" type="text/css" />
 
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
 
 <script type="text/javascript">
 
@@ -39,40 +39,24 @@ _gaq.push(['_trackPageview']);
 </head>
 <body>
 
-<!-- Navbar
-    ================================================== -->
-    <header class="navbar navbar-inverse navbar-fixed-top">
-        <section class="navbar-inner">
-            <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="brand" href="{{ path('homepage_i18n') }}"><img src="{{ app.request.basepath }}/assets/img/logo-antistatique.png" width="200" height="40"></a>
 
-                <div class="nav-collapse collapse pull-right">
-                    {% include '_menu.html.twig' %}
-                </div>
-            </div>
+    <header>
+        <section>
+            <a class="brand" href="{{ path('homepage_i18n') }}"><img src="{{ app.request.basepath }}/assets/img/logo-antistatique.png" width="200" height="40"></a>
+            {% include '_menu.html.twig' %}
         </section>
     </header>
+
+    {% block baseline %}{% endblock %}
 
     <section id="content">
         {% block content %}{% endblock %}
     </section>
 
     <footer>
-        <hr/>
-        <section class="container">
-            <div class="row-fluid">
-                <div class="span6">
-                    &copy; Antistatique – <a href="{{ path('contact') }}">Lausanne</a> – +41 21 623 63 03 – hello@antistatique.net
-                </div>
-                <div class="span6">
-                    {% include '_menu.html.twig' %}
-                </div>
-            </div>
+        <section>
+            <p class="vcard"><strong>Antistatique</strong> <a href="{{ path('contact') }}" class="locality">Lausanne</a> <span class="tel">+41 21 623 63 03</span> <a href="mailto:hello@antistatique.net" class="email">hello@antistatique.net</a></p>
+            {% include '_menu.html.twig' %}
         </section>
     </footer>
 

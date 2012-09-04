@@ -6,101 +6,107 @@
     <script src="http://platform.twitter.com/anywhere.js?id={{ app.twitter.api_key }}&v=1" type="text/javascript"></script>
 {% endblock %}
 
-{% block content %}
-    <section id="baseline" class="hero">
-        <div class="container">
+{% block baseline %}
+    <div id="baseline">
+        <section>
             <h1>
-                Nous sommes <a href="/team">une équipe d’artisans</a><br/> du web, lausannois, digital natives,<br/> curieux et <a href="/blog">exigeants</a>. 
+                Nous sommes <a href="/team">des artisans du web</a>, lausannois, curieux et <a href="/blog">exigeants</a>. 
             </h1>
             <a href="/contact" class="action-contact">Contactez-nous</a>
+        </section>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div id="work">
+        <h2>Des réalisations soignées</h2>
+        <div class="works">
+            <a id="uchitomi" href="#">
+                <hgroup>
+                    <h4>Uchitomi</h4>
+                    <p>Boutique en ligne sur mesure avec Magento</p>
+                </hgroup>
+            </a>
+            <a id="rdr" href="#">
+                <hgroup>
+                    <h4>RDR Architectes</h4>
+                    <p>Boutique en ligne sur mesure avec Magento</p>
+                </hgroup>
+            </a>
+            <a id="tw" href="#" class="last">
+                <hgroup>
+                    <h4>Tehran Watch</h4>
+                    <p>Boutique en ligne sur mesure avec Magento</p>
+                </hgroup>
+            </a>
         </div>
-    </section>
+    </div>
 
-    <section id="work">
-        <div class="container">
-            <h3>Des réalisations soignées</h3>
-
-            <div class="row">
-                <div id="uchitomi" class="work span4">
-                    <h1>Uchitomi</h1>
-                    <h2>Boutique en ligne sur mesure avec Magento</h2>
+    <div id="antistatique">
+        <div class="about-us with-aside">
+            <aside id="contact-us">
+                <div id="work-together">
+                    <h3>Travaillons ensemble</h3>
+                    <p>
+                        <a href="tel:0041216236303">+41 21 623 63 03</a><br/>
+                        <a href="mailto:hello@antistatique.net">hello@antistatique.net</a>
+                    </p>
                 </div>
-                <div id="rdr" class="work span4">
-                    <h1>RDR Architectes</h1>
-                    <h2>Boutique en ligne sur mesure avec Magento</h2>
+                <div id="stay-in-touch">
+                    <h3>Gardons contact</h3>
+                    <p>
+                        <a href="http://www.twitter.com/antistatique">Twitter</a><br/>
+                        <a href="http://www.facebook.com/Antistatique">Facebook</a><br/>
+                        <a href="http://www.linkedin.com/company/antistatique.net">LinkedIn</a>
+                        <a href="#RSS">RSS</a>
+                    </p>
                 </div>
-                <div id="tehran" class="work span4">
-                    <h1>Tehran Watch</h1>
-                    <h2>Boutique en ligne sur mesure avec Magento</h2>
-                </div>
-            </div>
+            </aside>
+            <article id="our-mission">
+                <h2>Notre mission ? Combattre la poussière et éliminer les risques d’inflammation dans votre présence web.</h2>
+                <p>Nous faisons des sites web rutilants et des applications mobiles vraiment utiles. Nous construisons des boutiques en ligne sur-mesure. Nous soignons votre réputation et le positionnement de votre marque. Nous vous aidons à établir puis exécuter des stratégies appropriées pour les médias sociaux.</p>
+                <a href="/team" class="btn">Découvrir Antistatique</a>
+            </article>
         </div>
-    </section>
+    </div>
 
-    <section id="antistatique">
-        <div class="container">
-            <div class="about-us row">
-                <div id="contact-us" class="span4">
-                    <div id="work-together">
-                        <a href="/contact" class="action-work-together">Travaillons ensemble</a>
-                    </div>
-                    <div id="let-s-talk">
-                        <h3>Parlons-nous</h3>
-                        <p>
-                            <a href="tel:0041216236303">+41 21 623 63 03</a><br/>
-                            <a href="mailto:hello@antistatique.net">hello@antistatique.net</a>
-                        </p>
-                    </div>
-                    <div id="stay-in-touch">
-                        <h3>Gardons contact</h3>
-                        <p>
-                            <a href="http://www.twitter.com/antistatique">Twitter</a><br/>
-                            <a href="http://www.facebook.com/Antistatique">Facebook</a><br/>
-                            <a href="http://www.linkedin.com/company/antistatique.net">LinkedIn</a>
-                            <a href="#RSS">RSS</a>
-                        </p>
-                    </div>
-                </div>
-                <div id="our-mission" class="span8">
-                    <h1>Notre mission ? Combattre la poussière et éliminer les risques d’inflammation dans votre présence web.</h1>
-                    <p>Nous faisons des sites web rutilants et des applications mobiles vraiment utiles. Nous construisons des boutiques en ligne sur-mesure. Nous soignons votre réputation et le positionnement de votre marque. Nous vous aidons à établir puis exécuter des stratégies appropriées pour les médias sociaux.</p>
-                    <a href="/team" class="btn">Découvrir Antistatique</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="connect">
-        <div class="container">
-            <div id="tweet" data-twitter-username="{{ app.twitter.username }}" data-twitter-hashtag="{{ app.twitter.hashtag }}">
-                <blockquote cite="http://twitter.com/{{ app.twitter.username }}">
-                    chargement ...
-                </blockquote>
-                <p>
-                    Sur 
-                    <a class="twitter-link" href="http://twitter.com/{{ app.twitter.username }}" title="@{{ app.twitter.username }}">
-                        twitter
+    <div id="connect">
+        <div id="tweet" data-twitter-username="{{ app.twitter.username }}" data-twitter-hashtag="{{ app.twitter.hashtag }}">
+            <blockquote cite="http://twitter.com/{{ app.twitter.username }}">
+                chargement ...
+            </blockquote>
+            <p>
+                Sur 
+                <a class="twitter-link" href="http://twitter.com/{{ app.twitter.username }}" title="@{{ app.twitter.username }}">twitter</a>
+                 le 
+                <time datetime="2012-08-23" pubdate="pubdate">
+                    <a href="http://twitter.com/antistatique/status/238651013966479361">
+                        23 Août 2012
                     </a>
-                    le 
-                    <time datetime="2012-08-23" pubdate="pubdate">
-                        <a href="http://twitter.com/antistatique/status/238651013966479361">
-                            23 Août 2012
-                        </a>
-                    </time>
-                </p>
-            </div>
-            <script type="text/javascript">
-                twttr.anywhere(function (T) {
-                    T("#tweet .twitter-link").hovercards({
-                        username: function(node) {
-                            return node.title;
-                        }
-                    });
-                });
-            </script>
+                </time>
+            </p>
         </div>
-    </section>
+        <script type="text/javascript">
+            twttr.anywhere(function (T) {
+                T("#tweet .twitter-link").hovercards({
+                    username: function(node) {
+                        return node.title;
+                    }
+                });
+            });
+        </script>
 
-    {% include '_newsletter.html.twig' %}
+        <div id="more">
+            <div id="blog" class="hnews">
+                <h2>En direct du blog</h2>
+                <time datetime="2012-08-23" pubdate="pubdate">23 août 2012</time>
+                <p class="entry-title">Youpi le titre de l'article du blog qui peut prendre plusieurs lignes</p>
+                <a href="/blog" class="action-blog">Le blog d'Antistatique</a>
+            </div>
+            {% include '_newsletter.html.twig' %}
+        </div>
+
+    </div>
 
 {% endblock %}
