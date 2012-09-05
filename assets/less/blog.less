@@ -1,17 +1,93 @@
-@blogWidth: 600px;
+// Less utils
+@import "style.less";
 
-.post{
-    width: @blogWidth;
-    margin: 0 auto;
-}
+@blogWidth: 1140px;
+
+/** Titres **/
 
 .entry-title a, .entry-title{
-    color: #505050;
+    color: @black;
     text-decoration: none;
-    font-size: 54px;
+    .font-size(40px);
+    margin: 25px 0 25px 0;
+}
+
+.page-title{
+    margin-top: 120px;
+    h1{
+        .font-size(45px);
+        color: @black70;
+    }
+}
+
+.entry-meta {
+    margin: 0 0 30px 0;
 }
 
 #comments{
     width: @blogWidth;
     margin: 50px auto;
+}
+
+hr.title-separation {
+   border: none;
+   height: 1px;
+   background: @black;
+   width: 145px;
+   text-align: left;
+   margin: 0;
+}
+
+hr.meta-separation{
+    border: none;
+    height: 1px;
+    background: @black;
+    width: 50px;
+    text-align: left;
+    margin: 0 0 30px 0;
+}
+
+#nav-below{
+    clear: both;
+    width: @blogWidth;
+    margin: 0 auto;
+}
+
+article{
+    clear: both;
+    width: @blogWidth;
+    margin: 0 auto 0 auto;
+    padding-top: 50px;
+
+    img{
+        clear: both;
+    }
+
+    aside{
+        float: left;
+        width: 30%;
+        h4{
+            margin: 0;
+        }
+    }
+
+    header{
+        float: right;
+        width: 70%;
+    }
+
+    h2{
+        .font-size(22px);
+        margin: 30px 0 10px 0;
+    }
+
+    .cover-image{
+        margin-bottom: 20px;
+    }
+
+    .entry-summary, .entry-content{
+        clear: right;
+        float: right;
+        width: 70%;
+    }
 }

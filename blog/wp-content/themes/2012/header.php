@@ -39,7 +39,6 @@
 
 	?></title>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo esc_url( home_url() ); ?>/../assets/css/style.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo esc_url( home_url() ); ?>/../assets/css/blog.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
@@ -86,5 +85,7 @@ _gaq.push(['_trackPageview']);
         </section>
     </header>
 
-
 	<section id="main">
+		<section class="page-title">
+			<h1>Le Blog</h1>
+		</section>

@@ -248,6 +248,9 @@ body {
   padding: 0;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+html {
+  font-size: 10px;
+}
 h1,
 h2,
 h3,
@@ -310,8 +313,8 @@ header.topbar {
 header.topbar a {
   color: #fbb0d4;
   text-decoration: none;
-  font-size: 11px;
-  font-size: 1.1rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 header.topbar li.active a,
 header.topbar a:hover {
@@ -461,12 +464,12 @@ footer a {
     width: 70%;
   }
   aside h3 {
-    font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 22px;
+    font-size: 2.2rem;
   }
   article h2 {
-    font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 40px;
+    font-size: 4rem;
     margin: 0.3em 0 0.4em;
   }
   article p {
@@ -482,8 +485,11 @@ footer a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     padding: 10px 0;
+  }
+  header.topbar section {
+    margin: 8px auto;
   }
   header.topbar .brand {
     float: left;
@@ -564,6 +570,7 @@ footer a {
   }
   footer {
     *zoom: 1;
+    clear: both;
   }
   footer:before,
   footer:after {

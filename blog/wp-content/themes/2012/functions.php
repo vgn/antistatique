@@ -337,11 +337,17 @@ function twentyeleven_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
 
+function new_excerpt_more() {
+	global $post;
+	return '<br><a class="btn" href="'. get_permalink($post->ID) . '">Lire plus</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 /**
  * Returns a "Continue Reading" link for excerpts
  */
 function twentyeleven_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) . '</a>';
+	return new_excerpt_more();
 }
 
 /**
@@ -447,9 +453,9 @@ function twentyeleven_content_nav( $nav_id ) {
 
 	if ( $wp_query->max_num_pages > 1 ) : ?>
 		<nav id="<?php echo $nav_id; ?>">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyeleven' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></div>
+			<h3 class="assistive-text"><?php _e( 'Post navigation', 'teheranwatch' ); ?></h3>
+			<div class="nav-previous"><?php next_posts_link( __( 'Dernière page', 'teheranwatch' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Prochaine page', 'teheranwatch' ) ); ?></div>
 		</nav><!-- #nav-above -->
 	<?php endif;
 }
@@ -577,8 +583,8 @@ if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
  *
  * @since Twenty Eleven 1.0
  */
-function twentyeleven_posted_on() {
-	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'twentyeleven' ),
+function antistatique_posted_on() {
+	printf( __( '<h3><span class="sep"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></h3><h4><span class="author vcard">Ecrit par <a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span><h4>', 'twentyeleven' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
@@ -608,4 +614,6 @@ function twentyeleven_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
+
+
 
