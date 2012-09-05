@@ -303,19 +303,19 @@ a:hover {
 section {
   margin: 5px 10px;
 }
-header {
+header.topbar {
   background-color: #d40b6b;
   padding: 0.8em 0 0.2em;
 }
-header a {
+header.topbar a {
   color: #fbb0d4;
   text-decoration: none;
 }
-header li.active a,
-header a:hover {
+header.topbar li.active a,
+header.topbar a:hover {
   color: #ffffff;
 }
-header .brand img {
+header.topbar .brand img {
   display: block;
 }
 nav ul,
@@ -469,7 +469,7 @@ footer a {
     margin: 0.6em 0;
   }
   /* Redefine */
-  header {
+  header.topbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -477,10 +477,10 @@ footer a {
     height: 60px;
     padding: 10px 0;
   }
-  header .brand {
+  header.topbar .brand {
     float: left;
   }
-  header nav {
+  header.topbar nav {
     float: right;
   }
   #baseline {
