@@ -310,6 +310,8 @@ header.topbar {
 header.topbar a {
   color: #fbb0d4;
   text-decoration: none;
+  font-size: 11px;
+  font-size: 1.1rem;
 }
 header.topbar li.active a,
 header.topbar a:hover {
@@ -342,6 +344,9 @@ nav a {
   font-style: italic;
   font-size: 14px;
   font-size: 1.4rem;
+}
+.baseline-space {
+  height: 10px;
 }
 .works a {
   display: block;
@@ -430,6 +435,9 @@ footer a {
   /* Reseting */
   section {
     margin: 10px;
+  }
+  .baseline-space {
+    height: 90px;
   }
   /* Modules */
   .with-aside {
