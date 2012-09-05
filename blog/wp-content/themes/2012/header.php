@@ -82,7 +82,7 @@ _gaq.push(['_trackPageview']);
 	<header class="topbar">
         <section>
             <a class="brand" href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( home_url() ); ?>/../assets/img/logo-antistatique.png" width="200" height="40"></a>
-            <!-- Load menu -->
+            <?php get_template_part( 'aside', 'navigation' ) ?>
         </section>
     </header>
 
