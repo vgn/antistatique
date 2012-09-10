@@ -1,56 +1,75 @@
 // Less utils
 @import "style.less";
 
-@blogWidth: 1140px;
+/** General **/
 
-/** Titres **/
+/** Mobile First **/
 
-.entry-title a, .entry-title{
-    color: @black;
-    text-decoration: none;
-    .font-size(40px);
-    margin: 25px 0 25px 0;
-}
+@blogWidth: 100%;
 
 .page-title{
-    margin-top: 120px;
+    margin: 0;
     h1{
         .font-size(45px);
-        color: @black70;
+        margin-bottom: 0;
+        a{
+            color: @black70;
+            text-decoration: none;
+            &:hover{
+                color: @magenta;
+            }
+        }
     }
 }
 
-.entry-meta {
-    margin: 0 0 30px 0;
-}
-
-#comments{
-    width: @blogWidth;
-    margin: 50px auto;
-}
-
-hr.title-separation {
-   border: none;
-   height: 1px;
-   background: @black;
-   width: 145px;
-   text-align: left;
-   margin: 0;
-}
-
-hr.meta-separation{
+hr.title-separation{
     border: none;
     height: 1px;
     background: @black;
     width: 50px;
     text-align: left;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
+}
+
+hr.meta-separation{
+    display: none;
+}
+
+.entry-title a, .entry-title{
+    color: @black;
+    text-decoration: none;
+    .font-size(25px);
+    margin: 5px 0 0 0;
+}
+
+.entry-title a:hover{
+    text-decoration: underline;
+}
+
+.single-post .entry-content{
+    margin-top: 30px;
 }
 
 #nav-below{
     clear: both;
     width: @blogWidth;
-    margin: 0 auto;
+    margin: 30px auto;
+    border-top: 1px solid @black;
+    padding-top: 15px;
+    a{
+        padding: 0.4em 0;
+    }
+    .nav-previous{
+        float: left;
+    }
+    .nav-next{
+        float: right;
+    }
+}
+
+#comments{
+    width: @blogWidth;
+    margin: 50px auto;
 }
 
 article{
@@ -61,23 +80,26 @@ article{
 
     img{
         clear: both;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn{
+        margin: 25px 0 0px 0;
     }
 
     aside{
-        float: left;
-        width: 30%;
-        h4{
-            margin: 0;
+        h3{
+            .font-size(14px);
+            font-family: @sansFontFamily;
+            font-style: normal;
+            margin: 2px 0;
         }
     }
 
-    header{
-        float: right;
-        width: 70%;
-    }
-
     h2{
-        .font-size(22px);
+        .font-size(16px);
+        font-style: italic;
         margin: 30px 0 10px 0;
     }
 
@@ -85,9 +107,231 @@ article{
         margin-bottom: 20px;
     }
 
-    .entry-summary, .entry-content{
-        clear: right;
-        float: right;
-        width: 70%;
+    #author-info{
+        display: none;
     }
+
+    #author-link{
+        clear: both;
+    }
+
+    .post-separation{
+        height: 1px;
+        background: @black;
+        border: none;
+        margin: 40px 0 10px 0;
+    }
+}
+
+footer{
+    margin-top: 50px;
+}
+
+/** Comments **/
+
+#comments{
+    h2, #reply-title{
+        .font-size(22px);
+    }
+
+    article{
+        padding: 0;
+        header{
+            float: none;
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .comment{
+        width: auto;
+    }
+
+    .comment-meta{
+        margin-top: 60px;
+    }
+    .comment-author > img{
+        float: left;
+        margin: -33px 10px 10px 0;
+    }
+    .comment-content{
+        clear: both;
+        margin-top: 10px;
+    }
+    .title-separation{
+        margin: 30px 0 0 0;
+    }
+
+    #comments-title{
+        .font-size(22px);
+    }
+
+    textarea{
+        width: 100%;
+    }
+
+    #respond{
+        clear: both;
+    }
+
+    input[type="submit"] {
+        .btn;
+        border: none;
+    }
+
+    input[type="text"], textarea {
+        border: 1px solid @magenta;
+        .font-size(14px);
+    }
+
+    input[type="text"] {
+        display: block;
+        padding: 5px;
+    }
+
+    p[class|="comment-form"] {
+        margin: 12px 0;
+    }
+}
+
+@media (min-width: 40.5em) { /* ... and (max-width: 720px) */
+    .page-title {
+        margin-top: 120px;
+    }
+}
+
+@media (min-width: 720px){ /* ... and (max-width: 720px) */
+    /* Reseting */
+
+    @blogWidth: 100%;
+
+    .entry-title a, .entry-title{
+        margin: 25px 0 0 0;
+        .font-size(40px);
+    }
+
+    hr.meta-separation{
+        display: block;
+        border: none;
+        height: 1px;
+        background: @black;
+        width: 50px;
+        text-align: left;
+        margin: 0 0 30px 0;
+    }
+
+    hr.title-separation {
+       border: none;
+       height: 1px;
+       background: @black;
+       width: 145px;
+       text-align: left;
+       margin: 0;
+    }
+
+    .entry-meta {
+        margin: 0;
+    }
+
+    #nav-below{
+        clear: both;
+        width: @blogWidth;
+        margin: 0 auto;
+    }
+
+    #comments{
+        width: @blogWidth;
+        clear: both;
+
+        .title-separation{
+            width: 50px;
+        }        
+
+        #comments-title{
+            .font-size(18px);
+        }
+
+        aside{
+            float: left;
+            width: 30%;
+        }
+
+        .entry-content{
+            float: right;
+            width: 70%;
+        }
+
+        #respond{
+            float: right;
+            width: 70%;
+            clear: none;
+            margin-bottom: 30px;
+        }
+
+        form{
+            input[type="text"] {
+                float: none;
+                display: block;
+            }
+        }
+    }
+
+    article{
+        width: @blogWidth;
+        header{
+            float: right;
+            width: 70%;
+        }
+
+        h2{
+            .font-size(22px);
+            margin: 30px 0 10px 0;
+        }
+
+        .entry-summary, .entry-content{
+            clear: right;
+            float: right;
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Reseting */
+
+    @blogWidth: 1140px;
+
+     #nav-below{
+        width: @blogWidth;
+    }
+
+    .single-post .entry-content {
+        margin-top: 0;
+    }
+
+    article{
+        width: @blogWidth;
+
+        p{
+            width: 600px;
+        }
+
+        #author-info{
+            display: block;
+            #author-avatar{
+                float: left;
+                margin: 4px 10px 5px 0;
+                img{
+                    margin: 0;
+                }
+            }
+            #author-description{
+                margin-right: 30px;
+            }
+        }
+    }
+
 }

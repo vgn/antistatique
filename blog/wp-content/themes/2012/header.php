@@ -87,5 +87,5 @@ _gaq.push(['_trackPageview']);
 
 	<section id="main">
 		<section class="page-title">
-			<h1>Le Blog</h1>
+			<h1><a href="/blog" class="page-title-link" title="Blog Frontpage">Le Blog</a></h1>
 		</section>

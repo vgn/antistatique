@@ -9,14 +9,6 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<aside>
-			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<hr class="meta-separation">
-				<?php antistatique_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
-		</aside>
 		<header class="entry-header">
 			<hr class="title-separation">
 			<?php if ( is_sticky() ) : ?>
@@ -28,10 +20,18 @@
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
+		<aside>
+			<?php if ( 'post' == get_post_type() ) : ?>
+			<div class="entry-meta">
+				<hr class="meta-separation">
+				<?php antistatique_posted_on(); ?>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</aside>
 
 		<?php //if (has_post_thumbnail()): ?>
 		<div class="cover-image">
-			<img src="http://www.placehold.it/1140x400" alt="">
+			<!-- <img src="http://www.placehold.it/1140x400" alt=""> -->
 			<?php //the_post_thumbnail(); ?>
 		</div>
 		<?php //endif; ?>

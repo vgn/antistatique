@@ -28,13 +28,16 @@
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 id="comments-title">
+	<aside>
+		<h4 id="comments-title">
 			<?php
-				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'twentyeleven' ),
+				printf( _n( 'Un commentaire', '%1$s commentaires', get_comments_number(), 'twentyeleven' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
-		</h2>
+		</h4>
+	</aside>
 
+	<div class="entry-content">
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above">
 			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'twentyeleven' ); ?></h1>
@@ -43,7 +46,7 @@
 		</nav>
 		<?php endif; // check for comment navigation ?>
 
-		<ol class="commentlist">
+		<ul class="commentlist">
 			<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
 				 * to use twentyeleven_comment() to format the comments.
@@ -51,9 +54,9 @@
 				 * define twentyeleven_comment() and that will be used instead.
 				 * See twentyeleven_comment() in twentyeleven/functions.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'twentyeleven_comment' ) );
+				wp_list_comments( array( 'callback' => 'antistatique_comment' ) );
 			?>
-		</ol>
+		</ul>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below">
@@ -62,6 +65,7 @@
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentyeleven' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
+	</div>
 
 	<?php
 		/* If there are no comments and comments are closed, let's leave a little note, shall we?
@@ -71,7 +75,6 @@
 	?>
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'twentyeleven' ); ?></p>
 	<?php endif; ?>
-
 	<?php comment_form(); ?>
 
 </div><!-- #comments -->

@@ -290,6 +290,12 @@ a:hover {
   background-color: #e68faf;
   color: #ffffff;
 }
+.btn.btn-previous:after {
+  content: "";
+}
+.btn.btn-previous:before {
+  content: "";
+}
 .alert {
   padding: 0.5em 0.4em;
   margin: 0.4em 0;

@@ -453,9 +453,8 @@ function twentyeleven_content_nav( $nav_id ) {
 
 	if ( $wp_query->max_num_pages > 1 ) : ?>
 		<nav id="<?php echo $nav_id; ?>">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'teheranwatch' ); ?></h3>
-			<div class="nav-previous"><?php next_posts_link( __( 'Dernière page', 'teheranwatch' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Prochaine page', 'teheranwatch' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Page précéndente', 'antistatique' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Prochaine page', 'antistatique' ) ); ?></div>
 		</nav><!-- #nav-above -->
 	<?php endif;
 }
@@ -518,21 +517,21 @@ if ( ! function_exists( 'twentyeleven_comment' ) ) :
  *
  * @since Twenty Eleven 1.0
  */
-function twentyeleven_comment( $comment, $args, $depth ) {
+function antistatique_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'twentyeleven' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'antistatique' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'antistatique' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
-			<footer class="comment-meta">
+			<header class="comment-meta">
 				<div class="comment-author vcard">
 					<?php
 						$avatar_size = 68;
@@ -542,31 +541,31 @@ function twentyeleven_comment( $comment, $args, $depth ) {
 						echo get_avatar( $comment, $avatar_size );
 
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s on %2$s <span class="says">said:</span>', 'twentyeleven' ),
-							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
+						printf( __( '%1$s on %2$s <span class="says">said:</span>', 'antistatique' ),
+							sprintf( '<h3 class="fn">%s</h3>', get_comment_author_link() ),
 							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s at %2$s', 'twentyeleven' ), get_comment_date(), get_comment_time() )
+								sprintf( __( '%1$s at %2$s', 'antistatique' ), get_comment_date(), get_comment_time() )
 							)
 						);
 					?>
 
-					<?php edit_comment_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'antistatique' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentyeleven' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'antistatique' ); ?></em>
 					<br />
 				<?php endif; ?>
 
-			</footer>
+			</header>
 
 			<div class="comment-content"><?php comment_text(); ?></div>
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'twentyeleven' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'antistatique' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 
@@ -574,7 +573,7 @@ function twentyeleven_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for twentyeleven_comment()
+endif; // ends check for antistatique_comment()
 
 if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
 /**
@@ -584,7 +583,7 @@ if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
  * @since Twenty Eleven 1.0
  */
 function antistatique_posted_on() {
-	printf( __( '<h3><span class="sep"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></h3><h4><span class="author vcard">Ecrit par <a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span><h4>', 'twentyeleven' ),
+	printf( __( '<h3><span class="sep"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></h3><h3><span class="author vcard">Ecrit par <a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span><h3>', 'twentyeleven' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
