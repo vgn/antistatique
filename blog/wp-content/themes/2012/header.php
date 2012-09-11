@@ -88,4 +88,11 @@ _gaq.push(['_trackPageview']);
     <div class="baseline-space"></div>
 
     <section id="main">
-        <h1><a href="/blog" class="page-title-link" title="Blog Frontpage">Le Blog</a></h1>
+    <div class="page-title">
+        <section>
+            <h1 class="title-separation magenta-sep">
+                <span></span>
+                 <a href="/blog" class="page-title-link" title="Blog Frontpage">Le Blog</a>
+            </h1>
+        </section>
+    </div>
