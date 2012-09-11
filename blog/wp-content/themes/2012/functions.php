@@ -339,7 +339,7 @@ add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
 
 function new_excerpt_more() {
 	global $post;
-	return '<br><a class="btn" href="'. get_permalink($post->ID) . '">Lire plus</a>';
+	return '<br><a class="btn" href="'. get_permalink($post->ID) . '">Lire la suite</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
