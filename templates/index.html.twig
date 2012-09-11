@@ -9,11 +9,13 @@
 {% block baseline %}
     <div id="baseline">
         <section>
-            <hr class="title-separation"/>
-            <h1>
-                Nous sommes <a href="/team">des artisans du web</a>, lausannois, curieux et <a href="/blog">exigeants</a>. 
+            <h1 class="title-separation">
+                <span></span>
+                {{ 'homepage.baseline' | trans }}
+                {# @todo ajouter les liens pour la trad
+                Nous sommes <a href="{{ path('team') }}">des artisans du web</a>, lausannois, curieux et <a href="/blog">exigeants</a>.  #}
             </h1>
-            <a href="/contact" class="action-contact">Contactez-nous</a>
+            <a href="{{ path('contact') }}" class="action-contact">{{ 'homepage.contact' | trans }}</a>
         </section>
     </div>
 {% endblock %}
@@ -23,25 +25,34 @@
     <div id="work">
         <h3 class="title-separation">
             <span></span>
-            Des réalisations soignées
+            {{ 'homepage.work.title' | trans }}
         </h3>
         <div class="works">
             <a id="uchitomi" href="#">
                 <hgroup>
-                    <h3>Uchitomi</h3>
-                    <p>Boutique en ligne sur mesure avec Magento</p>
+                    <h3>{{ 'homepage.work.uchitomi.title' | trans }}</h3>
+                    <h5 class="title-separation x-long-sep magenta-sep">
+                        <span></span>
+                        {{ 'homepage.work.uchitomi.baseline' | trans }}
+                    </h5>
                 </hgroup>
             </a>
             <a id="rdr" href="#">
                 <hgroup>
-                    <h3>RDR Architectes</h3>
-                    <p>Boutique en ligne sur mesure avec Magento</p>
+                    <h3>{{ 'homepage.work.rdr.title' | trans }}</h3>
+                    <h5 class="title-separation x-long-sep magenta-sep">
+                        <span></span>
+                        {{ 'homepage.work.rdr.baseline' | trans }}
+                    </h5>
                 </hgroup>
             </a>
             <a id="tw" href="#" class="last">
                 <hgroup>
-                    <h3>Tehran Watch</h3>
-                    <p>Boutique en ligne sur mesure avec Magento</p>
+                    <h3>{{ 'homepage.work.tehran.title' | trans }}</h3>
+                    <h5 class="title-separation x-long-sep magenta-sep">
+                        <span></span>
+                        {{ 'homepage.work.tehran.baseline' | trans }}
+                    </h5>
                 </hgroup>
             </a>
         </div>
@@ -51,26 +62,35 @@
         <div class="about-us with-aside">
             <aside id="contact-us">
                 <div id="work-together">
-                    <h3>Travaillons ensemble</h3>
+                    <h3 class="title-separation">
+                        <span></span>
+                        {{ 'antistatique.contact.work.title' | trans }}
+                    </h3>
                     <p>
                         <a href="tel:0041216236303">+41 21 623 63 03</a><br/>
                         <a href="mailto:hello@antistatique.net">hello@antistatique.net</a>
                     </p>
                 </div>
                 <div id="stay-in-touch">
-                    <h3>Gardons contact</h3>
+                    <h3 class="title-separation">
+                        <span></span>
+                        Gardons contact
+                    </h3>
                     <p>
                         <a href="http://www.twitter.com/antistatique">Twitter</a><br/>
                         <a href="http://www.facebook.com/Antistatique">Facebook</a><br/>
-                        <a href="http://www.linkedin.com/company/antistatique.net">LinkedIn</a>
+                        <a href="http://www.linkedin.com/company/antistatique.net">LinkedIn</a><br/>
                         <a href="#RSS">RSS</a>
                     </p>
                 </div>
             </aside>
             <article id="our-mission">
-                <h1>Notre mission ? Combattre la poussière dans votre présence web.</h1>
-                <p>Nous faisons des sites web rutilants et des applications mobiles vraiment utiles. Nous construisons des boutiques en ligne sur-mesure. Nous soignons votre réputation et le positionnement de votre marque. Nous vous aidons à établir puis exécuter des stratégies appropriées pour les médias sociaux.</p>
-                <a href="/team" class="btn">Découvrir Antistatique</a>
+                <h1 class="title-separation long-sep">
+                    <span></span>
+                    {{ 'antistatique.mission.title' | trans }}
+                </h1>
+                <p>{{ 'antistatique.mission.description' | trans }}</p>
+                <a href="/team" class="btn">{{ 'antistatique.mission.link' | trans }}</a>
             </article>
         </div>
     </div>
@@ -78,7 +98,7 @@
     <div id="connect">
         <div id="tweet" data-twitter-username="{{ app.twitter.username }}" data-twitter-hashtag="{{ app.twitter.hashtag }}">
             <blockquote cite="http://twitter.com/{{ app.twitter.username }}">
-                chargement ...
+                {{ 'antistatique.loading' | trans }}
             </blockquote>
             <p>
                 Sur 
@@ -103,7 +123,9 @@
 
         <div id="more">
             <div id="blog">
-                <h3>En direct du blog</h3>
+                <h3 class="title-separation">
+                    <span></span>{{ 'antistatique.blog.title' | trans }}
+                </h3>
                 <time datetime="2012-08-23" pubdate="pubdate">23 août 2012</time>
                 <p>Youpi le titre de l'article du blog qui peut prendre plusieurs lignes</p>
                 <a href="/blog" class="action-blog">Le blog d'Antistatique</a>

@@ -1,5 +1,32 @@
 homepage: 
     title: "Bonjour, nous sommes l'agence web Antistatique"
+    baseline: Nous sommes des artisans du web, lausannois, curieux et exigeants.
+    contact: "Contactez-nous"
+    work:
+        title: Des réalisations soignées
+        uchitomi:
+            title: Uchitomi
+            baseline: Boutique en ligne sur mesure avec Magento
+        rdr:
+            title: RDR Architectes
+            baseline: Boutique en ligne sur mesure avec Magento
+        tehran:
+            title: Tehran Watch
+            baseline: Boutique en ligne sur mesure avec Magento
+
+antistatique:
+    contact:
+        work:
+            title: Travaillons ensemble
+    mission:
+        title: Notre mission ? Combattre la poussière dans votre présence web.
+        description: Nous faisons des sites web rutilants et des applications mobiles vraiment utiles. Nous construisons des boutiques en ligne sur-mesure. Nous soignons votre réputation et le positionnement de votre marque. Nous vous aidons à établir puis exécuter des stratégies appropriées pour les médias sociaux.
+        link: Découvrir Antistatique
+
+    loading: Chargement ...
+
+    blog:
+        title: En direct du blog
 
 team:
     title: L'équipe Antistatique

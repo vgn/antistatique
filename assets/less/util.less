@@ -24,6 +24,12 @@
     clear: both;
   }
 }
+.transition(@timing: 1.0s){
+  -webkit-transition:all @timing ease-in-out;
+  -moz-transition:all @timing ease-in-out;
+  -o-transition:all @timing ease-in-out;
+  -transition:all @timing ease-in-out;
+}
 
 /*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}

@@ -2,16 +2,62 @@
 
 {% block title %}{{ 'contact.title' | trans }}{% endblock %}
 
+
+{% block body_class %}contact{% endblock %}
+
+{% block baseline %}
+<div class="baseline-space"></div>
+<div class="page-title title-image">
+    <section>
+        <h1 class="title-separation magenta-sep">
+            <span></span>
+            Contact
+        </h1>
+    </section>
+</div>
+{% endblock %}
+
 {% block content %}
 
-    <a href="mailto:hello@antistatique.net">hello@antistatique.net</a><br>
-    +41 21 623 63 03<br>
+    <div class="with-aside">
+        <aside id="contact-us">
+            <div id="work-together">
+                <h3 class="title-separation">
+                    <span></span>
+                    Travaillons ensemble
+                </h3>
+                <p>
+                    <a href="tel:0041216236303">+41 21 623 63 03</a><br/>
+                    <a href="mailto:hello@antistatique.net">hello@antistatique.net</a>
+                </p>
+                <p>
+                    Antistatique<br/>
+                    Rue de Sébeillon 9b<br/>
+                    Lausanne
+                </p>
+                <p>
+                    <a href="#">Télécharger la vCard</a>
+                </p>
+            </div>
+            <div id="stay-in-touch">
+                <h3 class="title-separation">
+                    <span></span>
+                    Gardons contact
+                </h3>
+                <p>
+                    <a href="http://www.twitter.com/antistatique">Twitter</a><br/>
+                    <a href="http://www.facebook.com/Antistatique">Facebook</a><br/>
+                    <a href="http://www.linkedin.com/company/antistatique.net">LinkedIn</a><br/>
+                    <a href="#RSS">RSS</a>
+                </p>
+            </div>
+        </aside>
+        <article>
+            <h2>Nous trouver</h2>
+            <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Antistatique.net+S%C3%A0rl,+Agence+Web+Lausanne,+Rue+de+S%C3%A9beillon,+Lausanne,+Switzerland&amp;aq=0&amp;oq=antist&amp;sll=37.0625,-95.677068&amp;sspn=64.497063,76.904297&amp;t=m&amp;ie=UTF8&amp;hq=Antistatique.net+S%C3%A0rl,+Agence+Web&amp;hnear=Rue+de+S%C3%A9beillon,+1004+Lausanne,+Vaud,+Switzerland&amp;ll=46.523338,6.616367&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Antistatique.net+S%C3%A0rl,+Agence+Web+Lausanne,+Rue+de+S%C3%A9beillon,+Lausanne,+Switzerland&amp;aq=0&amp;oq=antist&amp;sll=37.0625,-95.677068&amp;sspn=64.497063,76.904297&amp;t=m&amp;ie=UTF8&amp;hq=Antistatique.net+S%C3%A0rl,+Agence+Web&amp;hnear=Rue+de+S%C3%A9beillon,+1004+Lausanne,+Vaud,+Switzerland&amp;ll=46.523338,6.616367&amp;spn=0.006295,0.006295" style="color:#0000FF;text-align:left">Voir sur google maps</a></small>
+        </article>
+    </div>
 
-    <address>
-        Antistatique<br>
-        Rue de Sébeillon 9b<br>
-        1004 Lausanne<br>
-        Suisse
-    </address>
+    
 
 {% endblock %}
