@@ -39,7 +39,7 @@
 
 	?></title>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo esc_url( home_url() ); ?>/../assets/css/blog.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo esc_url( home_url() ); ?>/../assets/css/style.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -76,16 +76,16 @@ _gaq.push(['_trackPageview']);
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
+<div id="page" class="hfeed blog">
 
 	<header class="topbar">
         <section>
-            <a class="brand" href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( home_url() ); ?>/../assets/img/logo-antistatique.png" width="200" height="40"></a>
+            <a class="brand" href="/"><img src="<?php echo esc_url( home_url() ); ?>/../assets/img/logo-antistatique.png" width="175" height="35"></a>
             <?php get_template_part( 'aside', 'navigation' ) ?>
         </section>
     </header>
 
-	<section id="main">
-		<section class="page-title">
-			<h1><a href="/blog" class="page-title-link" title="Blog Frontpage">Le Blog</a></h1>
-		</section>
+    <div class="baseline-space"></div>
+
+    <section id="main">
+        <h1><a href="/blog" class="page-title-link" title="Blog Frontpage">Le Blog</a></h1>

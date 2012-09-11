@@ -241,15 +241,15 @@ table {
 }
 /* Variables */
 /* General */
+html {
+  font-size: 10px;
+}
 body {
   color: #333333;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-html {
-  font-size: 10px;
 }
 h1,
 h2,
@@ -261,6 +261,30 @@ h6 {
   font-style: italic;
   font-weight: normal;
 }
+h1 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
 h3,
 h2 {
   margin-top: 1em;
@@ -269,12 +293,25 @@ h2 {
 p {
   margin: 0.3em 0 0.5em 0;
   line-height: 1.6em;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 a {
   color: #d40b6b;
 }
 a:hover {
   color: #e68faf;
+}
+hr.title-separation {
+  border: none;
+  height: 1px;
+  background: #333333;
+  width: 50px;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+hr.meta-separation {
+  display: none;
 }
 .btn {
   display: inline-block;
@@ -319,8 +356,8 @@ header.topbar {
 header.topbar a {
   color: #fbb0d4;
   text-decoration: none;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 header.topbar li.active a,
 header.topbar a:hover {
@@ -344,6 +381,11 @@ nav a {
 #baseline {
   margin-bottom: 1em;
   padding-bottom: 1em;
+  padding-top: 0.2em;
+}
+#baseline hr.title-separation {
+  background-color: #ffffff;
+  margin-bottom: 1.4em;
 }
 #baseline .action-contact {
   display: block;
@@ -351,8 +393,8 @@ nav a {
   border-bottom: 1px solid #cccccc;
   font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
   font-style: italic;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 .baseline-space {
   height: 10px;
@@ -369,7 +411,7 @@ nav a {
   padding: 20px 0;
   text-decoration: none;
 }
-.works a h4,
+.works a h3,
 .works a p {
   background-color: #ffffff;
   margin: 0 40px;
@@ -377,15 +419,13 @@ nav a {
   padding: 10px;
   color: #333333;
 }
-.works a h4 {
-  font-size: 20px;
-  font-size: 2rem;
+.works a h3 {
   padding-bottom: 0;
 }
 .works a p {
   padding-top: 0;
 }
-.works a:hover h4 {
+.works a:hover h3 {
   color: #d40b6b;
 }
 .works a:hover p {
@@ -407,15 +447,15 @@ nav a {
 }
 #tweet blockquote {
   font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
-  font-size: 13px;
-  font-size: 1.3rem;
+  font-size: 20px;
+  font-size: 2rem;
   margin: 0em;
   padding: 0em;
 }
 #tweet p {
   text-align: right;
-  font-size: 9px;
-  font-size: 0.9rem;
+  font-size: 13px;
+  font-size: 1.3rem;
 }
 #newsletter .email-field {
   line-height: 1.4em;
@@ -439,8 +479,217 @@ footer .vcard .email {
 footer a {
   color: #333333;
 }
+/** General **/
+/** Mobile First **/
+.page-title {
+  margin: 0;
+}
+.page-title h1 {
+  font-size: 45px;
+  font-size: 4.5rem;
+  margin-bottom: 0;
+}
+.page-title h1 a {
+  color: #505050;
+  text-decoration: none;
+}
+.page-title h1 a:hover {
+  color: #d40b6b;
+}
+.entry-title a,
+.entry-title {
+  color: #333333;
+  text-decoration: none;
+  font-size: 25px;
+  font-size: 2.5rem;
+  margin: 5px 0 0 0;
+}
+.entry-title a:hover {
+  text-decoration: underline;
+}
+.single-post .entry-content {
+  margin-top: 30px;
+}
+#nav-below {
+  clear: both;
+  margin: 30px auto;
+  border-top: 1px solid #333333;
+  padding-top: 15px;
+}
+#nav-below a {
+  padding: 0.4em 0;
+}
+#nav-below .nav-previous {
+  float: left;
+}
+#nav-below .nav-next {
+  float: right;
+}
+#comments {
+  margin: 50px auto;
+}
+.blog article {
+  clear: both;
+  margin: 0 auto 0 auto;
+  padding-top: 50px;
+}
+.blog article img {
+  clear: both;
+  max-width: 100%;
+  margin: 10px 0;
+}
+.blog article .btn {
+  margin: 25px 0 0px 0;
+}
+.blog article .attachment-post-thumbnail {
+  height: auto;
+}
+.blog article aside h3 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  margin: 2px 0;
+}
+.blog article h2 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 30px 0 10px 0;
+}
+.blog article .cover-image {
+  margin: 25px 0 10px 0;
+}
+.blog article #author-info {
+  display: none;
+}
+.blog article #author-link {
+  clear: both;
+}
+.blog article .post-separation {
+  height: 1px;
+  background: #333333;
+  border: none;
+  margin: 40px 0 10px 0;
+}
+footer {
+  margin-top: 50px;
+}
+/** Comments **/
+#comments h2,
+#comments #reply-title {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+#comments article {
+  padding: 0;
+}
+#comments article header {
+  float: none;
+}
+#comments ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#comments .comment {
+  width: auto;
+}
+#comments .comment-meta {
+  margin-top: 60px;
+}
+#comments .comment-author > img {
+  float: left;
+  margin: -33px 10px 10px 0;
+}
+#comments .comment-content {
+  clear: both;
+  margin-top: 10px;
+}
+#comments .title-separation {
+  margin: 30px 0 0 0;
+}
+#comments #comments-title {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+#comments textarea {
+  width: 100%;
+}
+#comments #respond {
+  clear: both;
+}
+#comments input[type="submit"] {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em 0.6em;
+  background-color: #d40b6b;
+  color: #ffffff;
+  border: none;
+}
+#comments input[type="submit"]:after {
+  content: " ►";
+}
+#comments input[type="submit"]:hover {
+  background-color: #e68faf;
+  color: #ffffff;
+}
+#comments input[type="submit"].btn-previous:after {
+  content: "";
+}
+#comments input[type="submit"].btn-previous:before {
+  content: "";
+}
+#comments input[type="text"],
+#comments textarea {
+  border: 1px solid #d40b6b;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+#comments input[type="text"] {
+  display: block;
+  padding: 5px;
+}
+#comments p[class|="comment-form"] {
+  margin: 12px 0;
+}
 @media (min-width: 40.5em) {
   /* ... and (max-width: 720px) */
+  h1 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  h4 {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  h5 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  h6 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  h1.title-separation span,
+  h2.title-separation span,
+  h3.title-separation span,
+  h4.title-separation span,
+  h5.title-separation span {
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #333333;
+    margin-bottom: 0.4em;
+  }
   /* Reseting */
   section {
     margin: 10px;
@@ -469,13 +718,7 @@ footer a {
     float: right;
     width: 70%;
   }
-  aside h3 {
-    font-size: 22px;
-    font-size: 2.2rem;
-  }
   article h2 {
-    font-size: 40px;
-    font-size: 4rem;
     margin: 0.3em 0 0.4em;
   }
   article p {
@@ -499,20 +742,20 @@ footer a {
   }
   header.topbar .brand {
     float: left;
+    margin-left: 10px;
   }
   header.topbar nav {
     float: right;
+    margin-right: 10px;
   }
   #baseline {
     background-color: #d40b6b;
-    margin: 80px 0 0;
+    margin: 70px 0 0;
   }
   #baseline h1 {
     clear: both;
     color: #e68faf;
-    margin: 0 0 20px;
-    font-size: 30px;
-    font-size: 3rem;
+    margin: 0 0 20px 0;
   }
   #baseline h1 a {
     color: #e68faf;
@@ -522,10 +765,11 @@ footer a {
   }
   #baseline .action-contact {
     color: #ffffff;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 24px;
+    font-size: 2.4rem;
     border-bottom: none;
     padding-bottom: 0;
+    margin-left: 0;
   }
   .works a {
     float: left;
@@ -549,8 +793,8 @@ footer a {
     background-color: transparent;
   }
   #tweet blockquote {
-    font-size: 20px;
-    font-size: 2rem;
+    font-size: 24px;
+    font-size: 2.4rem;
   }
   #tweet p {
     text-align: left;
@@ -601,19 +845,154 @@ footer a {
   footer nav {
     float: right;
   }
+  /* Reseting */
+  .entry-title a,
+  .entry-title {
+    margin: 25px 0 0 0;
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  hr.meta-separation {
+    display: block;
+    border: none;
+    height: 1px;
+    background: #333333;
+    width: 50px;
+    text-align: left;
+    margin: 0 0 30px 0;
+  }
+  hr.title-separation {
+    border: none;
+    height: 1px;
+    background: #333333;
+    width: 145px;
+    text-align: left;
+    margin: 0;
+  }
+  .entry-meta {
+    margin: 0;
+  }
+  #nav-below {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #comments {
+    width: 100%;
+    clear: both;
+  }
+  #comments .entry-content {
+    margin-top: 0;
+  }
+  #comments .title-separation {
+    width: 50px;
+  }
+  #comments #comments-title {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+  #comments aside {
+    float: left;
+    width: 30%;
+  }
+  #comments .entry-content {
+    float: right;
+    width: 70%;
+  }
+  #comments #respond {
+    float: right;
+    width: 70%;
+    clear: none;
+    margin-bottom: 30px;
+  }
+  #comments form input[type="text"] {
+    float: none;
+    display: block;
+  }
+  article {
+    width: 100%;
+  }
+  article header {
+    float: right;
+    width: 70%;
+  }
+  article h2 {
+    font-size: 22px;
+    font-size: 2.2rem;
+    margin: 30px 0 10px 0;
+  }
+  article .entry-summary,
+  article .entry-content {
+    clear: right;
+    float: right;
+    width: 70%;
+  }
 }
 @media (min-width: 1200px) {
+  h1 {
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+  h4 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  h5 {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  h6 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
   /* Reseting */
   section {
     margin: 10px auto;
-    width: 1140px;
+    max-width: 1140px;
   }
   #baseline {
-    margin: 80px auto 0;
+    margin: 70px auto 0;
   }
   #baseline h1 {
-    font-size: 40px;
-    font-size: 4rem;
     font-weight: bold;
+  }
+  header.topbar .brand {
+    margin-left: 0;
+  }
+  header.topbar nav {
+    margin-right: 0;
+  }
+  #nav-below {
+    width: 1140px;
+  }
+  .single-post .entry-content {
+    margin-top: 0;
+  }
+  article {
+    width: 1140px;
+  }
+  article p {
+    width: 600px;
+  }
+  article #author-info {
+    display: block;
+  }
+  article #author-info #author-avatar {
+    float: left;
+    margin: 4px 10px 5px 0;
+  }
+  article #author-info #author-avatar img {
+    margin: 0;
+  }
+  article #author-info #author-description {
+    margin-right: 30px;
   }
 }

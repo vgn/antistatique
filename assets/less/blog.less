@@ -1,11 +1,7 @@
-// Less utils
-@import "style.less";
 
 /** General **/
 
 /** Mobile First **/
-
-@blogWidth: 100%;
 
 .page-title{
     margin: 0;
@@ -20,19 +16,6 @@
             }
         }
     }
-}
-
-hr.title-separation{
-    border: none;
-    height: 1px;
-    background: @black;
-    width: 50px;
-    text-align: left;
-    margin: 0 0 10px 0;
-}
-
-hr.meta-separation{
-    display: none;
 }
 
 .entry-title a, .entry-title{
@@ -52,7 +35,6 @@ hr.meta-separation{
 
 #nav-below{
     clear: both;
-    width: @blogWidth;
     margin: 30px auto;
     border-top: 1px solid @black;
     padding-top: 15px;
@@ -68,13 +50,11 @@ hr.meta-separation{
 }
 
 #comments{
-    width: @blogWidth;
     margin: 50px auto;
 }
 
-article{
+.blog article{
     clear: both;
-    width: @blogWidth;
     margin: 0 auto 0 auto;
     padding-top: 50px;
 
@@ -201,145 +181,3 @@ footer{
     }
 }
 
-@media (min-width: 40.5em) { /* ... and (max-width: 720px) */
-    .page-title {
-        margin-top: 120px;
-    }
-}
-
-@media (min-width: 720px){ /* ... and (max-width: 720px) */
-    /* Reseting */
-
-    @blogWidth: 100%;
-
-    .entry-title a, .entry-title{
-        margin: 25px 0 0 0;
-        .font-size(40px);
-    }
-
-    hr.meta-separation{
-        display: block;
-        border: none;
-        height: 1px;
-        background: @black;
-        width: 50px;
-        text-align: left;
-        margin: 0 0 30px 0;
-    }
-
-    hr.title-separation {
-       border: none;
-       height: 1px;
-       background: @black;
-       width: 145px;
-       text-align: left;
-       margin: 0;
-    }
-
-    .entry-meta {
-        margin: 0;
-    }
-
-    #nav-below{
-        clear: both;
-        width: @blogWidth;
-        margin: 0 auto;
-    }
-
-    #comments{
-        width: @blogWidth;
-        clear: both;
-
-        .entry-content {
-            margin-top: 0;
-        }
-
-        .title-separation{
-            width: 50px;
-        }        
-
-        #comments-title{
-            .font-size(18px);
-        }
-
-        aside{
-            float: left;
-            width: 30%;
-        }
-
-        .entry-content{
-            float: right;
-            width: 70%;
-        }
-
-        #respond{
-            float: right;
-            width: 70%;
-            clear: none;
-            margin-bottom: 30px;
-        }
-
-        form{
-            input[type="text"] {
-                float: none;
-                display: block;
-            }
-        }
-    }
-
-    article{
-        width: @blogWidth;
-        header{
-            float: right;
-            width: 70%;
-        }
-
-        h2{
-            .font-size(22px);
-            margin: 30px 0 10px 0;
-        }
-
-        .entry-summary, .entry-content{
-            clear: right;
-            float: right;
-            width: 70%;
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-    /* Reseting */
-
-    @blogWidth: 1140px;
-
-     #nav-below{
-        width: @blogWidth;
-    }
-
-    .single-post .entry-content {
-        margin-top: 0;
-    }
-
-    article{
-        width: @blogWidth;
-
-        p{
-            width: 600px;
-        }
-
-        #author-info{
-            display: block;
-            #author-avatar{
-                float: left;
-                margin: 4px 10px 5px 0;
-                img{
-                    margin: 0;
-                }
-            }
-            #author-description{
-                margin-right: 30px;
-            }
-        }
-    }
-
-}

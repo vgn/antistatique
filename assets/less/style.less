@@ -12,6 +12,7 @@
 @red:                   #a6191d;
 @black80:               #cccccc;
 @black70:               #505050;
+@textLeftMargin:        0;
 
 // Links
 @linkColor:             @magenta;
@@ -23,6 +24,9 @@
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 /* General */
+html{
+    font-size: 10px;
+}
 body{
     color: @black;
     background-color: @white;
@@ -31,15 +35,17 @@ body{
     font: 14px @sansFontFamily;
 }
 
-html{
-    font-size: 10px;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: @serifFontFamily; 
     font-style: italic;
     font-weight: normal;
 }
+h1{ .font-size(30px); }
+h2{ .font-size(28px); }
+h3{ .font-size(26px); }
+h4{ .font-size(24px); }
+h5{ .font-size(14px); }
+h6{ .font-size(14px); }
 h3, h2{
     margin-top: 1em;
     margin-bottom: 0.1em;
@@ -47,6 +53,7 @@ h3, h2{
 p{
     margin: 0.3em 0 0.5em 0;
     line-height: 1.6em;
+    .font-size(14px);
 }
 a{
     color: @magenta;
@@ -54,6 +61,20 @@ a{
         color: @vieuxRose;
     }
 }
+
+hr.title-separation{
+    border: none;
+    height: 1px;
+    background: @black;
+    width: 50px;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+hr.meta-separation{
+    display: none;
+}
+
 .btn{
     display: inline-block;
     text-decoration: none;
@@ -99,7 +120,7 @@ header.topbar{
     a{
         color: lighten(@magenta, 40%);
         text-decoration: none;
-        .font-size(18px);
+        .font-size(16px);
     }
     li.active a, a:hover{
         color: @white;
@@ -126,13 +147,18 @@ nav{
 #baseline{
     margin-bottom: 1em;
     padding-bottom: 1em;
+    padding-top: 0.2em;
+    hr.title-separation{
+        background-color: @white;
+        margin-bottom: 1.4em;
+    }
     .action-contact{
         display: block;
         padding-bottom: 0.8em;
         border-bottom: 1px solid @black80;
         font-family: @serifFontFamily;
         font-style: italic;
-        .font-size(14px);
+        .font-size(18px);
     }
 }
 .baseline-space{
@@ -152,22 +178,21 @@ nav{
         background-repeat: no-repeat;
         padding: 20px 0;
         text-decoration: none;
-        h4, p{
+        h3, p{
             background-color: @white;
             margin: 0 40px;
             width: 60%;
             padding: 10px;
             color: @black;
         }
-        h4{
-            .font-size(20px);
+        h3{
             padding-bottom: 0;
         }
         p{
             padding-top: 0;
         }
         &:hover{
-            h4{ color: @magenta;}
+            h3{ color: @magenta;}
             p{
                 text-decoration: underline;
             }
@@ -194,13 +219,13 @@ nav{
     background-color: rgba(240, 240, 240, 0.8);
     blockquote{
         font-family: @serifFontFamily;
-        .font-size(13px);
+        .font-size(20px);
         margin: 0em;
         padding: 0em;
     }
     p{
         text-align: right;
-        .font-size(9px);
+        .font-size(13px);
     }
 }
 #newsletter{
@@ -230,8 +255,28 @@ footer{
     }
 }
 
+@import "blog.less";
 
 @media (min-width: 40.5em){ /* ... and (max-width: 720px) */
+    h1{ .font-size(40px); }
+    h2{ .font-size(32px); }
+    h3{ .font-size(24px); }
+    h4{ .font-size(20px); }
+    h5{ .font-size(14px); }
+    h6{ .font-size(14px); }
+
+    h1, h2, h3, h4, h5{
+        &.title-separation{
+            span{
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: @black;
+                margin-bottom: 0.4em;
+            }
+        }
+    }
+
     /* Reseting */
     section{
         margin: 10px;
@@ -253,14 +298,8 @@ footer{
             width: 70%;
         }
     }
-    aside{
-        h3{
-            .font-size(22px);
-        }
-    }
     article{
         h2{
-            .font-size(40px);
             margin: 0.3em 0 0.4em;
         }
         p{
@@ -285,19 +324,20 @@ footer{
         }
         .brand{
             float: left;
+            margin-left: 10px;
         }
         nav{
             float: right;
+            margin-right: 10px;
         }
     }
     #baseline{
         background-color: @magenta;
-        margin: 80px 0 0;
+        margin: 70px 0 0;
         h1{
             clear: both;
             color: @vieuxRose;
-            margin: 0 0 20px;
-            .font-size(30px);
+            margin: 0 0 20px @textLeftMargin;
             a{
                 color: @vieuxRose;
                 &:hover{ color: @white;}
@@ -305,9 +345,10 @@ footer{
         }
        .action-contact{
             color: @white;
-            .font-size(18px);
+            .font-size(24px);
             border-bottom: none;
             padding-bottom: 0;
+            margin-left: @textLeftMargin;
         }
     }
 
@@ -333,7 +374,7 @@ footer{
     #tweet{
         background-color: transparent;
         blockquote{
-            .font-size(20px);
+            .font-size(24px);
         }
         p{
             text-align: left;
@@ -368,20 +409,35 @@ footer{
             float: right;
         }
     }
+    @import "blog-tablet.less";
 
 }
 
 @media (min-width: 1200px) {
+    h1{ .font-size(50px); }
+    h2{ .font-size(40px); }
+    h3{ .font-size(32px); }
+    h4{ .font-size(24px); }
+    h5{ .font-size(16px); }
+    h6{ .font-size(14px); }
     /* Reseting */
     section{
         margin: 10px auto;
-        width: 1140px;
+        max-width: 1140px;
     }
     #baseline{
-        margin: 80px auto 0;
+        margin: 70px auto 0;
         h1{
-            .font-size(40px);
             font-weight: bold;
         }
     }
+    header.topbar{
+        .brand{
+            margin-left: 0;
+        }
+        nav{
+            margin-right: 0;
+        }
+    }
+    @import "blog-desktop.less";
 }
