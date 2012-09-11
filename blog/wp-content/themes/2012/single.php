@@ -9,23 +9,23 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
+        <div id="primary">
+            <div id="content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+                <?php while ( have_posts() ) : the_post(); ?>
 
-					<nav id="nav-single">
-						<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'twentyeleven' ) ); ?></span>
-						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></span>
-					</nav><!-- #nav-single -->
+                    <nav id="nav-single">
+                        <span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'as2012' ) ); ?></span>
+                        <span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'as2012' ) ); ?></span>
+                    </nav><!-- #nav-single -->
 
-					<?php get_template_part( 'content', 'single' ); ?>
+                    <?php get_template_part( 'content', 'single' ); ?>
 
-					<?php comments_template( '', true ); ?>
+                    <?php comments_template( '', true ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+                <?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+            </div><!-- #content -->
+        </div><!-- #primary -->
 
 <?php get_footer(); ?>

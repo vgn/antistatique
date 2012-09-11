@@ -269,7 +269,7 @@ msgstr ""
 msgid "Featured"
 msgstr ""
 
-#. #-#-#-#-#  twentyeleven.pot (Twenty Eleven 1.4)  #-#-#-#-#
+#. #-#-#-#-#  as2012.pot (Twenty Eleven 1.4)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:27
 msgid "http://wordpress.org/"
@@ -629,7 +629,7 @@ msgid "Twenty Eleven"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://wordpress.org/extend/themes/twentyeleven"
+msgid "http://wordpress.org/extend/themes/as2012"
 msgstr ""
 
 #. Description of the plugin/theme
