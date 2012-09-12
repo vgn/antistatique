@@ -20,10 +20,11 @@
 <![endif]-->
 
 
+{% if app.analytics %}
 <script type="text/javascript">
 
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXX-1']);
+_gaq.push(['_setAccount', '{{ app.analytics.account }}']);
 _gaq.push(['_trackPageview']);
 
 (function() {
@@ -33,6 +34,7 @@ _gaq.push(['_trackPageview']);
 })();
 
 </script>
+{% endif %}
 
 {% block head_scripts %}{% endblock %}
 
