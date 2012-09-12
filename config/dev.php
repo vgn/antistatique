@@ -13,8 +13,8 @@ $app->register(new MonologServiceProvider(), array(
 ));
 
 $app['twitter'] = array(
-    'username' => 'gil_les',
-    'hashtag' => '#kiri',
+    'username' => 'antistatique',
+    'hashtag' => '',
     'api_key' => 'QONcBRXXJBw8o3uzK2atQ' // https://dev.twitter.com/apps/3088947 (logged as antistatique)
 );
 
