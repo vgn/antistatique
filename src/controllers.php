@@ -15,7 +15,16 @@ $app->get('/', function () use ($app) {
 ;
 
 $app->get('/{_locale}/', function () use ($app) {
-    return $app['twig']->render('index.html.twig', array());
+    try {
+        $blog = $app['blog'];
+        $latestPost = $blog->item[0];
+    } catch (\Exception $e) {
+        $latestPost = null;
+    }
+    
+    return $app['twig']->render('index.html.twig', array(
+        'latestBlogpost' => $latestPost,
+    ));
 })
 ->bind('homepage_i18n')
 ->assert('_locale', $localeRegExp);

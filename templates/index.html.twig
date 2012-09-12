@@ -113,8 +113,10 @@
                 <h3 class="title-separation">
                     <span></span>{{ 'antistatique.blog.title' | trans }}
                 </h3>
-                <time datetime="2012-08-23" pubdate="pubdate">23 août 2012</time>
-                <p>Youpi le titre de l'article du blog qui peut prendre plusieurs lignes</p>
+                {% if latestBlogpost %}
+                <time datetime="{{ latestBlogpost.timestamp|date('Y-m-d') }}" pubdate="pubdate">{{ latestBlogpost.timestamp|date('d M Y') }}</time>
+                <p>{{ latestBlogpost.title }}</p>
+                {% endif %}
                 <a href="/blog" class="action-blog">Le blog d'Antistatique</a>
             </div>
             {% include '_newsletter.html.twig' %}
