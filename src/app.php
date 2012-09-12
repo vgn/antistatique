@@ -6,6 +6,7 @@ use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
+use \Feed;
 
 $app = new Application();
 $app->register(new TranslationServiceProvider(), array(
@@ -34,5 +35,13 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 
     return $twig;
 }));
+
+$app['blog'] = $app->share(function($app) {
+    
+    Feed::$cacheDir = __DIR__ . '/../cache';
+    $feed = Feed::loadRss('http://antistatique.net/blog/feed/rss2');
+    
+    return $feed;
+});
 
 return $app;

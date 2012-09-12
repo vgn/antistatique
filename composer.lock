@@ -1,6 +1,12 @@
 {
-    "hash": "6d6c91bce1096f554382ff56d1761263",
+    "hash": "43ad3abc22ab83648f3b6fdaf9aa55c6",
     "packages": [
+        {
+            "package": "dg/rss-php",
+            "version": "dev-master",
+            "source-reference": "v1.0.0",
+            "commit-date": "1346378681"
+        },
         {
             "package": "monolog/monolog",
             "version": "1.1.0"
@@ -173,7 +179,7 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "dg/rss-php": 20
+    }
 }
