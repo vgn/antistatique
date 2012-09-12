@@ -9,7 +9,11 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 $localeRegExp = '(fr|en)'; 
 
 $app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html.twig', array());
+    $locale = 'fr';
+
+    return $app->redirect($app['url_generator']->generate('homepage_i18n', array(
+        '_locale' => $locale
+    )));
 })
 ->bind('homepage')
 ;
