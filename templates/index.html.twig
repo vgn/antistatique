@@ -2,10 +2,6 @@
 
 {% block title %}{{ 'homepage.title' | trans }}{% endblock %}
 
-{% block head_scripts %}
-    <script src="http://platform.twitter.com/anywhere.js?id={{ app.twitter.api_key }}&v=1" type="text/javascript"></script>
-{% endblock %}
-
 {% block baseline %}
     <div id="baseline">
         <section>
@@ -111,15 +107,6 @@
                 </time>
             </p>
         </div>
-        <script type="text/javascript">
-            twttr.anywhere(function (T) {
-                T("#tweet .twitter-link").hovercards({
-                    username: function(node) {
-                        return node.title;
-                    }
-                });
-            });
-        </script>
 
         <div id="more">
             <div id="blog">
