@@ -24,7 +24,7 @@
             {{ 'homepage.work.title' | trans }}
         </h3>
         <div class="works">
-            <a id="uchitomi" href="#">
+            <a id="uchitomi" href="{{ path('portfolio_show', { slug: 'uchitomi' }) }}">
                 <hgroup>
                     <h3>{{ 'homepage.work.uchitomi.title' | trans }}</h3>
                     <h5 class="title-separation x-long-sep magenta-sep">
@@ -33,7 +33,7 @@
                     </h5>
                 </hgroup>
             </a>
-            <a id="rdr" href="#">
+            <a id="rdr" href="{{ path('portfolio_show', { slug: 'rdr' }) }}">
                 <hgroup>
                     <h3>{{ 'homepage.work.rdr.title' | trans }}</h3>
                     <h5 class="title-separation x-long-sep magenta-sep">
@@ -42,7 +42,7 @@
                     </h5>
                 </hgroup>
             </a>
-            <a id="tw" href="#" class="last">
+            <a id="tw" href="{{ path('portfolio_show', { slug: 'tehran-watch' }) }}" class="last">
                 <hgroup>
                     <h3>{{ 'homepage.work.tehran.title' | trans }}</h3>
                     <h5 class="title-separation x-long-sep magenta-sep">
