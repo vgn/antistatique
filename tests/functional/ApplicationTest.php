@@ -39,7 +39,7 @@ class ApplicationTest extends WebTestCase
         $client = $this->createClient();
         $crawler = $client->request('GET', '/');
 
-        $this->assertTrue($client->getResponse()->isOk());
+        $this->assertTrue($client->getResponse()->isRedirect(), 'Homepage redirect');
     }
 
     public function testHomepageI18nFr()
@@ -48,7 +48,7 @@ class ApplicationTest extends WebTestCase
         $crawler = $client->request('GET', '/fr/');
 
         $this->assertTrue($client->getResponse()->isOk());
-        $this->assertTrue($crawler->filter('html:contains("Bonjour")')->count() > 0, 'Return hello in french');
+        $this->assertTrue($crawler->filter('html:contains("Des réalisations soignées")')->count() > 0, 'Return hello in french');
     }
 
     public function testHomepageI18nEn()
