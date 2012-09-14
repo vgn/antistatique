@@ -1318,6 +1318,7 @@ footer {
   }
   .portfolio .head {
     clear: both;
+    margin-top: 3em;
   }
   .portfolio .summary,
   .portfolio .solutions {
