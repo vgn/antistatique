@@ -133,8 +133,8 @@ hr.meta-separation{
         &.mail span{ background-position: 0px -120px;}
         &.drupal span{ background-position: 0px -150px;}
         &.drupal span{ background-position: 0px -150px;}
-        &.rss span{ background-position: 0px -360px;}
-        &.rss span{ background-position: 0px -360px;}
+        &.rss span{ background-position: 0px -180px;}
+        &.rss span{ background-position: 0px -180px;}
     }
 }
 
@@ -409,7 +409,15 @@ nav{
                 max-width: 100%;
             }
         }
+    }
 
+    &.tehran{
+        .title-image{
+            background-image: url('../img/tehran/tw1.jpg')
+        }
+        img{
+            max-width: 100%;
+        }
     }
 }
 
@@ -885,6 +893,7 @@ footer{
             }
             h3{
                 .font-size(24px);
+                margin-top: 120px;
             }
             article{
                 float: left;
@@ -909,6 +918,69 @@ footer{
             .multi-column{
                 margin: 50px 0;
                 .textMultiColumn(3, 32px);
+            }
+        }
+
+        &.tehran{
+            
+            .tech-summary{
+                margin-left: 22%;
+
+                .text{
+                    width: 32%;
+                    float: left;
+                    margin-left: 2%;
+                }
+                .image{
+                    width: 32%;
+                    float: left;
+                    >img{
+                        max-width: 100%;
+                    }
+                }
+            }
+            .logo{
+                width: 47%;
+                margin: 50px auto;
+                > img{
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            .artisan{
+                p.lead{
+                    width: 64%;
+                }
+                p.text{
+                    display: block;
+                    width: 32%;
+                    margin-left: 34%;
+                }
+            }
+
+            .story{
+                padding: 50px 0;
+                .year{
+                    width: 66%;
+                    float: left;
+                }
+                img{
+                    max-width: 100%;
+                }
+                div.text{
+                    margin-left: 2%;
+                    width: 32%;
+                    float: left;
+                }
+            }
+
+            .website{
+                margin-left: 17%;
+                width: 47%;
+                img{
+                    max-width: 100%;
+                }
             }
         }
     }
