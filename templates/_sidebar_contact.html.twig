@@ -1,0 +1,14 @@
+<div id="stay-in-touch">
+    <h3 class="title-separation">
+        <span></span>
+        Gardons contact
+    </h3>
+    <p>
+        <a href="http://www.twitter.com/antistatique">Twitter</a><br/>
+        <a href="http://www.facebook.com/Antistatique">Facebook</a><br/>
+        <a href="http://www.linkedin.com/company/antistatique.net">LinkedIn</a><br/>
+        {% if app.blog_feed %}
+            <a href="{{ app.blog_feed }}" title="Blog">RSS</a>
+        {% endif %}
+    </p>
+</div>

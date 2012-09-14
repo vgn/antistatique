@@ -319,19 +319,6 @@ hr.meta-separation {
   padding: 0.6em 0.6em;
   background-color: #d40b6b;
   color: #ffffff;
-  /*    &:after {
-        content: " ►";
-    }*/
-
-  /*    &.btn-previous{
-        &:after {
-            content: "";
-        }
-        &:before {
-            content: ""
-        }
-    }*/
-
 }
 .btn:hover {
   background-color: #e68faf;
@@ -671,19 +658,6 @@ footer {
   padding: 0.6em 0.6em;
   background-color: #d40b6b;
   color: #ffffff;
-  /*    &:after {
-        content: " ►";
-    }*/
-
-  /*    &.btn-previous{
-        &:after {
-            content: "";
-        }
-        &:before {
-            content: ""
-        }
-    }*/
-
   border: none;
 }
 #comments input[type="submit"]:hover {
@@ -865,10 +839,6 @@ footer {
   }
   .member .photo {
     overflow: hidden;
-  }
-  .member:hover .photo img {
-    /*margin-left: -10%;*/
-  
   }
   .member .photo img {
     width: 110%;

@@ -6,13 +6,13 @@ homepage:
         title: Des réalisations soignées
         uchitomi:
             title: Uchitomi
-            baseline: Boutique en ligne sur mesure avec Magento
+            baseline: Boutique en ligne Magento sur-mesure 
         rdr:
             title: RDR Architectes
-            baseline: Boutique en ligne sur mesure avec Magento
+            baseline: Développement Symfony
         tehran:
             title: Tehran Watch
-            baseline: Boutique en ligne sur mesure avec Magento
+            baseline: Rebranding complet et Wordpress personnalisé
 
 antistatique:
     contact:
@@ -38,7 +38,7 @@ menu:
     home: Accueil
     team: L'Équipe
     blog: Blog
-    contact: contact
+    contact: Contact
 
 footer:
     newsletter:
