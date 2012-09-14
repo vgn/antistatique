@@ -693,6 +693,9 @@ nav a {
 .portfolio.tehran img {
   max-width: 100%;
 }
+.richter .title-image {
+  background-image: url('../img/rdr-title.jpg');
+}
 footer .vcard strong,
 footer .vcard .locality,
 footer .vcard .tel,
