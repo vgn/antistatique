@@ -999,14 +999,14 @@ footer {
     float: left;
     width: 30%;
   }
-  .portfolio h3.magenta-sep {
-    margin-top: 0;
-  }
-  .portfolio h3.magenta-sep span {
-    width: 170px;
+  .portfolio .magenta-sep span {
+    width: 183px;
     height: 1px;
     margin: 12px 0 15px 0;
     display: block;
+  }
+  .portfolio h3.magenta-sep {
+    margin: 0;
   }
   .portfolio .tech li {
     width: 25%;
@@ -1199,23 +1199,24 @@ footer {
   }
   .portfolio .summary h3,
   .portfolio .solutions h3 {
-    width: 30%;
+    width: 32%;
     float: left;
     text-align: right;
   }
   .portfolio .summary .text,
   .portfolio .solutions .text {
-    width: 53%;
+    width: 51%;
     float: left;
     padding: 0 5% 0 12%;
   }
   .portfolio .tech h3 {
-    width: 30%;
+    width: 32%;
     float: left;
   }
   .portfolio .tech .icons {
     float: left;
-    width: 70%;
+    width: 66%;
+    margin-left: 2%;
   }
   .portfolio .tech h4 {
     font-size: 21px;
@@ -1229,7 +1230,7 @@ footer {
     text-transform: uppercase;
   }
   .portfolio .prices .intro {
-    margin: 0 15% 0 31%;
+    margin: 0 15% 0 34%;
   }
   .portfolio .prices ul {
     margin: 100px 0  0 10%;
@@ -1244,6 +1245,9 @@ footer {
     color: #505050;
     width: 15%;
   }
+  .portfolio .challenges .challenge img {
+    max-width: 100%;
+  }
   .portfolio .challenges .challenge1 {
     margin-top: 0;
   }
@@ -1251,23 +1255,64 @@ footer {
     float: left;
   }
   .portfolio .challenges .challenge1 img {
-    float: right;
+    margin-left: 2%;
   }
   .portfolio .challenges .challenge2 p {
     float: left;
-    margin-left: 200px;
+    margin-left: 17%;
   }
   .portfolio .challenges .challenge3 p {
     float: right;
-    width: 31%;
+    width: 32%;
   }
   .portfolio .challenges .challenge4 p {
     float: right;
-    width: 31%;
+    width: 32%;
   }
   .portfolio .challenges .challenge4 img {
     float: right;
-    margin-right: 37px;
+    margin-right: 2%;
+  }
+  .portfolio .design {
+    margin: 100px 0;
+  }
+  .portfolio .design aside {
+    float: left;
+    width: 32%;
+  }
+  .portfolio .design aside > img {
+    max-width: 100%;
+  }
+  .portfolio .design article {
+    float: left;
+    margin-left: 2%;
+    width: 66%;
+  }
+  .portfolio .design article p {
+    width: auto;
+  }
+  .portfolio .design article .multi-column {
+    -moz-column-count: 2;
+    -moz-column-gap: 32px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 32px;
+    column-count: 2;
+    column-gap: 32px;
+  }
+  .portfolio .newsletter {
+    margin: 100px 0;
+  }
+  .portfolio .newsletter h3 {
+    width: 51%;
+  }
+  .portfolio .newsletter .multi-column {
+    margin: 50px 0;
+    -moz-column-count: 3;
+    -moz-column-gap: 32px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 32px;
+    column-count: 3;
+    column-gap: 32px;
   }
   .member {
     width: 22%;
