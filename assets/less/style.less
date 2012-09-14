@@ -249,7 +249,7 @@ nav{
 // Generated with http://spritegen.website-performance.org/
 .icon{
     background: url('../img/ico/ico_sprite.png') no-repeat top left;
-    display: block;
+    display: none;
 }
 .ico_agile{ background-position: 0 0; width: 140px; height: 140px; }
 .ico_github{ background-position: 0 -190px; width: 140px; height: 140px; }
@@ -414,9 +414,6 @@ nav{
 
 
     &.tehran{
-        .title-image{
-            background-image: url('../img/tehran/tw1.jpg')
-        }
         img{
             max-width: 100%;
         }
@@ -459,12 +456,7 @@ nav{
     }
 }
 
-//richter
-.richter{
-    .title-image{
-        background-image: url('../img/rdr-title.jpg');
-    }
-}
+
 footer{
     .vcard{
         strong, .locality, .tel, .email{
@@ -487,6 +479,9 @@ footer{
     h5{ .font-size(14px); }
     h6{ .font-size(14px); }
 
+    .icon{
+        display: block;
+    }
     .title-separation{
         span{
             display: block;
@@ -764,6 +759,18 @@ footer{
         }
     }
 
+    .tehran{
+        .title-image{
+            background-image: url('../img/tehran/tw1.jpg')
+        }
+    }
+    //richter
+    .richter{
+        .title-image{
+            background-image: url('../img/rdr-title.jpg');
+        }
+    }
+
     // Footer
     footer{
         .clearfix();
@@ -796,6 +803,9 @@ footer{
     section{
         margin: 10px auto;
         max-width: 1140px;
+    }
+    .icon{
+        display: block;
     }
     #baseline{
         margin: 70px auto 0;

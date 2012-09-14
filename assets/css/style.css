@@ -507,7 +507,7 @@ nav a {
 }
 .icon {
   background: url('../img/ico/ico_sprite.png') no-repeat top left;
-  display: block;
+  display: none;
 }
 .ico_agile {
   background-position: 0 0;
@@ -687,9 +687,6 @@ nav a {
 .portfolio .challenges .challenge > img {
   max-width: 100%;
 }
-.portfolio.tehran .title-image {
-  background-image: url('../img/tehran/tw1.jpg');
-}
 .portfolio.tehran img {
   max-width: 100%;
 }
@@ -716,9 +713,6 @@ nav a {
   height: 194px;
   width: 191px;
   background-image: url('../img/uchitomi/uchitomi-best.jpg');
-}
-.richter .title-image {
-  background-image: url('../img/rdr-title.jpg');
 }
 footer .vcard strong,
 footer .vcard .locality,
@@ -929,6 +923,9 @@ footer {
   h6 {
     font-size: 14px;
     font-size: 1.4rem;
+  }
+  .icon {
+    display: block;
   }
   .title-separation span {
     display: block;
@@ -1183,6 +1180,12 @@ footer {
   .portfolio .prices li div > img {
     max-width: 100%;
   }
+  .tehran .title-image {
+    background-image: url('../img/tehran/tw1.jpg');
+  }
+  .richter .title-image {
+    background-image: url('../img/rdr-title.jpg');
+  }
   footer {
     *zoom: 1;
     clear: both;
@@ -1320,6 +1323,9 @@ footer {
   section {
     margin: 10px auto;
     max-width: 1140px;
+  }
+  .icon {
+    display: block;
   }
   #baseline {
     margin: 70px auto 0;
