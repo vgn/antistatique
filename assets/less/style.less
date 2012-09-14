@@ -12,6 +12,7 @@
 @red:                   #a6191d;
 @black80:               #cccccc;
 @black70:               #505050;
+@grey:                  #a0a0a0;
 @textLeftMargin:        0;
 
 // Links
@@ -282,6 +283,83 @@ nav{
     }
 }
 
+#uchitomi{
+    .clearfix();
+}
+
+.portfolio{
+    .lead{
+        color: @grey;
+        font-family: @serifFontFamily;
+        .font-size(18px);
+    }
+
+    .section{
+        padding: 25px 0;
+    }
+    .icons{
+        h4{
+            text-transform: uppercase;
+        }
+    }
+    .challenge{
+        > img {
+            max-width: 100%;
+        }
+    }
+
+    .tech{
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            clear: both;
+        }
+
+        li{
+            float: left;
+            width: 50%;
+            div{
+                padding: 5px;
+            }
+
+            &:nth-child(3n) {
+                clear: left;
+            }
+
+            h4{
+                span{
+                    background-color: @black70;
+                    width: 75px;
+                    height: 1px;
+                    display: block;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .prices{
+        clear: both;
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            float: left;
+            width: 33%;
+            div{
+                padding: 5px;
+                > img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
 footer{
     .vcard{
         strong, .locality, .tel, .email{
@@ -528,6 +606,57 @@ footer{
         width: 30%;
     }
 
+    .portfolio{
+
+        .lead{
+
+        }
+
+        .icons{
+
+        }
+        .challenge{
+
+        }
+
+
+        h3.magenta-sep {
+            span{
+                width: 170px;
+                height: 1px;
+            }
+        }
+
+        .tech{
+            li{
+                width: 25%;
+                &:nth-child(3n) {
+                    clear: none;
+                }
+            }
+        }
+
+        .prices{
+            clear: both;
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            li{
+                float: left;
+                width: 33%;
+                div{
+                    padding: 5px;
+                    > img{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
     // Footer
     footer{
         .clearfix();
@@ -584,6 +713,21 @@ footer{
             background-position: 10% 0;
         }
     }
+
+    .portfolio{
+        .summary, .solution{
+            float: left;
+            width: 50%;
+            h3{
+                width: 15%;
+                float: left;
+            }
+            .text{
+                width: 35%;
+            }
+        }
+    }
+
     .member{
         width: 22%;
     }

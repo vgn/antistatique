@@ -515,6 +515,73 @@ nav a {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
+#uchitomi {
+  *zoom: 1;
+}
+#uchitomi:before,
+#uchitomi:after {
+  display: table;
+  content: "";
+}
+#uchitomi:after {
+  clear: both;
+}
+.portfolio .lead {
+  color: #a0a0a0;
+  font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+.portfolio .section {
+  padding: 25px 0;
+}
+.portfolio .icons h4 {
+  text-transform: uppercase;
+}
+.portfolio .challenge > img {
+  max-width: 100%;
+}
+.portfolio .tech ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+.portfolio .tech li {
+  float: left;
+  width: 50%;
+}
+.portfolio .tech li div {
+  padding: 5px;
+}
+.portfolio .tech li:nth-child(3n) {
+  clear: left;
+}
+.portfolio .tech li h4 span {
+  background-color: #505050;
+  width: 75px;
+  height: 1px;
+  display: block;
+  margin-bottom: 15px;
+}
+.portfolio .prices {
+  clear: both;
+}
+.portfolio .prices ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.portfolio .prices li {
+  float: left;
+  width: 33%;
+}
+.portfolio .prices li div {
+  padding: 5px;
+}
+.portfolio .prices li div > img {
+  max-width: 100%;
+}
 footer .vcard strong,
 footer .vcard .locality,
 footer .vcard .tel,
@@ -940,6 +1007,34 @@ footer {
     float: left;
     width: 30%;
   }
+  .portfolio h3.magenta-sep span {
+    width: 170px;
+    height: 1px;
+  }
+  .portfolio .tech li {
+    width: 25%;
+  }
+  .portfolio .tech li:nth-child(3n) {
+    clear: none;
+  }
+  .portfolio .prices {
+    clear: both;
+  }
+  .portfolio .prices ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .portfolio .prices li {
+    float: left;
+    width: 33%;
+  }
+  .portfolio .prices li div {
+    padding: 5px;
+  }
+  .portfolio .prices li div > img {
+    max-width: 100%;
+  }
   footer {
     *zoom: 1;
     clear: both;
@@ -1096,6 +1191,20 @@ footer {
   }
   .team .title-image {
     background-position: 10% 0;
+  }
+  .portfolio .summary,
+  .portfolio .solution {
+    float: left;
+    width: 50%;
+  }
+  .portfolio .summary h3,
+  .portfolio .solution h3 {
+    width: 15%;
+    float: left;
+  }
+  .portfolio .summary .text,
+  .portfolio .solution .text {
+    width: 35%;
   }
   .member {
     width: 22%;
