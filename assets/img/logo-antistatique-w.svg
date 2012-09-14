@@ -3,7 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="175px" height="35px" viewBox="57.771 7.856 175 35" enable-background="new 57.771 7.856 175 35" xml:space="preserve">
-<a xlink:href="http://antistatique.net" >
+<a xlink:href="http://antistatique.net" target='_parent' >
 <rect x="57.771" y="7.856" fill="#D40B6B" width="175" height="35"/>
 	<g>
 		<path fill="#FFFFFF" d="M139.833,30.401c-0.571,0-1.114-0.303-1.114-0.96v-8.582h2.76v-3.462h-2.76v-5.494l-4.017,2.16v3.334
