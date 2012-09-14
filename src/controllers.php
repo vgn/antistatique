@@ -52,7 +52,14 @@ $app->get('/{_locale}/portfolio/{slug}', function ($slug) use ($app) {
 
     $template = 'portfolio/'.$slug.'.html.twig';
 
-    return $app['twig']->render($template, array());
+    try {
+        $response = $app['twig']->render($template, array());
+    } catch (\Twig_Error_Loader $e) {
+        // like the template is not found
+        $app->abort(404, sprintf('Template "%s" not found', $template)); 
+    }
+
+    return $response;
 })
 ->bind('portfolio_show')
 ->assert('_locale', $localeRegExp);
