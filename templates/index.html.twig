@@ -7,9 +7,8 @@
         <section>
             <h1 class="title-separation">
                 <span></span>
-                {{ 'homepage.baseline' | trans }}
-                {# @todo ajouter les liens pour la trad
-                Nous sommes <a href="{{ path('team') }}">des artisans du web</a>, lausannois, curieux et <a href="/blog">exigeants</a>.  #}
+                {# {{ 'homepage.baseline' | trans }} #}
+                Nous&nbsp;sommes <a href="{{ path('team') }}">des&nbsp;artisans du&nbsp;web</a>, lausannois, curieux&nbsp;et&nbsp;<a href="/blog">exigeants</a>. 
             </h1>
             <a href="{{ path('contact') }}" class="action-contact">{{ 'homepage.contact' | trans }}</a>
         </section>
@@ -33,7 +32,7 @@
                     </h5>
                 </hgroup>
             </a>
-            <a id="rdr" href="{{ path('portfolio_show', { slug: 'rdr' }) }}">
+            <a id="rdr" href="{{ path('portfolio_show', { slug: 'richter' }) }}">
                 <hgroup>
                     <h3>{{ 'homepage.work.rdr.title' | trans }}</h3>
                     <h5 class="title-separation x-long-sep magenta-sep">
@@ -75,7 +74,7 @@
                     {{ 'antistatique.mission.title' | trans }}
                 </h1>
                 <p>{{ 'antistatique.mission.description' | trans }}</p>
-                <a href="/team" class="btn">{{ 'antistatique.mission.link' | trans }}</a>
+                <a href="{{ path('contact') }}" class="btn">{{ 'antistatique.mission.link' | trans }}</a>
             </article>
         </div>
     </div>
