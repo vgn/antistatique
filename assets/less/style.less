@@ -459,6 +459,12 @@ nav{
     }
 }
 
+//richter
+.richter{
+    .title-image{
+        background-image: url('../img/rdr-title.jpg');
+    }
+}
 footer{
     .vcard{
         strong, .locality, .tel, .email{
@@ -708,14 +714,18 @@ footer{
         float: left;
         width: 30%;
     }
-
+    //base composant
+    .multi-column{
+        margin: 50px 0;
+        .textMultiColumn(2, 32px);
+    }
     .portfolio{
 
         .magenta-sep {
             span{
                 width: 183px;
                 height: 1px;
-                margin: 12px 0 15px -55px;
+                margin: 12px 0 15px -10px;
                 display: block;
             }
         }
@@ -814,6 +824,7 @@ footer{
     .portfolio{
         .head{
             clear: both;
+            margin-top: 3em;
         }
         .summary, .solutions{
             float: left;

@@ -65,6 +65,28 @@ $app->get('/{_locale}/portfolio/{slug}', function ($slug) use ($app) {
 ->assert('_locale', $localeRegExp)
 ->assert('slug', '[a-zA-Z0-9\-]+');
 
+$app->get('cache/clear', function () use ($app) {
+
+    $cacheDir = $app['twig']->getCache();
+    $finder = new Symfony\Component\Finder\Finder();
+
+    foreach($finder->in($cacheDir)->files() as $file) {
+        print "- ".$file->getRealpath()."<br>\n";
+        unlink($file->getRealpath());
+    }
+
+    foreach($finder->in($cacheDir)->directories() as $file) {
+        //print "- ".$file->getRealpath()."<br>\n";
+        //rmdir($file->getRealpath());
+    }
+
+
+    $response = 'cache:clear';
+
+    return $response;
+})
+->bind('cache_clear');
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
