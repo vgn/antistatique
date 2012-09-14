@@ -693,6 +693,30 @@ nav a {
 .portfolio.tehran img {
   max-width: 100%;
 }
+.portfolio.uchitomi .title-image {
+  background-image: url('../img/uchitomi/uchitomi-title.jpg');
+}
+.portfolio.uchitomi .design aside img {
+  margin: 50px 0;
+}
+.portfolio.uchitomi .prices .price-icon {
+  display: block;
+}
+.portfolio.uchitomi .prices .awwwards {
+  width: 167px;
+  height: 150px;
+  background-image: url('../img/uchitomi/uchitomi-book.jpg');
+}
+.portfolio.uchitomi .prices .meilleurWeb {
+  height: 156px;
+  width: 201px;
+  background-image: url('../img/uchitomi/uchitomi-meilleur.jpg');
+}
+.portfolio.uchitomi .prices .bestofswissweb {
+  height: 194px;
+  width: 191px;
+  background-image: url('../img/uchitomi/uchitomi-best.jpg');
+}
 footer .vcard strong,
 footer .vcard .locality,
 footer .vcard .tel,
