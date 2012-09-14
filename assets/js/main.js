@@ -14,7 +14,7 @@ jQuery(function($) {
             function (response) {
                 if (200 === response.Status) {
                     $form.find('.alert-success').show();
-                    $('#newsletter_form').reset();
+                    $('input[type="text"]','#newsletter_form').val('');
                 } else {
                     $form.find('.alert-error').show();
                 }
