@@ -38,12 +38,12 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 
 $app['blog'] = $app->share(function($app) {
 
-    if (!$app['blog.feed']) {
+    if (!$app['blog_feed']) {
         return null;
     }
 
-    Feed::$cacheDir = $app['blog.cache_dir'];
-    $feed = Feed::loadRss($app['blog.feed']);
+    Feed::$cacheDir = $app['blog_cache_dir'];
+    $feed = Feed::loadRss($app['blog_feed']);
 
     return $feed;
 });

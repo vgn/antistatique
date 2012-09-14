@@ -12,5 +12,5 @@ $app['analytics'] = array(
     'account' => 'UA-4367884-3',
 );
 
-$app['blog.feed'] = 'http://antistatique.net/blog/feed/rss2';
-$app['blog.cache_dir'] = __DIR__ . '/../cache';
+$app['blog_feed'] = 'http://antistatique.net/blog/feed/rss2';
+$app['blog_cache_dir'] = __DIR__ . '/../cache';
