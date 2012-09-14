@@ -4,7 +4,7 @@
 
 $app['twitter'] = array(
     'username' => 'antistatique',
-    'hashtag' => '',
+    'hashtag' => '#A',
     'api_key' => 'QONcBRXXJBw8o3uzK2atQ' // https://dev.twitter.com/apps/3088947 (logged as antistatique)
 );
 
