@@ -106,7 +106,7 @@
                 <time datetime="{{ latestBlogpost.timestamp|date('Y-m-d') }}" pubdate="pubdate">{{ latestBlogpost.timestamp|date('d M Y') }}</time>
                 <p>{{ latestBlogpost.title }}</p>
                 {% endif %}
-                <a href="/blog" class="action-blog">Le blog d'Antistatique</a>
+                <a href="/blog" class="action-blog">{{ 'antistatique.blog.link' | trans }}</a>
             </div>
             {% include '_newsletter.html.twig' %}
         </div>
