@@ -687,14 +687,8 @@ nav a {
 .portfolio .challenges .challenge > img {
   max-width: 100%;
 }
-.portfolio.tehran .title-image {
-  background-image: url('../img/tehran/tw1.jpg');
-}
 .portfolio.tehran img {
   max-width: 100%;
-}
-.richter .title-image {
-  background-image: url('../img/rdr-title.jpg');
 }
 footer .vcard strong,
 footer .vcard .locality,
@@ -1158,6 +1152,12 @@ footer {
   }
   .portfolio .prices li div > img {
     max-width: 100%;
+  }
+  .tehran .title-image {
+    background-image: url('../img/tehran/tw1.jpg');
+  }
+  .richter .title-image {
+    background-image: url('../img/rdr-title.jpg');
   }
   footer {
     *zoom: 1;
