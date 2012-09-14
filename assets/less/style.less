@@ -433,14 +433,15 @@ footer{
     }
     .member{
         clear: none;
-        width: 25%;
+        width: 22%;
+        margin-right: 2%;
         float: left;
         .photo, .description{
             float: none;
             width: auto;
         }
         .description{
-            min-height: 130px;
+            min-height: 200px;
             padding: 0;
             padding-right: 2em;
         }
@@ -448,19 +449,19 @@ footer{
             overflow: hidden;
         }
         &:hover .photo img{
-            margin-left: -15%;
+            /*margin-left: -10%;*/
         }
         .photo img{
-            width: 130%;
+            width: 110%;
+            margin-left: -5%;
             .transition(0.4s);
         }
         h4, p{
-            .transition(0.4s);
-            margin-left: 15%;
+
         }
         &:hover{
             h4, p{
-                margin-left: 5%;
+
             }
         }
     }
@@ -520,6 +521,7 @@ footer{
     #blog{
         float: left;
         width: 30%;
+        margin-right: 5%;
     }
     #newsletter{
         float: left;
@@ -583,7 +585,7 @@ footer{
         }
     }
     .member{
-        width: 20%;
+        width: 22%;
     }
     @import "blog-desktop.less";
 }
