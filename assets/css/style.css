@@ -324,6 +324,17 @@ hr.meta-separation {
   background-color: #e68faf;
   color: #ffffff;
 }
+.clear {
+  *zoom: 1;
+}
+.clear:before,
+.clear:after {
+  display: table;
+  content: "";
+}
+.clear:after {
+  clear: both;
+}
 .alert {
   padding: 0.5em 0.4em;
   margin: 0.4em 0;
@@ -516,8 +527,8 @@ nav a {
 .portfolio .lead {
   color: #a0a0a0;
   font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 19px;
+  font-size: 1.9rem;
 }
 .portfolio .section {
   padding: 25px 0;
@@ -977,9 +988,14 @@ footer {
     float: left;
     width: 30%;
   }
+  .portfolio h3.magenta-sep {
+    margin-top: 0;
+  }
   .portfolio h3.magenta-sep span {
     width: 170px;
     height: 1px;
+    margin: 12px 0 15px 0;
+    display: block;
   }
   .portfolio .tech li {
     width: 25%;
@@ -1162,19 +1178,25 @@ footer {
   .team .title-image {
     background-position: 10% 0;
   }
+  .portfolio .head {
+    clear: both;
+  }
   .portfolio .summary,
-  .portfolio .solution {
+  .portfolio .solutions {
     float: left;
     width: 50%;
   }
   .portfolio .summary h3,
-  .portfolio .solution h3 {
-    width: 15%;
+  .portfolio .solutions h3 {
+    width: 30%;
     float: left;
+    text-align: right;
   }
   .portfolio .summary .text,
-  .portfolio .solution .text {
-    width: 35%;
+  .portfolio .solutions .text {
+    width: 53%;
+    float: left;
+    padding: 0 5% 0 12%;
   }
   .member {
     width: 22%;
