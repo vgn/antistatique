@@ -1108,6 +1108,15 @@ footer {
     float: left;
     width: 30%;
   }
+  .multi-column {
+    margin: 50px 0;
+    -moz-column-count: 2;
+    -moz-column-gap: 32px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 32px;
+    column-count: 2;
+    column-gap: 32px;
+  }
   .portfolio .magenta-sep span {
     width: 183px;
     height: 1px;
