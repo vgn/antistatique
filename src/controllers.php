@@ -48,6 +48,14 @@ $app->get('/{_locale}/contact', function () use ($app) {
 ->assert('_locale', $localeRegExp);
 ;
 
+$app->get('/{_locale}/portfolio/{slug}', function ($slug) use ($app) {
+
+    $template = 'portfolio/'.$slug.'.html.twig';
+
+    return $app['twig']->render($template, array());
+})
+->bind('portfolio_show')
+->assert('_locale', $localeRegExp);
 
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
