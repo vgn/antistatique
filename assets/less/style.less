@@ -589,3 +589,21 @@ footer{
     }
     @import "blog-desktop.less";
 }
+
+/* retinafy */
+@media (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (-webkit-min-device-pixel-ratio: 1.5),
+       (min-resolution: 1.5dppx) {
+    .works {
+        #uchitomi {
+            background-image: url(../img/portfolio-uchitomi@2x.png);
+        }
+        #tw {
+            background-image: url(../img/portfolio-tw@2x.png);
+        }
+        #rdr {
+            background-image: url(../img/portfolio-rdr@2x.png);
+        }
+    }
+}
