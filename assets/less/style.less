@@ -291,16 +291,8 @@ nav{
     .section{
         padding: 25px 0;
     }
-    .icons{
-        h4{
-            text-transform: uppercase;
-        }
-    }
-    .challenge{
-        > img {
-            max-width: 100%;
-        }
-    }
+
+    
 
     .tech{
         ul{
@@ -344,6 +336,10 @@ nav{
         li{
             float: left;
             width: 33%;
+            h4{
+                .font-size(21px);
+                margin: 0 10px 5px 0;
+            }
             div{
                 padding: 5px;
                 > img{
@@ -351,6 +347,23 @@ nav{
                 }
             }
         }
+    }
+
+    .challenges{
+        clear: both;
+        span{
+            margin-left: -20px;
+        }
+
+        h3{
+            margin-bottom: 30px;
+        }
+        .challenge{
+            > img {
+                max-width: 100%;
+            }
+        }
+
     }
 }
 
@@ -715,6 +728,85 @@ footer{
                 width: 53%;
                 float: left;
                 padding: 0 5% 0 12%;
+            }
+        }
+        .tech{
+            h3{
+                width: 30%;
+                float: left;
+            }
+            .icons{
+                float: left;
+                width: 70%;
+            }
+
+            h4{
+                .font-size(21px);
+            }
+
+            .dev{
+                h4{
+                    font-family: @sansFontFamily;
+                    font-style: normal;
+                    .font-size(20px);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .prices{
+            .intro{
+                margin: 0 15% 0 31%;
+            }
+            ul{
+                margin: 100px 0  0 10%;
+            }
+            li{
+                width: 20%;
+            }
+        }
+
+        .challenges{
+            .challenge{
+                margin-top: 50px;
+                p{
+                    color: @black70;
+                    width: 15%;
+                }   
+            }
+            .challenge1{
+                margin-top: 0;
+                p{
+                    float: left;
+                }
+                img{
+                    float: right;
+                }
+            }
+
+            .challenge2{
+                p{
+                    float: left;
+                    margin-left: 200px;
+                }
+            }
+
+            .challenge3{
+                p{
+                    float: right;
+                    width: 31%;
+                }
+            }
+
+            .challenge4{
+                p{
+                    float: right;
+                    width: 31%;
+                }
+                img{
+                    float: right;
+                    margin-right: 37px;
+                }
             }
         }
     }

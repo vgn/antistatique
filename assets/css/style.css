@@ -533,12 +533,6 @@ nav a {
 .portfolio .section {
   padding: 25px 0;
 }
-.portfolio .icons h4 {
-  text-transform: uppercase;
-}
-.portfolio .challenge > img {
-  max-width: 100%;
-}
 .portfolio .tech ul {
   list-style-type: none;
   margin: 0;
@@ -574,10 +568,27 @@ nav a {
   float: left;
   width: 33%;
 }
+.portfolio .prices li h4 {
+  font-size: 21px;
+  font-size: 2.1rem;
+  margin: 0 10px 5px 0;
+}
 .portfolio .prices li div {
   padding: 5px;
 }
 .portfolio .prices li div > img {
+  max-width: 100%;
+}
+.portfolio .challenges {
+  clear: both;
+}
+.portfolio .challenges span {
+  margin-left: -20px;
+}
+.portfolio .challenges h3 {
+  margin-bottom: 30px;
+}
+.portfolio .challenges .challenge > img {
   max-width: 100%;
 }
 footer .vcard strong,
@@ -1197,6 +1208,66 @@ footer {
     width: 53%;
     float: left;
     padding: 0 5% 0 12%;
+  }
+  .portfolio .tech h3 {
+    width: 30%;
+    float: left;
+  }
+  .portfolio .tech .icons {
+    float: left;
+    width: 70%;
+  }
+  .portfolio .tech h4 {
+    font-size: 21px;
+    font-size: 2.1rem;
+  }
+  .portfolio .tech .dev h4 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .portfolio .prices .intro {
+    margin: 0 15% 0 31%;
+  }
+  .portfolio .prices ul {
+    margin: 100px 0  0 10%;
+  }
+  .portfolio .prices li {
+    width: 20%;
+  }
+  .portfolio .challenges .challenge {
+    margin-top: 50px;
+  }
+  .portfolio .challenges .challenge p {
+    color: #505050;
+    width: 15%;
+  }
+  .portfolio .challenges .challenge1 {
+    margin-top: 0;
+  }
+  .portfolio .challenges .challenge1 p {
+    float: left;
+  }
+  .portfolio .challenges .challenge1 img {
+    float: right;
+  }
+  .portfolio .challenges .challenge2 p {
+    float: left;
+    margin-left: 200px;
+  }
+  .portfolio .challenges .challenge3 p {
+    float: right;
+    width: 31%;
+  }
+  .portfolio .challenges .challenge4 p {
+    float: right;
+    width: 31%;
+  }
+  .portfolio .challenges .challenge4 img {
+    float: right;
+    margin-right: 37px;
   }
   .member {
     width: 22%;
