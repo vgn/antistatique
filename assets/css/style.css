@@ -454,6 +454,45 @@ nav a {
 .works #rdr {
   background-image: url(../img/portfolio-rdr.png);
 }
+.icon {
+  background: url('../img/ico/ico_sprite.png') no-repeat top left;
+  display: block;
+}
+.ico_agile {
+  background-position: 0 0;
+  width: 140px;
+  height: 140px;
+}
+.ico_github {
+  background-position: 0 -190px;
+  width: 140px;
+  height: 140px;
+}
+.ico_html5 {
+  background-position: 0 -380px;
+  width: 140px;
+  height: 140px;
+}
+.ico_magento {
+  background-position: 0 -570px;
+  width: 140px;
+  height: 140px;
+}
+.ico_rebranding {
+  background-position: 0 -760px;
+  width: 140px;
+  height: 140px;
+}
+.ico_responsive {
+  background-position: 0 -950px;
+  width: 140px;
+  height: 140px;
+}
+.ico_userTest {
+  background-position: 0 -1140px;
+  width: 140px;
+  height: 131px;
+}
 #tweet {
   margin: 1em 0;
   padding: 1.4em;
@@ -1370,5 +1409,43 @@ footer {
   }
   .works #rdr {
     background-image: url(../img/portfolio-rdr@2x.png);
+  }
+  .icon {
+    background: url('../img/ico/ico_sprite@2x.png') no-repeat top left;
+  }
+  .ico_agile {
+    background-position: 0 0;
+    width: 280px;
+    height: 280px;
+  }
+  .ico_github {
+    background-position: 0 -330px;
+    width: 280px;
+    height: 280px;
+  }
+  .ico_html5 {
+    background-position: 0 -660px;
+    width: 280px;
+    height: 280px;
+  }
+  .ico_magento {
+    background-position: 0 -990px;
+    width: 280px;
+    height: 280px;
+  }
+  .ico_rebranding {
+    background-position: 0 -1320px;
+    width: 280px;
+    height: 280px;
+  }
+  .ico_responsive {
+    background-position: 0 -1650px;
+    width: 280px;
+    height: 280px;
+  }
+  .ico_userTest {
+    background-position: -330px 0;
+    width: 280px;
+    height: 262px;
   }
 }
