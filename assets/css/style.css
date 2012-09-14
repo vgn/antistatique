@@ -507,7 +507,7 @@ nav a {
 }
 .icon {
   background: url('../img/ico/ico_sprite.png') no-repeat top left;
-  display: block;
+  display: none;
 }
 .ico_agile {
   background-position: 0 0;
@@ -906,6 +906,9 @@ footer {
     font-size: 14px;
     font-size: 1.4rem;
   }
+  .icon {
+    display: block;
+  }
   .title-separation span {
     display: block;
     width: 50px;
@@ -1296,6 +1299,9 @@ footer {
   section {
     margin: 10px auto;
     max-width: 1140px;
+  }
+  .icon {
+    display: block;
   }
   #baseline {
     margin: 70px auto 0;
