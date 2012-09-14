@@ -14,7 +14,7 @@ jQuery(function($) {
             function (response) {
                 if (200 === response.Status) {
                     $form.find('.alert-success').show();
-                    $('#newsletter_form').reset();
+                    $('input[type="text"]','#newsletter_form').val('');
                 } else {
                     $form.find('.alert-error').show();
                 }
@@ -33,18 +33,18 @@ jQuery(function($) {
             var tweetUrl;
             var dateUserFriendly;
             var linkify = function (text) {
-                var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-                return text.replace(exp,"<a href='$1'>$1</a>"); 
-            }
-            
+                var exp = /(\b(https?|ftp|file):\/\/[\-A-Z0-9+&@#\/%?=~_|!:,.;]*[\-A-Z0-9+&@#\/%=~_|])/ig;
+                return text.replace(exp,"<a href='$1'>$1</a>");
+            };
+
             var removeHashtag = function (text) {
                 return text.replace(twitterHashtag, '');
-            }
+            };
 
             if (results.length > 0) {
                 tweet = results[0];
                 tweetUrl = 'http://twitter.com/'+twitterUsername+'/status/'+tweet.id_str; // strange, no way to get it from response...
-                dateUserFriendly = moment(tweet.created_at).format('D MMM YYYY, H:m')
+                dateUserFriendly = moment(tweet.created_at).format('D MMM YYYY, H:m');
 
                 $('#tweet')
                     .find('blockquote').html('<span>«</span> ' + linkify(removeHashtag(tweet.text)) + ' <span>»</span>').attr('cite', tweetUrl).end()

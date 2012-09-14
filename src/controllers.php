@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-$localeRegExp = '(fr|en)'; 
+$localeRegExp = '(fr)'; 
 
 $app->get('/', function () use ($app) {
     $locale = 'fr';
@@ -21,7 +21,7 @@ $app->get('/', function () use ($app) {
 $app->get('/{_locale}/', function () use ($app) {
     try {
         $blog = $app['blog'];
-        $latestPost = $blog->item[0];
+        $latestPost = $blog ? $blog->item[0] : null;
     } catch (\Exception $e) {
         $latestPost = null;
     }

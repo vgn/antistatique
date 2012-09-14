@@ -17,7 +17,7 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
     $translator->addLoader('yaml', new YamlFileLoader());
 
     $translator->addResource('yaml', __DIR__.'/../locales/fr.yml', 'fr');
-    $translator->addResource('yaml', __DIR__.'/../locales/en.yml', 'en');
+    // $translator->addResource('yaml', __DIR__.'/../locales/en.yml', 'en');
 
     return $translator;
 }));
@@ -37,10 +37,14 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 }));
 
 $app['blog'] = $app->share(function($app) {
-    
-    Feed::$cacheDir = __DIR__ . '/../cache';
-    $feed = Feed::loadRss('http://antistatique.net/blog/feed/rss2');
-    
+
+    if (!$app['blog_feed']) {
+        return null;
+    }
+
+    Feed::$cacheDir = $app['blog_cache_dir'];
+    $feed = Feed::loadRss($app['blog_feed']);
+
     return $feed;
 });
 

@@ -1,18 +1,18 @@
 homepage: 
-    title: "Bonjour, nous sommes l'agence web Antistatique"
+    title: "Antistatique – Agence web à Lausanne – Suisse – PHP, Symfony, Magento, Mobile, e-Commerce, Web Design, Social Media"
     baseline: Nous sommes des artisans du web, lausannois, curieux et exigeants.
     contact: "Contactez-nous"
     work:
         title: Des réalisations soignées
         uchitomi:
             title: Uchitomi
-            baseline: Boutique en ligne sur mesure avec Magento
+            baseline: Boutique en ligne Magento sur-mesure 
         rdr:
             title: RDR Architectes
-            baseline: Boutique en ligne sur mesure avec Magento
+            baseline: Développement Symfony
         tehran:
             title: Tehran Watch
-            baseline: Boutique en ligne sur mesure avec Magento
+            baseline: Rebranding complet et Wordpress personnalisé
 
 antistatique:
     contact:
@@ -27,6 +27,7 @@ antistatique:
 
     blog:
         title: En direct du blog
+        link: Articles Antistatique
 
 team:
     title: L'équipe Antistatique
@@ -38,10 +39,11 @@ menu:
     home: Accueil
     team: L'Équipe
     blog: Blog
-    contact: contact
+    contact: Contact
 
 footer:
     newsletter:
-        submit: Inscription
+        submit: "S'abonner"
         error: "<strong>Aie !</strong> Une erreur est survenue, merci de vérifier votre adresse email et de réessayer."
         success: "<strong>Merci !</strong> Nous nous réjouissons de vous avoir parmis nos lecteurs."
+        text: "Pour recevoir l'essentiel de notre actualité, une fois par mois maximum, promis."

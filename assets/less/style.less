@@ -82,21 +82,10 @@ hr.meta-separation{
     padding: 0.6em 0.6em;
     background-color: @magenta;
     color: @white;
-/*    &:after {
-        content: " ►";
-    }*/
     &:hover{
         background-color: @vieuxRose;
         color: @white;
     }
-/*    &.btn-previous{
-        &:after {
-            content: "";
-        }
-        &:before {
-            content: ""
-        }
-    }*/
 }
 .alert{
     padding: 0.5em 0.4em;
@@ -527,7 +516,7 @@ footer{
             overflow: hidden;
         }
         &:hover .photo img{
-            /*margin-left: -10%;*/
+
         }
         .photo img{
             width: 110%;
@@ -732,4 +721,22 @@ footer{
         width: 22%;
     }
     @import "blog-desktop.less";
+}
+
+/* retinafy */
+@media (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (-webkit-min-device-pixel-ratio: 1.5),
+       (min-resolution: 1.5dppx) {
+    .works {
+        #uchitomi {
+            background-image: url(../img/portfolio-uchitomi@2x.png);
+        }
+        #tw {
+            background-image: url(../img/portfolio-tw@2x.png);
+        }
+        #rdr {
+            background-image: url(../img/portfolio-rdr@2x.png);
+        }
+    }
 }
