@@ -45,7 +45,11 @@ _gaq.push(['_trackPageview']);
 
     <header class="topbar">
         <section>
-            <a class="brand" href="{{ path('homepage_i18n') }}"><img src="{{ app.request.basepath }}/assets/img/logo-antistatique.png" width="175" height="35"></a>
+            <a class="brand" href="{{ path('homepage_i18n') }}">
+                <object data='{{ app.request.basepath }}/assets/img/logo-antistatique-w.svg' style='height:35px; width:175px;' >
+                    <img alt="antistatique" src="{{ app.request.basepath }}/assets/img/logo-antistatique.png" width="175" height="35" />
+                </object>
+            </a>
             {% include '_menu.html.twig' %}
         </section>
     </header>
