@@ -48,6 +48,5 @@ To run the test suite, you need [composer](http://getcomposer.org) and [PHPUnit]
 To generate new CSS files
 
 ```bash
-    $ lessc assets/less/bootstrap.less assets/css/bootstrap.css
-    $ lessc assets/less/responsive.less assets/css/responsive.css
+    $ lessc assets/less/style.less assets/css/style.css
 ```
