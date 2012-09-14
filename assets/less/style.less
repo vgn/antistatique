@@ -108,6 +108,36 @@ hr.meta-separation{
     background-color: lighten(@red, 45%);
 }
 
+.social-links{
+    a{
+        display: block;
+        text-decoration: none;
+        line-height: 15px;
+        padding: 0.4em 0;
+        span{
+            display: block;
+            float: left;
+            width: 20px;
+            height: 15px;
+            margin-right: 0.7em;
+            background: url('../img/ico/ico_social_sprite.png') 0 0 no-repeat;
+        }
+
+        &.facebook span{ background-position: 0px -30px;}
+        &.facebook span{ background-position: 0px -30px;}
+        &.linkedin span{ background-position: 0px -60px;}
+        &.linkedin span{ background-position: 0px -60px;}
+        &.github span{ background-position: 0px -90px;}
+        &.github span{ background-position: 0px -90px;}
+        &.mail span{ background-position: 0px -120px;}
+        &.mail span{ background-position: 0px -120px;}
+        &.drupal span{ background-position: 0px -150px;}
+        &.drupal span{ background-position: 0px -150px;}
+        &.rss span{ background-position: 0px -360px;}
+        &.rss span{ background-position: 0px -360px;}
+    }
+}
+
 /* Mobile first approach */
 section{
     margin: 5px 10px;
