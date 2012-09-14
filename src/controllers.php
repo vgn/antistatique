@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-$localeRegExp = '(fr|en)'; 
+$localeRegExp = '(fr)'; 
 
 $app->get('/', function () use ($app) {
     $locale = 'fr';
