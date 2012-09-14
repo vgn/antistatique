@@ -305,7 +305,7 @@ a {
   color: #d40b6b;
 }
 a:hover {
-  color: #e68faf;
+  color: #b50a5d;
 }
 hr.title-separation {
   border: none;
@@ -321,12 +321,13 @@ hr.meta-separation {
 .btn {
   display: inline-block;
   text-decoration: none;
-  padding: 0.6em 0.6em;
+  padding: 0.6em 0.8em;
+  font-weight: bold;
   background-color: #d40b6b;
   color: #ffffff;
 }
 .btn:hover {
-  background-color: #e68faf;
+  background-color: #b50a5d;
   color: #ffffff;
 }
 .clear {
@@ -680,7 +681,7 @@ footer a {
 #nav-below {
   clear: both;
   margin: 30px auto;
-  border-top: 1px solid #333333;
+  border-top: 1px solid #a0a0a0;
   padding-top: 15px;
 }
 #nav-below a {
@@ -696,9 +697,17 @@ footer a {
   margin: 50px auto;
 }
 .blog article {
-  clear: both;
+  *zoom: 1;
   margin: 0 auto 0 auto;
-  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.blog article:before,
+.blog article:after {
+  display: table;
+  content: "";
+}
+.blog article:after {
+  clear: both;
 }
 .blog article img {
   clear: both;
@@ -789,13 +798,14 @@ footer {
 #comments input[type="submit"] {
   display: inline-block;
   text-decoration: none;
-  padding: 0.6em 0.6em;
+  padding: 0.6em 0.8em;
+  font-weight: bold;
   background-color: #d40b6b;
   color: #ffffff;
   border: none;
 }
 #comments input[type="submit"]:hover {
-  background-color: #e68faf;
+  background-color: #b50a5d;
   color: #ffffff;
 }
 #comments input[type="text"],
@@ -921,6 +931,7 @@ footer {
     clear: both;
     color: #e68faf;
     margin: 0 0 20px 0;
+    margin-right: 4em;
   }
   #baseline h1 a {
     color: #e68faf;
@@ -1222,7 +1233,7 @@ footer {
     margin: 70px auto 0;
   }
   #baseline h1 {
-    font-weight: bold;
+    font-weight: normal;
   }
   header.topbar .brand {
     margin-left: 0;

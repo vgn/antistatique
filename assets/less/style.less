@@ -7,6 +7,7 @@
 @black:                 #333333;
 @white:                 #ffffff;
 @magenta:               #d40b6b;
+@magentaHover:          #b50a5d;
 @vieuxRose:             #e68faf;
 @green:                 #30a530;
 @red:                   #a6191d;
@@ -60,7 +61,7 @@ p{
 a{
     color: @magenta;
     &:hover{
-        color: @vieuxRose;
+        color: @magentaHover;
     }
 }
 
@@ -80,11 +81,12 @@ hr.meta-separation{
 .btn{
     display: inline-block;
     text-decoration: none;
-    padding: 0.6em 0.6em;
+    padding: 0.6em 0.8em;
+    font-weight: bold;
     background-color: @magenta;
     color: @white;
     &:hover{
-        background-color: @vieuxRose;
+        background-color: @magentaHover;
         color: @white;
     }
 }
@@ -492,6 +494,7 @@ footer{
             clear: both;
             color: @vieuxRose;
             margin: 0 0 20px @textLeftMargin;
+            margin-right: 4em;
             a{
                 color: @vieuxRose;
                 &:hover{ color: @white;}
@@ -711,7 +714,7 @@ footer{
     #baseline{
         margin: 70px auto 0;
         h1{
-            font-weight: bold;
+            font-weight: normal;
         }
     }
     header.topbar{
