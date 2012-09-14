@@ -636,6 +636,12 @@ nav a {
 .portfolio .challenges .challenge > img {
   max-width: 100%;
 }
+.portfolio.tehran .title-image {
+  background-image: url('../img/tehran/tw1.jpg');
+}
+.portfolio.tehran img {
+  max-width: 100%;
+}
 footer .vcard strong,
 footer .vcard .locality,
 footer .vcard .tel,
@@ -1338,6 +1344,7 @@ footer {
   .portfolio .design h3 {
     font-size: 24px;
     font-size: 2.4rem;
+    margin-top: 120px;
   }
   .portfolio .design article {
     float: left;
@@ -1369,6 +1376,59 @@ footer {
     -webkit-column-gap: 32px;
     column-count: 3;
     column-gap: 32px;
+  }
+  .portfolio.tehran .tech-summary {
+    margin-left: 22%;
+  }
+  .portfolio.tehran .tech-summary .text {
+    width: 32%;
+    float: left;
+    margin-left: 2%;
+  }
+  .portfolio.tehran .tech-summary .image {
+    width: 32%;
+    float: left;
+  }
+  .portfolio.tehran .tech-summary .image > img {
+    max-width: 100%;
+  }
+  .portfolio.tehran .logo {
+    width: 47%;
+    margin: 50px auto;
+  }
+  .portfolio.tehran .logo > img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .portfolio.tehran .artisan p.lead {
+    width: 64%;
+  }
+  .portfolio.tehran .artisan p.text {
+    display: block;
+    width: 32%;
+    margin-left: 34%;
+  }
+  .portfolio.tehran .story {
+    padding: 50px 0;
+  }
+  .portfolio.tehran .story .year {
+    width: 66%;
+    float: left;
+  }
+  .portfolio.tehran .story img {
+    max-width: 100%;
+  }
+  .portfolio.tehran .story div.text {
+    margin-left: 2%;
+    width: 32%;
+    float: left;
+  }
+  .portfolio.tehran .website {
+    margin-left: 17%;
+    width: 47%;
+  }
+  .portfolio.tehran .website img {
+    max-width: 100%;
   }
   .member {
     width: 22%;
