@@ -13,3 +13,4 @@ $app->register(new MonologServiceProvider(), array(
 ));
 
 $app['analytics'] = null;
+$app['blog.cache_dir'] = null;

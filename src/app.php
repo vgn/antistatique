@@ -37,10 +37,14 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 }));
 
 $app['blog'] = $app->share(function($app) {
-    
-    Feed::$cacheDir = __DIR__ . '/../cache';
-    $feed = Feed::loadRss('http://antistatique.net/blog/feed/rss2');
-    
+
+    if (!$app['blog.feed']) {
+        return null;
+    }
+
+    Feed::$cacheDir = $app['blog.cache_dir'];
+    $feed = Feed::loadRss($app['blog.feed']);
+
     return $feed;
 });
 
