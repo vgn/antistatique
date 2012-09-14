@@ -87,6 +87,11 @@ hr.meta-separation{
         color: @white;
     }
 }
+
+.clear{
+    .clearfix();
+}
+
 .alert{
     padding: 0.5em 0.4em;
     margin: 0.4em 0;
@@ -597,18 +602,6 @@ footer{
 
     .portfolio{
 
-        .lead{
-
-        }
-
-        .icons{
-
-        }
-        .challenge{
-
-        }
-
-
         h3.magenta-sep {
             span{
                 width: 170px;
@@ -704,15 +697,20 @@ footer{
     }
 
     .portfolio{
-        .summary, .solution{
+        .head{
+            clear: both;
+        }
+        .summary, .solutions{
             float: left;
             width: 50%;
             h3{
-                width: 15%;
+                width: 30%;
                 float: left;
             }
             .text{
-                width: 35%;
+                width: 66%;
+                float: left;
+                padding: 2%;
             }
         }
     }
