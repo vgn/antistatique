@@ -21,14 +21,14 @@ Redirect permanent /fr/solutions.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/webmarketing.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/iphone.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/gis.html  http://www.antistatique.net/fr/
-Redirect permanent /fr/contact.html  http://www.antistatique.net/fr/
+Redirect permanent /fr/contact.html  http://www.antistatique.net/fr/contact
 Redirect permanent /fr/portfolio/filter/flash  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/webdesign  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/newsletter  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/website  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/webapp  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/webmarketing  http://www.antistatique.net/fr/
-Redirect permanent /fr/portfolio/filter/ecommerce  http://www.antistatique.net/fr/
+Redirect permanent /fr/portfolio/filter/ecommerce  http://www.antistatique.net/fr/portfolio/uchitomi
 Redirect permanent /fr/portfolio/filter/cms  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/graphisme  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/foncia  http://www.antistatique.net/fr/
@@ -40,7 +40,7 @@ Redirect permanent /fr/portfolio/filter/symfony  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/lesmiserables.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/eshopboky.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/uchitomi.html  http://www.antistatique.net/fr/portfolio/uchitomi
-Redirect permanent /fr/portfolio/rdr.html  http://www.antistatique.net/fr/portfolio/rdr
+Redirect permanent /fr/portfolio/rdr.html  http://www.antistatique.net/fr/portfolio/richter
 Redirect permanent /fr/portfolio/noemie.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/whaa.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/clos_de_laiglon.html  http://www.antistatique.net/fr/
@@ -72,7 +72,7 @@ Redirect permanent /fr/portfolio/helsana.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio.html?page=2  http://www.antistatique.net/fr/
 Redirect permanent /fr/stream.html?p=1  http://www.antistatique.net/fr/
 Redirect permanent /iphone.html  http://www.antistatique.net/fr/
-Redirect permanent /iphone/contact  http://www.antistatique.net/fr/
+Redirect permanent /iphone/contact  http://www.antistatique.net/fr/contact
 Redirect permanent /fr/portfolio/ee-oron.html  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/filter/aton-service  http://www.antistatique.net/fr/
 Redirect permanent /fr/portfolio/carrard-associes.html  http://www.antistatique.net/fr/
