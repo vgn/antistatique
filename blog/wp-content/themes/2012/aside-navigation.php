@@ -4,7 +4,7 @@
             <a href="<?php echo esc_url( home_url() ); ?>/../">Accueil</a>
         </li>
         <li>
-            <a href="<?php echo esc_url( home_url() ); ?>/../fr/team">L'Équipe</a>
+            <a href="<?php echo esc_url( home_url() ); ?>/../fr/team">L'Agence</a>
         </li>
         <li class="active">
             <a href="/blog">Blog</a>

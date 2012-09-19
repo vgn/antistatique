@@ -73,6 +73,16 @@ _gaq.push(['_trackPageview']);
 
 </script>
 
+<!--[if lt IE 9]>
+    <script src="<?php echo esc_url( home_url() ); ?>/../assets/js/html5.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+    <script src="<?php echo esc_url( home_url() ); ?>/../assets/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+    <script src="<?php echo esc_url( home_url() ); ?>/../assets/js/respond.min.js"></script>
+<![endif]-->
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -92,7 +102,7 @@ _gaq.push(['_trackPageview']);
         <section>
             <h1 class="title-separation magenta-sep">
                 <span></span>
-                 <a href="/blog" class="page-title-link" title="Blog Frontpage">Le Blog</a>
+                 <a href="/blog" class="page-title-link" title="Blog Frontpage">Blog</a>
             </h1>
         </section>
     </div>
