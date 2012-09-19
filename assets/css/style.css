@@ -318,6 +318,10 @@ hr.title-separation {
 hr.meta-separation {
   display: none;
 }
+blockquote {
+  font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
+  padding: 1em;
+}
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -1465,6 +1469,34 @@ footer {
     -webkit-column-gap: 32px;
     column-count: 2;
     column-gap: 32px;
+  }
+  .portfolio .design .design-icons {
+    clear: both;
+  }
+  .portfolio .design .design-icon {
+    background-image: url(../img/uchitomi/uchitomi-sprite.jpg);
+    width: 12%;
+    margin: 20px 2.333333334%;
+    height: 100px;
+    float: left;
+  }
+  .portfolio .design .design-icon.panda {
+    background-position: 50% 0;
+  }
+  .portfolio .design .design-icon.samurai {
+    background-position: 50% -100px;
+  }
+  .portfolio .design .design-icon.monkey {
+    background-position: 50% -200px;
+  }
+  .portfolio .design .design-icon.pig {
+    background-position: 50% -300px;
+  }
+  .portfolio .design .design-icon.fish {
+    background-position: 50% -400px;
+  }
+  .portfolio .design .design-icon.whale {
+    background-position: 50% -500px;
   }
   .portfolio .newsletter {
     margin: 100px 0;
