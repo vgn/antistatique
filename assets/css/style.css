@@ -601,8 +601,12 @@ nav a {
   float: left;
   width: 50%;
 }
+.member .photo img {
+  max-width: 100%;
+}
 .member:hover {
-  color: #d40b6b;
+  /*        color: @magenta;*/
+
 }
 .member h4 {
   margin-top: 0.3em;
@@ -1109,8 +1113,9 @@ footer {
     background-position: 50% 0;
   }
   #connect {
-    background: url('../img/logo-a.png') 100% 100% no-repeat;
-    min-height: 410px;
+    /*background: url('../img/logo-a.png') 100% 100% no-repeat; 
+                  min-height: 410px;*/
+  
   }
   #tweet {
     background-color: transparent;
