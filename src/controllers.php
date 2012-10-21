@@ -34,6 +34,13 @@ $app->get('/{_locale}/', function () use ($app) {
 ->assert('_locale', $localeRegExp);
 ;
 
+$app->get('/{_locale}/portfolio', function () use ($app) {
+    return $app['twig']->render('portfolio.html.twig', array());
+})
+->bind('portfolio')
+->assert('_locale', $localeRegExp);
+;
+
 $app->get('/{_locale}/team', function () use ($app) {
     return $app['twig']->render('team.html.twig', array());
 })
