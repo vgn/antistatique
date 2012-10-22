@@ -13,6 +13,7 @@
 @red:                   #a6191d;
 @black80:               #cccccc;
 @black70:               #505050;
+@black40:               #666666;
 @grey:                  #a0a0a0;
 @textLeftMargin:        0;
 
@@ -64,6 +65,12 @@ a{
         color: @magentaHover;
     }
 }
+ul{
+  list-style: square outside ;
+}
+li{
+  margin-bottom: 0.4em;
+}
 
 hr.title-separation{
     border: none;
@@ -79,8 +86,16 @@ hr.meta-separation{
 }
 
 blockquote{
+    background-color: rgba(240, 240, 240, 0.8);
     font-family: @serifFontFamily; 
-    padding: 1em;
+    color: @black40;
+    padding: 0.6em 1.8em;
+    margin: 2em 0;
+    p{
+      padding: 0;
+      margin: 0;
+      font-size: 1.6em;
+    }
 }
 
 .btn{
@@ -697,7 +712,6 @@ footer{
                 min-height: 410px;*/
     }
     #tweet{
-        background-color: transparent;
         blockquote{
             .font-size(24px);
         }

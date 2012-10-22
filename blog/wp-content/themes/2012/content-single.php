@@ -27,7 +27,10 @@
     </div>
     <?php endif; ?>
     <div class="entry-content">
-        <?php the_content(); ?>
+        <div class="article-content">
+            <?php the_content(); ?>
+        </div>
+
         <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'as2012' ) . '</span>', 'after' => '</div>' ) ); ?>
         <hr class="post-separation">
     </div><!-- .entry-content -->
