@@ -29,6 +29,9 @@ antistatique:
         title: En direct du blog
         link: Articles Antistatique
 
+portfolio:
+    title: Portfolio
+
 team:
     title: L'équipe Antistatique
 
