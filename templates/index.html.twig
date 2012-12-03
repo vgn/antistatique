@@ -88,7 +88,7 @@
                 Sur 
                 <a class="twitter-link" href="http://twitter.com/{{ app.twitter.username }}" title="@{{ app.twitter.username }}">twitter</a>
                  le 
-                <time datetime="2012-08-23" pubdate="pubdate">
+                <time datetime="2012-08-23">
                     <a href="http://twitter.com/antistatique/status/238651013966479361">
                         23 Août 2012
                     </a>
@@ -102,7 +102,7 @@
                     <span></span>{{ 'antistatique.blog.title' | trans }}
                 </h3>
                 {% if latestBlogpost %}
-                <time datetime="{{ latestBlogpost.timestamp|date('Y-m-d') }}" pubdate="pubdate">{{ latestBlogpost.timestamp|date('d M Y') }}</time>
+                <time datetime="{{ latestBlogpost.timestamp|date('Y-m-d') }}">{{ latestBlogpost.timestamp|date('d M Y') }}</time>
                 <p>{{ latestBlogpost.title }}</p>
                 {% endif %}
                 <a href="/blog" class="action-blog">{{ 'antistatique.blog.link' | trans }}</a>
