@@ -8,7 +8,7 @@
 @white:                 #ffffff;
 @magenta:               #d40b6b;
 @magentaHover:          #b50a5d;
-@vieuxRose:             #e68faf;
+@vieuxRose:             #eed2da;
 @green:                 #30a530;
 @red:                   #a6191d;
 @black80:               #cccccc;
@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
     font-weight: normal;
     line-height: 1.3em;
+    .text_shadow(1px,1px,2px,rgba(44,44,44,0.1));
 }
 h1{ .font-size(30px); }
 h2{ .font-size(28px); }
@@ -189,6 +190,9 @@ nav{
         display: inline-block;
         padding: 0.4em 0.8em 0.4em 0.2em;
     }
+}
+header nav ul li:first-child{
+    display: none;
 }
 
 // Baseline
@@ -585,6 +589,9 @@ footer{
         nav{
             float: right;
             margin-right: 20px;
+            ul li:first-child{
+                display: inline;
+            }
         }
     }
     #baseline{

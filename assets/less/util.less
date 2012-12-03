@@ -24,6 +24,9 @@
     clear: both;
   }
 }
+.text_shadow (@left:0,@right:0, @blur:4px, @color:""){
+    text-shadow: @left @right @blur @color;
+}
 .transition(@timing: 1.0s){
   -webkit-transition:all @timing ease-in-out;
   -moz-transition:all @timing ease-in-out;

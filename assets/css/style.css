@@ -261,6 +261,7 @@ h6 {
   font-style: italic;
   font-weight: normal;
   line-height: 1.3em;
+  text-shadow: 1px 1px 2px rgba(44, 44, 44, 0.1);
 }
 h1 {
   font-size: 30px;
@@ -453,6 +454,9 @@ nav li {
 nav a {
   display: inline-block;
   padding: 0.4em 0.8em 0.4em 0.2em;
+}
+header nav ul li:first-child {
+  display: none;
 }
 #baseline {
   margin-bottom: 1em;
@@ -1025,18 +1029,21 @@ footer {
     float: right;
     margin-right: 20px;
   }
+  header.topbar nav ul li:first-child {
+    display: inline;
+  }
   #baseline {
     background-color: #d40b6b;
     margin: 70px 0 0;
   }
   #baseline h1 {
     clear: both;
-    color: #e68faf;
+    color: #eed2da;
     margin: 0 0 20px 0;
     margin-right: 4em;
   }
   #baseline h1 a {
-    color: #e68faf;
+    color: #eed2da;
   }
   #baseline h1 a:hover {
     color: #ffffff;
