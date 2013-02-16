@@ -1,4 +1,5 @@
 /vendor/
 /cache/
+composer.phar
 antistatique.log
 .DS_Store
