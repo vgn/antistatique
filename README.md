@@ -1,5 +1,6 @@
 # Antistatique website v2012
 
+It's a [Silex](http://silex.sensiolabs.org/) powered website.
 
 
 # Installation
@@ -20,26 +21,31 @@
 
 ## Install vendors
 
+We use [Composer](http://getcomposer.org) to manage vendors and dependencies.
+First [install it](http://getcomposer.org/download/), if it is not already done.
+
+Then:
 ```bash
-    $ php composer.phar install
+    $ composer install
 ```
 
 # Update project
 
 Sometimes, after a pull, you need to update the project dependency:
 
-    $ php composer.phar install
+    $ composer install
 
-clear cache (Twig templates):
+clear cache (Twig templates and RSS reader):
 
     $ rm -r cache/*
+
 
 # Tests
 
 To run the test suite, you need [composer](http://getcomposer.org) and [PHPUnit](https://github.com/sebastianbergmann/phpunit).
 
 ```bash
-    $ php composer.phar install --dev
+    $ composer install --dev
     $ phpunit
 ```
 
