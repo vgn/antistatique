@@ -47,7 +47,7 @@ jQuery(function($) {
                 dateUserFriendly = moment(tweet.created_at).format('D MMM YYYY, H:m');
 
                 $('#tweet')
-                    .find('blockquote').html('<span>«</span> ' + linkify(removeHashtag(tweet.text)) + ' <span>»</span>').attr('cite', tweetUrl).end()
+                    .find('blockquote p').html('<span>«</span> ' + linkify(removeHashtag(tweet.text)) + ' <span>»</span>').attr('cite', tweetUrl).end()
                     .find('time').attr('datetime', tweet.created_at).end()
                     .find('time a').html(dateUserFriendly).attr('href', tweetUrl)
                 ;
