@@ -13,7 +13,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ app.request.basepath }}/favicon.ico" />
 
-    <link href="{{ app.request.basepath }}/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="{{ app.request.basepath }}/assets/css/antistatique.css" rel="stylesheet" type="text/css" />
 
 <!--[if lt IE 9]>
     <script src="{{ app.request.basepath }}/assets/js/html5.js"></script>
@@ -60,9 +60,7 @@ _gaq.push(['_trackPageview']);
 
     {% block baseline %}<div class="baseline-space"></div>{% endblock %}
 
-    <section id="content">
-        {% block content %}{% endblock %}
-    </section>
+    {% block content %}{% endblock %}
 
     <footer>
         <section>

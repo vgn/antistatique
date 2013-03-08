@@ -2,92 +2,80 @@
 
 {% block title %}Cas Tehran Watch - Design et rebranding (web et print), Antistatique{% endblock %}
 
-
 {% block body_class %}{{ parent() }} tehran{% endblock %}
+
+{% block previous_work %}{{ 'homepage.work.rdr.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'richter' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.uchitomi.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'uchitomi' }) }}{% endblock %}
 
 {% block baseline %}
 <div class="baseline-space"></div>
-<div class="page-title title-image">
-    <section>
-        <h1 class="magenta-sep">
-            <span></span>
-            Tehran Watch
-        </h1>
-    </section>
+
+{{ parent() }}
+
+<div class="page-title title-image"  style="background-image: url('/assets/img/tehran/tw1.jpg')">
+  <section>
+    <h1 class="magenta-sep">
+      <span></span>
+      Tehran Watch
+    </h1>
+  </section>
 </div>
 {% endblock %}
 
 {% block content %}
-
-{% block summary %}
-<div class="head">
-    <div class="summary">
-        <h3 class="magenta-sep">
-            <span></span>
-            Brief
+<section>
+  <div class="page-content">
+    <div class="isolated">
+      <aside>
+        <h3>
+          Brief
         </h3>
-        <div class="text">
-            <p class="lead">Le premier importateur de montres suisses en Iran est une entreprise familiale depuis 1901. La quatrième génération de la famille Djavaheri souhaitait renforcer son image, en développant une identité de marque qui leur soit propre : Tehran Watch.</p>
-        </div>
-    </div>
-    {% endblock %}
-
-    {% block solutions %}
-    <div class="solutions">
-        <h3 class="magenta-sep">
-            <span></span>
-            Solution
+      </aside>
+      <p>
+        Le premier importateur de montres suisses en Iran est une entreprise familiale depuis 1901. La quatrième génération de la famille Djavaheri souhaitait renforcer son image, en développant une identité de marque qui leur soit propre : Tehran Watch.
+      </p>
+      <aside>
+        <h3>
+          Solution
         </h3>
-        <div class="text">
-            <p class="lead">Design et rebranding complet, faisant le lien entre des produits "Swiss Made" et l'identité iranienne forte. Déclinaison web et print.
-            </p>
-            <a href="http://www.tehranwatch.com" class="btn">Visiter le site de Tehran Watch</a>
-        </div>
+      </aside>
+      <p>
+        Design et rebranding complet, faisant le lien entre des produits "Swiss Made" et l'identité iranienne forte. Déclinaison web et print.
+      </p>
+      <a href="http://www.tehranwatch.com" class="btn">Visiter le site de Tehran Watch</a>
     </div>
-    <div class="clear"></div>
-</div>
-{% endblock %}
 
-<div class="tech-summary">
     <h3>L'occasion nous a été donnée de créer de A à Z leur identité visuelle.</h3>
-    <div class="image">
-        <img src="/assets/img/tehran/tw3.jpg" alt="">
-    </div>
-    <div class="text">
-        <p>Historiquement, l'entreprise a porté les noms des héritiers successifs, les boutiques et les marques de montres suisses distribuées se multipliant.</p>
-        <p>La génération actuelle désirait unifier l'identité de son réseau de boutiques et capitaliser sur sa position de distributeur leader sur le marché iranien pour renforcer sa réputation. De telles circonstances sont rares, et ce rebranding complet fut un régal.</p>
-    </div>
-    <div class="clear"></div>
-</div>
 
-<div class="logo">
-    <img src="/assets/img/tehran/logo_tw.jpg" alt="">
-</div>
+    <img src="/assets/img/tehran/tw3.jpg" alt="">
 
-<div class="artisan">
-    <h2>
-        Nous aimons les gens qui aiment ce qu'ils font.
-    </h2>
-    <p class="lead">
-        Nous aimons les artisans, ceux qui par leur expérience et la qualité de leur travail, ont prouvé sur plusieurs générations leur savoir-faire.
+
+    <p>
+      Historiquement, l'entreprise a porté les noms des héritiers successifs, les boutiques et les marques de montres suisses distribuées se multipliant.
     </p>
-    <p class="text">Quand ceux-là mêmes nous accordent leur confiance pour nous occuper de la réputation de leur marque, c'est toujours un honneur.</p>
-</div>
+    <p>
+      La génération actuelle désirait unifier l'identité de son réseau de boutiques et capitaliser sur sa position de distributeur leader sur le marché iranien pour renforcer sa réputation. De telles circonstances sont rares, et ce rebranding complet fut un régal.
+    </p>
 
-<img src="/assets/img/tehran/tw2.jpg" alt="">
+    <h2>
+      Nous aimons les gens qui aiment ce qu'ils font.
+    </h2>
+    <aside>
+      <p> Nous aimons les artisans, ceux qui par leur expérience et la qualité de leur travail, ont prouvé sur plusieurs générations leur savoir-faire.</p>
 
-<div class="story">
-    <div class="year"><img src="/assets/img/tehran/1901.png" alt=""></div>
-    <div class="text">
-        <p>Premier importateur de montres suisses de luxe en Iran certes. Mais Tehran Watch a un autre atout majeur, qui justifie cette qualification d'artisans : ils disposent également d'un Service Après-Vente d'horlogers locaux hautement qualifiés, formés régulièrement en Suisse sur les nouveaux modèles. Ils portent donc fièrement leur "since 1901". <strong>L'histoire de Tehran Watch, c'est avant tout celle-là.</strong></p>
-    </div>
-    <div class="clear"></div>
-</div>
+    </aside>
+    
+    <img src="/assets/img/tehran/tw2.jpg" alt="">
 
-<div class="website">
+    <p>Quand ceux-là mêmes nous accordent leur confiance pour nous occuper de la réputation de leur marque, c'est toujours un honneur.</p>
+
+    <p>Premier importateur de montres suisses de luxe en Iran certes. Mais Tehran Watch a un autre atout majeur, qui justifie cette qualification d'artisans : ils disposent également d'un Service Après-Vente d'horlogers locaux hautement qualifiés, formés régulièrement en Suisse sur les nouveaux modèles. Ils portent donc fièrement leur "since 1901". <strong>L'histoire de Tehran Watch, c'est avant tout celle-là.</strong></p>
     <h3>En ce qui concerne le site web plus précisément</h3>
     <p>il est basé sur un WordPress dont le template est complètement personnalisé. Le site est entièrement responsive.</p>
     <img src="/assets/img/tehran/tw4.jpg" alt="">
-</div>
+  </div>
+</section>
 
 {% endblock %}
