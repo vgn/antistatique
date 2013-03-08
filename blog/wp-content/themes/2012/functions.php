@@ -60,55 +60,6 @@ function as2012_setup() {
 }
 endif; // as2012_setup
 
-/**
- * Sets the post excerpt length to 40 words.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- */
-function as2012_excerpt_length( $length ) {
-    return 40;
-}
-add_filter( 'excerpt_length', 'as2012_excerpt_length' );
-
-function new_excerpt_more() {
-    global $post;
-    return '<br><a class="btn" href="'. get_permalink($post->ID) . '">Lire la suite</a>';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
-
-/**
- * Returns a "Continue Reading" link for excerpts
- */
-function as2012_continue_reading_link() {
-    return new_excerpt_more();
-}
-
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and as2012_continue_reading_link().
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- */
-function as2012_auto_excerpt_more( $more ) {
-    return ' &hellip;' . as2012_continue_reading_link();
-}
-add_filter( 'excerpt_more', 'as2012_auto_excerpt_more' );
-
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- */
-function as2012_custom_excerpt_more( $output ) {
-    if ( has_excerpt() && ! is_attachment() ) {
-        $output .= as2012_continue_reading_link();
-    }
-    return $output;
-}
-add_filter( 'get_the_excerpt', 'as2012_custom_excerpt_more' );
-
 
 
 if ( ! function_exists( 'as2012_content_nav' ) ) :
@@ -119,10 +70,16 @@ function as2012_content_nav( $nav_id ) {
     global $wp_query;
 
     if ( $wp_query->max_num_pages > 1 ) : ?>
-        <nav id="<?php echo $nav_id; ?>">
-            <div class="nav-previous"><?php next_posts_link( __( 'Page précédente', 'antistatique' ) ); ?></div>
-            <div class="nav-next"><?php previous_posts_link( __( 'Prochaine page', 'antistatique' ) ); ?></div>
-        </nav><!-- #nav-above -->
+            <section>
+        <nav class="page-navigation bottom">
+          <span class="previous">
+            <?php next_posts_link( __( 'Articles précédents', 'antistatique' ) ); ?>
+          </span>
+          <span class="next">
+            <?php previous_posts_link( __( 'Articles suivants', 'antistatique' ) ); ?>
+          </span>
+        </nav>
+    </section>
     <?php endif;
 }
 endif; // as2012_content_nav
@@ -218,7 +175,7 @@ if ( ! function_exists( 'as2012_posted_on' ) ) :
  * @since Twenty Eleven 1.0
  */
 function antistatique_posted_on() {
-    printf( __( '<h3><span class="sep"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></h3><h3><span class="author vcard">Ecrit par <a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span><h3>', 'as2012' ),
+    printf( __( '<h5><span class="sep"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time> – <span class="author vcard">Ecrit par <a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span><h5>', 'as2012' ),
         esc_url( get_permalink() ),
         esc_attr( get_the_time() ),
         esc_attr( get_the_date( 'c' ) ),

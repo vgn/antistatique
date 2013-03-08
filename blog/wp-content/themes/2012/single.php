@@ -9,18 +9,30 @@
 
 get_header(); ?>
 
-        <div id="primary">
-            <div id="content" role="main">
 
-                <?php while ( have_posts() ) : the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'content', 'single' ); ?>
+	<?php get_template_part( 'content', 'single' ); ?>
 
-                    <?php comments_template( '', true ); ?>
+	<section>
+		<article>
+			<?php comments_template( '', true ); ?>
+		</article>
+	</section>
 
-                <?php endwhile; // end of the loop. ?>
+	<section>
+		<nav class="page-navigation bottom">
+			<span class="previous">
+				<?php previous_post_link('%link','%title'); ?>
+			</span>
+			<span class="next">
+				<?php next_post_link('%link','%title'); ?>
+			</span>
+		</nav>
+	</section>
 
-            </div><!-- #content -->
-        </div><!-- #primary -->
+<?php endwhile; // end of the loop. ?>
+
+
 
 <?php get_footer(); ?>
