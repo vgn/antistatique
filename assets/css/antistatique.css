@@ -1287,11 +1287,3 @@ hr.meta-separation {
     background-position: 10% 0;
   }
 }
-/*// To remove !
-@import "blog.less";
-@media (min-width: @tabletBreakPoint){
-  @import "blog-tablet.less";
-}
-@media (min-width: @bigBreakPoint){
-  @import "blog-desktop.less";
-}*/
