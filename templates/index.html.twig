@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block content %}
-
+<section id="content">
     <div id="work">
         <h3 class="title-separation">
             <span></span>
@@ -74,7 +74,7 @@
                     {{ 'antistatique.mission.title' | trans }}
                 </h1>
                 <p>{{ 'antistatique.mission.description' | trans }}</p>
-                <a href="{{ path('contact') }}" class="btn">{{ 'antistatique.mission.link' | trans }}</a>
+                <a href="{{ path('team') }}" class="btn">{{ 'antistatique.mission.link' | trans }}</a>
             </article>
         </div>
     </div>
@@ -82,18 +82,18 @@
     <div id="connect">
         <div id="tweet" data-twitter-username="{{ app.twitter.username }}" data-twitter-hashtag="{{ app.twitter.hashtag }}">
             <blockquote cite="http://twitter.com/{{ app.twitter.username }}">
-                {{ 'antistatique.loading' | trans }}
+                <p>{{ 'antistatique.loading' | trans }}</p>
+                <footer>
+                    Sur 
+                    <a class="twitter-link" href="http://twitter.com/{{ app.twitter.username }}" title="@{{ app.twitter.username }}">twitter</a>
+                     le 
+                    <time datetime="2012-08-23">
+                        <a href="http://twitter.com/antistatique/status/238651013966479361">
+                            23 Août 2012
+                        </a>
+                    </time>
+                </footer>
             </blockquote>
-            <p>
-                Sur 
-                <a class="twitter-link" href="http://twitter.com/{{ app.twitter.username }}" title="@{{ app.twitter.username }}">twitter</a>
-                 le 
-                <time datetime="2012-08-23">
-                    <a href="http://twitter.com/antistatique/status/238651013966479361">
-                        23 Août 2012
-                    </a>
-                </time>
-            </p>
         </div>
 
         <div id="more">
@@ -111,5 +111,5 @@
         </div>
 
     </div>
-
+</section>
 {% endblock %}

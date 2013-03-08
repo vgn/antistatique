@@ -39,7 +39,7 @@
 
     ?></title>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo esc_url( home_url() ); ?>/../assets/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo esc_url( home_url() ); ?>/../assets/css/antistatique.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -86,23 +86,14 @@ _gaq.push(['_trackPageview']);
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed blog">
+  <div id="page" class="hfeed blog">
 
     <header class="topbar">
-        <section>
-            <a class="brand" href="/"><img src="<?php echo esc_url( home_url() ); ?>/../assets/img/logo-antistatique.png" width="175" height="35"></a>
-            <?php get_template_part( 'aside', 'navigation' ) ?>
-        </section>
+      <section>
+        <a class="brand" href="/"><img src="<?php echo esc_url( home_url() ); ?>/../assets/img/logo-antistatique.png" width="175" height="35"></a>
+        <?php get_template_part( 'aside', 'navigation' ) ?>
+      </section>
     </header>
 
     <div class="baseline-space"></div>
 
-    <section id="main">
-    <div class="page-title">
-        <section>
-            <h1 class="title-separation magenta-sep">
-                <span></span>
-                 <a href="/blog" class="page-title-link" title="Blog Frontpage">Blog</a>
-            </h1>
-        </section>
-    </div>

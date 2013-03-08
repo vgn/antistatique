@@ -1,0 +1,122 @@
+// Works
+.works{
+  a{
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    background-color: @white;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    position: relative;
+    z-index:0;
+    hgroup{
+      position: absolute;
+      z-index:0;
+      bottom: 7%;
+      left:10%;
+      background-color: @white;
+      width: 60%;
+      padding: 8% 10%;
+    }
+    h3, h5{
+      color: @black;
+      padding: 0em;
+      margin: 0px;
+    }
+    h3{
+      padding-bottom: 0;
+    }
+    h5{
+      padding-top: 0;
+    }
+    &:hover{
+      h3{ color: @magenta;}
+      h5{
+        text-decoration: underline;
+      }
+    }
+  }
+  #uchitomi{
+    background-image: url(../img/portfolio-uchitomi.png);
+  }
+  #tw{
+    background-image: url(../img/portfolio-tw.png);
+  }
+  #rdr{
+    background-image: url(../img/portfolio-rdr.png);
+  }
+}
+
+/*
+# icons
+
+````
+<div class="icons">
+  <ul class="row">
+    <li>
+      <div class="responsive">
+          <img src="/assets/img/ico/ico_responsive.png">
+          <h4 class="title-separation long-sep">
+              <span></span>
+              Responsive Design
+          </h4>
+      </div>
+    </li>
+  </ul>
+</div>
+````
+*/
+.icons{
+  .row{
+    margin-top: 3em;
+    padding-left: 0;
+    list-style: none;
+    li{
+      float: left;
+      width: 45%;
+      margin-right: 5%;
+    }
+  }
+}
+
+
+@media (min-width: @tabletBreakPoint){
+  .works{
+    margin-top: 0.8em;
+    a{
+      margin-bottom: 1.8em;
+      float: left;
+      width: 32%;
+      height: 360px;
+      margin-right: 2%;
+      background-position: 50% 100%;
+      background-size: 360px;
+      &.last{ margin-right: 0;}
+      &:hover{ background-position: 50% 0; }
+    }
+  }
+  .icons{
+    .row{
+      li{
+        width: 17%;
+        margin-right: 3%;
+      }
+    }
+  }
+}
+
+
+
+// to trash
+
+#uchitomi{
+  .clearfix();
+}
+
+
+@media (min-width: @tabletBreakPoint){
+
+}

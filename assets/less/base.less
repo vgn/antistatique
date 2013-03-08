@@ -1,0 +1,246 @@
+// VARIABLES
+
+// AS Colors
+@black:                 #333333;
+@white:                 #ffffff;
+@magenta:               #d40b6b;
+@magentaHover:          #b50a5d;
+@vieuxRose:             #eed2da;
+@green:                 #30a530;
+@red:                   #a6191d;
+@black80:               #cccccc;
+@black75:               #bdbdbd;
+@black70:               #505050;
+@black40:               #666666;
+@grey:                  #a0a0a0;
+@textLeftMargin:        0;
+
+// Links
+@linkColor:             @magenta;
+@linkColorHover:        lighten(@linkColor, 5%);
+
+@textColor:             @black;
+@bgColor:               @white;
+
+// Typography
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+// The "grid"
+@tabletBreakPoint:      40.5em;
+@bigBreakPoint:         1200px;
+
+
+/* 
+# Base styles
+
+## Responsive titles
+
+You can resize browser window to see how titles size change.
+````
+<h1>Title level 1</h1>
+<h2>Title level 2</h2>
+<h3>Title level 3</h3>
+<h4>Title level 4</h4>
+<h5>Title level 5</h5>
+````
+*/
+html{
+  font-size: 10px;
+}
+body{
+  color: @textColor;
+  background-color: @bgColor;
+  margin: 0;
+  padding: 0;
+  font: 14px @sansFontFamily;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @serifFontFamily; 
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+h1{ .font-size(38); }
+h2{ .font-size(28); }
+h3{ .font-size(26); }
+h4{ .font-size(24); }
+h5{ .font-size(14); }
+h6{ .font-size(14); }
+h3, h2, h3, h4, h5, h6{
+  margin-top: 1em;
+  margin-bottom: 0.1em;
+}
+
+/*
+## Texts and base elements
+
+````
+<p>A simple paragraph with a <a href="#">link</a> in it</p>
+````
+*/
+p{
+  margin: 0.3em 0 0.5em 0;
+  line-height: 1.6em;
+  .font-size(16px);
+}
+a{
+  color: @linkColor;
+  &:hover{
+    color: @linkColorHover;
+  }
+}
+
+/*
+## Lists
+
+List element
+````
+<ul>
+  <li>list item</li>
+  <li>list item</li>
+  <li>list item</li>
+</ul>
+````
+*/
+ul{
+  list-style: square outside;
+}
+li{
+  margin-bottom: 0.4em;
+}
+
+/*
+## Highlight a block
+
+````
+<section class="highlight">Highlighted block</section>
+````
+*/
+.highlight{
+  background-color: #ccc;
+  background-color: rgba(240, 240, 240, 0.8);
+  padding: 0.6em;
+}
+.unhighlight{
+  background-color: transparent;
+}
+
+/*
+## Blockquote
+
+Quoting
+````
+<blockquote>
+  <p>I believe in the Golden Rule — The Man with the Gold . . . Rules.</p>
+  <footer>
+    <span class="author">Mr. T</span> 
+    from <cite>http://blog.neilpie.co.uk/web-dev/html5-quote-attribution</cite>
+    </footer>
+</blockquote>
+````
+
+Un-highlighted quote
+````
+<blockquote class="unhighlight">
+  <p>I believe in the Golden Rule — The Man with the Gold . . . Rules.</p>
+</blockquote>
+````
+*/
+blockquote{
+  background-color: rgba(240, 240, 240, 0.8);
+  font-family: @serifFontFamily; 
+  color: @black40;
+  padding: 1.3em 1.8em;
+  margin: 2em 0;
+  p{
+    padding: 0;
+    margin: 0 0 0.3em;
+    .font-size(26);
+    line-height: 1.3em;
+  }
+  footer, cite{
+    font-family: @sansFontFamily;
+    .font-size(14);
+  }
+}
+
+/*
+## Buttons
+
+A simple button
+````
+<a href="#" class="btn">I'm a simple button</a>
+````
+*/
+.btn{
+  margin-top: 1em;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em 0.8em;
+  font-weight: bold;
+  background-color: @linkColor;
+  color: @white;
+  &:hover{
+    background-color: @linkColorHover;
+    color: @white;
+  }
+}
+
+.clear{
+  .clearfix();
+}
+
+.alert{
+  padding: 0.5em 0.4em;
+  margin: 0.4em 0;
+}
+
+.isolated{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pull-right{
+  text-align: right;
+}
+
+.full-width{
+  max-width: 100%;
+}
+
+hr{
+  border: none;
+  background-color: @magenta;
+  height: 1px;
+  margin: 40px 0 30px 0;
+}
+
+.previous-sign, .next-sign{
+  font-style: normal;
+  font-family: Georgia, Times;
+}
+
+@media (min-width: @tabletBreakPoint){
+  h1{ .font-size(40); }
+  h2{ .font-size(36); }
+  h3{ .font-size(32); }
+  h4{ .font-size(24); }
+  h5{ .font-size(14); }
+  h6{ .font-size(14); }
+
+  .multi-column{
+    margin: 50px 0;
+    .textMultiColumn(2, 32px);
+  }
+}
+@media (min-width: @bigBreakPoint){
+  h1{ .font-size(50); }
+  h2{ .font-size(40); }
+  h3{ .font-size(32); }
+  h4{ .font-size(24); }
+  h5{ .font-size(16); }
+  h6{ .font-size(14); }
+}

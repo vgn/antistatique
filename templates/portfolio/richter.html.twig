@@ -2,128 +2,125 @@
 
 {% block title %}Cas Richter - Dahl Rocha & Associés – Développement Symfony, Antistatique{% endblock %}
 
-
 {% block body_class %}{{ parent() }} richter{% endblock %}
+
+
+{% block previous_work %}{{ 'homepage.work.uchitomi.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'uchitomi' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.tehran.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'tehran' }) }}{% endblock %}
 
 {% block baseline %}
 <div class="baseline-space"></div>
-<div class="page-title title-image">
-    <section>
-        <h1 class="magenta-sep">
-            <span></span>
-            Richter - Dahl Rocha & Associés
-        </h1>
-    </section>
+
+{{ parent() }}
+
+<div class="page-title title-image" style="background-image: url('/assets/img/rdr-title.jpg')">
+  <section>
+    <h1 class="magenta-sep">
+      <span></span>
+      Richter - Dahl Rocha & Associés
+    </h1>
+  </section>
 </div>
 {% endblock %}
 
 {% block content %}
 
-{% block summary %}
-<div class="head">
-    <div class="summary">
-        <h3 class="magenta-sep">
-            <span></span>
-            Brief
-        </h3>
-        <div class="text">
-            <p class="lead">Un cabinet d'architectes présent sur plusieurs continents.</p>
-            <p>qui possède des équipes de designers très compétents en interne.</p>
-        </div>
-    </div>
-    {% endblock %}
+<section>
+  <div class="page-content isolated">
+    <aside>
+      <h3>
+        Brief
+      </h3>
+    </aside>
+    <h4>Un cabinet d'architectes présent sur plusieurs continents.</h4>
+    <p>qui possède des équipes de designers très compétents en interne.</p>
+    <aside>
+      <h3>
+        Solution
+      </h3>
+    </aside>
+    <h4>Une écoute attentive des attentes du client.</h4>
+    <p>Notre créativité pour plier les dernières technologies web à ses attentes.</p>
+    <a href="http://www.richterdahlrocha.com/fr/" class="btn">Visiter le site richterdahlrocha.com</a>
+  </div>
+</section>
 
-    {% block solutions %}
-    <div class="solutions">
-        <h3 class="magenta-sep">
-            <span></span>
-            Solution
-        </h3>
-        <div class="text">
-            <p class="lead">Une écoute attentive des attentes du client.</p>
-            <p>Notre créativité pour plier les dernières technologies web à ses attentes.</p>
-            <a href="http://www.richterdahlrocha.com/fr/" class="btn">Visiter le site richterdahlrocha.com</a>
-        </div>
-    </div>
-    <div class="clear"></div>
-</div>
-{% endblock %}
-
-{% block tech %}
-<div class="tech section">
-    <h3 class="title-separation">
-        <span></span>
+<div class="highlight">
+  <section>
+    <div class="page-content">
+      <h3>
         Un aperçu des techniques utilisées :
-    </h3>
+      </h3>
+    </div>
     <div class="icons">
-        <ul class="row">
-            <li>
-                <div class="html dev">
-                    <i class='icon ico_html5'></i>
-                    <h4>
-                        <span></span>
-                        HTML 5 / CSS 3
-                    </h4>
-                </div>
-            </li>
-            <li>
-                <div class="github dev">
-                    <i class='icon ico_github'></i>
-                    <h4>
-                        <span></span>
-                        Github
-                    </h4>
-                    <p class="github-text">
-                        Versioning et suivi de projet
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="agile">
-                    <i class='icon ico_agile'></i>
-                    <h4>
-                        <span></span>
-                        Méthode agile de gestion de projet
-                    </h4>
-                    <p class="agile-text">
-                        Implication maximale du client et de l'équipe à toutes les étapes du projet.
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="responsive">
-                    <i class='icon ico_responsive'></i>
-                    <h4>
-                        <span></span>
-                        Responsive Design
-                    </h4>
-                </div>
-            </li>
-        </ul>
+      <ul class="row">
+        <li>
+          <div class="html dev">
+            <img src="/assets/img/ico/ico_html5.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              HTML 5 / CSS 3
+            </h4>
+          </div>
+        </li>
+        <li>
+          <div class="github dev">
+            <img src="/assets/img/ico/ico_github.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Github
+            </h4>
+            <p class="github-text">
+              Versioning et suivi de projet
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="agile">
+            <img src="/assets/img/ico/ico_agile.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Méthode agile de gestion de projet
+            </h4>
+            <p class="agile-text">
+              Implication maximale du client et de l'équipe à toutes les étapes du projet.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="responsive">
+            <img src="/assets/img/ico/ico_responsive.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Responsive Design
+            </h4>
+          </div>
+        </li>
+      </ul>
+    </div></section>
+  </div>
+  <section class="isolated">
+    <img src="/assets/img/rdr/full-site.jpg" class="full-width">
+  </section>
+  <section>
+    <div class="page-content">
+
+      <h2>
+        Le site que nous avons réalisé est un bon exemple de notre capacité à personnaliser un <a href="http://www.symfony.com">framework Symfony</a> aux désirs du client.
+      </h2>
+
+      <p>Le design est responsive, stricto sensu. Un des éléments retrouvés sur les notes de nos premiers briefs résume bien le cahier des charges à ce niveau :</p>
+      <blockquote>
+        <p>"Ce site doit fonctionner sur un vieux Nokia".</p>
+      </blockquote>
+
+      <div class="clear">
+        <aside><p><br/><br/><br/><br/>Version mobile fonctionnant sur tous les smartphones du marché</p></aside>
+        <p><img src="/assets/img/rdr/mobile.jpg"></p>
+      </div>
     </div>
-</div>
-{% endblock %}
-
-<div class="prices section">
-    <div class="intro">
-        <h2 class="magenta-sep">
-            <span></span>
-            Le site que nous avons réalisé est un bon exemple de notre capacité à personnaliser un <a href="http://www.symfony.com">framework Symfony</a> aux désirs du client.
-        </h2>
-        <div class="multi-column">
-            <p class="text">Le design est responsive, stricto sensu. Un des éléments retrouvés sur les notes de nos premiers briefs résume bien le cahier des charges à ce niveau :</p>
-            <blockquote>
-                "Ce site doit fonctionner sur un vieux Nokia".
-            </blockquote>
-{#             <p class="text">
-            L'UX et le design ont été gérés en interne par notre client, ce qui semble logique : un cabinet d'architectes avec une branche design a envie de se faire plaisir sur son propre site. Comme quand nous refaisons notre site web dont chaque bout de code est passé à la brosse à reluire, en somme.</p> #}
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-{% endblock %}
+  </section>
+  {% endblock %}
