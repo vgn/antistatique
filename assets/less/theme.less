@@ -1,0 +1,133 @@
+.social-links{
+  a{
+    display: block;
+    text-decoration: none;
+    line-height: 15px;
+    padding: 0.4em 0;
+    span{
+      display: block;
+      float: left;
+      width: 20px;
+      height: 15px;
+      margin-right: 0.7em;
+      background: url('../img/ico/ico_social_sprite.png') 0 0 no-repeat;
+    }
+
+    &.facebook span{ background-position: 0px -30px;}
+    &.facebook span{ background-position: 0px -30px;}
+    &.linkedin span{ background-position: 0px -60px;}
+    &.linkedin span{ background-position: 0px -60px;}
+    &.github span{ background-position: 0px -90px;}
+    &.github span{ background-position: 0px -90px;}
+    &.mail span{ background-position: 0px -120px;}
+    &.mail span{ background-position: 0px -120px;}
+    &.drupal span{ background-position: 0px -150px;}
+    &.drupal span{ background-position: 0px -150px;}
+    &.rss span{ background-position: 0px -180px;}
+    &.rss span{ background-position: 0px -180px;}
+  }
+}
+
+hr.title-separation{
+  border: none;
+  height: 1px;
+  background: @black;
+  width: 50px;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+hr.meta-separation{
+  display: none;
+}
+
+.title-image{
+  background: none;
+}
+
+.cover-image{
+  background-color: #ccc;
+  background-color: rgba(240, 240, 240, 0.8);
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto
+  }
+}
+
+// need some cleaning
+@media (min-width: @tabletBreakPoint){
+  .page-title{
+    h1{
+      margin-left: -30px;
+      padding: 0 100px 5px 30px;
+      .font-size(60px);
+      margin-top: 0px;
+    }
+  }
+  .title-image{
+    min-height: 400px;
+    background-color: #ccc;
+    background-color: rgba(240, 240, 240, 0.8);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    h1{
+      background-color: @white;
+      background-repeat: repeat-x;
+      float: left;
+    }
+  }
+
+  .icon{
+    display: block;
+  }
+  .title-separation{
+    span{
+      display: block;
+      width: 50px;
+      height: 1px;
+      background-color: @black;
+      margin-bottom: 12px;
+    }
+  }
+  .long-sep{
+    span{
+      width: 100px;
+    }
+  }
+  .x-long-sep{
+    span{
+      width: 80%;
+    }
+  }
+  .magenta-sep{
+    span{
+      background-color: @magenta;
+    }
+  }
+
+  .aside-border{
+    padding-top: 0.4em;
+  }
+
+}
+
+@media (max-height: 700px) and (min-width: @tabletBreakPoint){
+  body .title-image{
+    height: 200px;
+    min-height: 0;
+  }
+}
+
+@media (min-width: @bigBreakPoint){
+  .icon{
+    display: block;
+  }
+
+  .team{
+    .title-image{
+      background-position: 10% 0;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+#team{
+  .clearfix();
+}
+.member{
+  clear: both;
+  .description{
+    float: left;
+    width: 40%;
+    background-color: @white;
+    padding: 5%;
+  }
+  .photo{
+    float: left;
+    width: 50%;
+    img{
+      max-width: 100%;
+    }
+  }
+  &:hover{
+    /*        color: @magenta;*/
+  }
+
+  h4{
+    margin-top: 0.3em;
+    margin-bottom: 0;
+  }
+  p{
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+}
+
+
+@media (min-width: @tabletBreakPoint){
+  // Team
+  .team{
+    .title-image{
+      background-image: url('../img/team.jpg');
+    }
+  }
+  .web-artisans{
+    margin-top: 2.8em;
+  }
+  .member{
+    clear: none;
+    width: 22%;
+    margin-right: 2%;
+    float: left;
+    .photo, .description{
+      float: none;
+      width: auto;
+    }
+    .description{
+      min-height: 230px;
+      padding: 0;
+      padding-right: 2em;
+    }
+    .photo{
+      overflow: hidden;
+    }
+    &:hover .photo img{
+
+    }
+    .photo img{
+      width: 110%;
+      margin-left: -5%;
+      .transition(0.4s);
+    }
+    h4, p{
+
+    }
+    &:hover{
+      h4, p{
+
+      }
+    }
+  }
+}
+
+@media (min-width: @bigBreakPoint){
+  .member{
+    width: 22%;
+  }
+}

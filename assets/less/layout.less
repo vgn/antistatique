@@ -1,0 +1,138 @@
+// BASICS layout
+
+/*
+# Sections
+
+````
+<section class="highlight"></section>
+````
+*/
+section{
+  margin: 5px 10px;
+  .clearfix();
+}
+
+
+// Page navigation
+
+
+/*
+# Layout
+
+````
+<section class="with-aside">
+<aside>this text will stay on the left</aside>
+<article>An article</article>
+</section>
+````
+*/
+
+@media (min-width: @tabletBreakPoint){
+  section{
+    margin: 10px 20px;
+  }
+  aside{
+    float: left;
+    width: 30%;
+  }
+  article{
+    float: right;
+    width: 65%;
+  }
+
+  // Modules 
+  .with-aside{
+    .clearfix();
+    padding-bottom: 3em;
+    padding-top: 3em;
+    aside{
+      float: left;
+      width: 30%;
+      margin-right: 5%;
+      >*:first-child{
+        margin-top: 0;
+      }
+    }
+    article{
+      float: right;
+      width: 65%;
+      >*:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+  article{
+    h2{
+      margin: 0.3em 0 0.4em;
+    }
+    p{
+      line-height: 1.5em;
+      margin: 0.8em 0;
+    }
+    .btn{
+      margin: 0.6em 0;
+    }
+  }
+}
+@media (min-width: @bigBreakPoint){
+  section{
+    margin: 10px auto;
+    max-width: 1140px;
+  }
+}
+
+/*
+# Page content
+
+````
+<section>
+  <div class="page-content">
+   <p>some texte</p>
+  </div>
+</section>
+````
+*/
+.page-content{
+  img{
+    max-width: 100%;
+  }
+}
+@media (min-width: @tabletBreakPoint){
+  .page-content{
+    width: 80%;
+    margin-left: 20%;
+    blockquote{
+      margin-left: -25%;
+      padding-left: 25%;
+    }
+    aside{
+      margin-left: -25%;
+      width: 20%;
+      text-align: right;
+      >*:first-child{
+        margin-top: 0;
+      }
+      p{
+        .font-size(14px);
+      }
+    }
+  }
+}
+
+@media (min-width: @bigBreakPoint){
+  .page-content{
+    width: 65%;
+    margin-left: 35%;
+    img{
+      max-width: 100%;
+    }
+    blockquote{
+      margin-left: -50%;
+      padding-left: 50%;
+    }
+    aside{
+      margin-left: -35%;
+      width: 30%;
+    }
+  }
+}

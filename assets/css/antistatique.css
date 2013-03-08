@@ -1,0 +1,1297 @@
+/*
+# Antistatique - Style guide
+
+Automaticaly generated using [Thomas Davis](http://thomasdavis.github.com) project [kaleistyleguide](http://github.com/thomasdavis/kaleistyleguide)
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.visible-phone {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+}
+/* 
+Our style use normalize.css v1.0.1 more infos (http://git.io/normalize)
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: .83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: .75em;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000000;
+}
+p,
+pre {
+  margin: 1em 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 
+# Base styles
+
+## Responsive titles
+
+You can resize browser window to see how titles size change.
+````
+<h1>Title level 1</h1>
+<h2>Title level 2</h2>
+<h3>Title level 3</h3>
+<h4>Title level 4</h4>
+<h5>Title level 5</h5>
+````
+*/
+html {
+  font-size: 10px;
+}
+body {
+  color: #333333;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+h1 {
+  font-size: 38px;
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+h3,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.1em;
+}
+/*
+## Texts and base elements
+
+````
+<p>A simple paragraph with a <a href="#">link</a> in it</p>
+````
+*/
+p {
+  margin: 0.3em 0 0.5em 0;
+  line-height: 1.6em;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+a {
+  color: #d40b6b;
+}
+a:hover {
+  color: #ec0c77;
+}
+/*
+## Lists
+
+List element
+````
+<ul>
+  <li>list item</li>
+  <li>list item</li>
+  <li>list item</li>
+</ul>
+````
+*/
+ul {
+  list-style: square outside;
+}
+li {
+  margin-bottom: 0.4em;
+}
+/*
+## Highlight a block
+
+````
+<section class="highlight">Highlighted block</section>
+````
+*/
+.highlight {
+  background-color: #ccc;
+  background-color: rgba(240, 240, 240, 0.8);
+  padding: 0.6em;
+}
+.unhighlight {
+  background-color: transparent;
+}
+/*
+## Blockquote
+
+Quoting
+````
+<blockquote>
+  <p>I believe in the Golden Rule — The Man with the Gold . . . Rules.</p>
+  <footer>
+    <span class="author">Mr. T</span> 
+    from <cite>http://blog.neilpie.co.uk/web-dev/html5-quote-attribution</cite>
+    </footer>
+</blockquote>
+````
+
+Un-highlighted quote
+````
+<blockquote class="unhighlight">
+  <p>I believe in the Golden Rule — The Man with the Gold . . . Rules.</p>
+</blockquote>
+````
+*/
+blockquote {
+  background-color: rgba(240, 240, 240, 0.8);
+  font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
+  color: #666666;
+  padding: 1.3em 1.8em;
+  margin: 2em 0;
+}
+blockquote p {
+  padding: 0;
+  margin: 0 0 0.3em;
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 1.3em;
+}
+blockquote footer,
+blockquote cite {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+/*
+## Buttons
+
+A simple button
+````
+<a href="#" class="btn">I'm a simple button</a>
+````
+*/
+.btn {
+  margin-top: 1em;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em 0.8em;
+  font-weight: bold;
+  background-color: #d40b6b;
+  color: #ffffff;
+}
+.btn:hover {
+  background-color: #ec0c77;
+  color: #ffffff;
+}
+.clear {
+  *zoom: 1;
+}
+.clear:before,
+.clear:after {
+  display: table;
+  content: "";
+}
+.clear:after {
+  clear: both;
+}
+.alert {
+  padding: 0.5em 0.4em;
+  margin: 0.4em 0;
+}
+.isolated {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.pull-right {
+  text-align: right;
+}
+.full-width {
+  max-width: 100%;
+}
+hr {
+  border: none;
+  background-color: #d40b6b;
+  height: 1px;
+  margin: 40px 0 30px 0;
+}
+.previous-sign,
+.next-sign {
+  font-style: normal;
+  font-family: Georgia, Times;
+}
+@media (min-width: 40.5em) {
+  h1 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+  h4 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  h5 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  h6 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .multi-column {
+    margin: 50px 0;
+    -moz-column-count: 2;
+    -moz-column-gap: 32px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 32px;
+    column-count: 2;
+    column-gap: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+  h4 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  h5 {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  h6 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+/*
+# Sections
+
+````
+<section class="highlight"></section>
+````
+*/
+section {
+  margin: 5px 10px;
+  *zoom: 1;
+}
+section:before,
+section:after {
+  display: table;
+  content: "";
+}
+section:after {
+  clear: both;
+}
+/*
+# Layout
+
+````
+<section class="with-aside">
+<aside>this text will stay on the left</aside>
+<article>An article</article>
+</section>
+````
+*/
+@media (min-width: 40.5em) {
+  section {
+    margin: 10px 20px;
+  }
+  aside {
+    float: left;
+    width: 30%;
+  }
+  article {
+    float: right;
+    width: 65%;
+  }
+  .with-aside {
+    *zoom: 1;
+    padding-bottom: 3em;
+    padding-top: 3em;
+  }
+  .with-aside:before,
+  .with-aside:after {
+    display: table;
+    content: "";
+  }
+  .with-aside:after {
+    clear: both;
+  }
+  .with-aside aside {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+  }
+  .with-aside aside > *:first-child {
+    margin-top: 0;
+  }
+  .with-aside article {
+    float: right;
+    width: 65%;
+  }
+  .with-aside article > *:first-child {
+    margin-top: 0;
+  }
+  article h2 {
+    margin: 0.3em 0 0.4em;
+  }
+  article p {
+    line-height: 1.5em;
+    margin: 0.8em 0;
+  }
+  article .btn {
+    margin: 0.6em 0;
+  }
+}
+@media (min-width: 1200px) {
+  section {
+    margin: 10px auto;
+    max-width: 1140px;
+  }
+}
+/*
+# Page content
+
+````
+<section>
+  <div class="page-content">
+   <p>some texte</p>
+  </div>
+</section>
+````
+*/
+.page-content img {
+  max-width: 100%;
+}
+@media (min-width: 40.5em) {
+  .page-content {
+    width: 80%;
+    margin-left: 20%;
+  }
+  .page-content blockquote {
+    margin-left: -25%;
+    padding-left: 25%;
+  }
+  .page-content aside {
+    margin-left: -25%;
+    width: 20%;
+    text-align: right;
+  }
+  .page-content aside > *:first-child {
+    margin-top: 0;
+  }
+  .page-content aside p {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .page-content {
+    width: 65%;
+    margin-left: 35%;
+  }
+  .page-content img {
+    max-width: 100%;
+  }
+  .page-content blockquote {
+    margin-left: -50%;
+    padding-left: 50%;
+  }
+  .page-content aside {
+    margin-left: -35%;
+    width: 30%;
+  }
+}
+/* HEADER AND TOPBAR */
+header.topbar {
+  background-color: #d40b6b;
+  padding: 0.8em 0 0.2em;
+}
+header.topbar a {
+  color: #fbb0d4;
+  text-decoration: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+header.topbar li.active a,
+header.topbar a:hover {
+  color: #ffffff;
+}
+header.topbar .brand img {
+  display: block;
+}
+nav ul,
+nav li {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  display: inline-block;
+  padding: 0.4em 0.8em 0.4em 0.2em;
+}
+header nav ul li:first-child {
+  display: none;
+}
+@media (min-width: 40.5em) {
+  header.topbar {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+  }
+  header.topbar section {
+    margin: 8px auto;
+  }
+  header.topbar .brand {
+    float: left;
+    margin-left: 20px;
+  }
+  header.topbar nav {
+    float: right;
+    margin-right: 20px;
+  }
+  header.topbar nav ul li:first-child {
+    display: inline;
+  }
+}
+@media (min-width: 1200px) {
+  header.topbar .brand {
+    margin-left: 0;
+  }
+  header.topbar nav {
+    margin-right: 0;
+  }
+}
+/* BASELINE */
+#baseline {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  padding-top: 0.2em;
+}
+#baseline .title-separation span {
+  background-color: #ffffff;
+}
+#baseline .action-contact {
+  display: block;
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid #cccccc;
+  font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+.baseline-space {
+  height: 10px;
+}
+@media (min-width: 40.5em) {
+  #baseline {
+    background-color: #d40b6b;
+    margin: 70px 0 0;
+  }
+  #baseline h1 {
+    clear: both;
+    color: #eed2da;
+    margin: 0 0 20px 0;
+    margin-right: 4em;
+  }
+  #baseline h1 a {
+    color: #eed2da;
+  }
+  #baseline h1 a:hover {
+    color: #ffffff;
+  }
+  #baseline .action-contact {
+    color: #ffffff;
+    font-size: 24px;
+    font-size: 2.4rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+  .baseline-space {
+    height: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  #baseline {
+    margin: 70px auto 0;
+  }
+  #baseline h1 {
+    font-weight: normal;
+  }
+}
+/* FOOTER */
+footer .vcard strong,
+footer .vcard .locality,
+footer .vcard .tel,
+footer .vcard .email {
+  display: block;
+  padding: 0.2em;
+}
+footer a {
+  color: #333333;
+}
+@media (min-width: 40.5em) {
+  footer {
+    *zoom: 1;
+    clear: both;
+  }
+  footer:before,
+  footer:after {
+    display: table;
+    content: "";
+  }
+  footer:after {
+    clear: both;
+  }
+  footer section {
+    border-top: 1px solid #cccccc;
+  }
+  footer .vcard {
+    float: left;
+  }
+  footer .vcard strong,
+  footer .vcard .locality,
+  footer .vcard .tel,
+  footer .vcard .email {
+    display: inline;
+  }
+  footer nav {
+    float: right;
+  }
+}
+/*
+# Page and post navigation
+
+````
+<nav class="page-navigation">
+  <span class="previous">
+    <a href="#"><span class="previous-sign">&laquo;</span> Previous page</a>
+  </span>
+  <span class="next">
+    <a href="#">Next page <span class="next-sign">&raquo;</span></a>
+  </span>
+</nav>
+````
+*/
+.page-navigation {
+  *zoom: 1;
+}
+.page-navigation:before,
+.page-navigation:after {
+  display: table;
+  content: "";
+}
+.page-navigation:after {
+  clear: both;
+}
+.page-navigation .next {
+  float: right;
+}
+.page-navigation a {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #bdbdbd;
+  font-family: "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
+  text-decoration: none;
+}
+.page-navigation a:hover {
+  color: #333333;
+}
+.page-navigation .previous-sign,
+.page-navigation .next-sign {
+  font-size: 20px;
+  font-size: 2rem;
+}
+/* CONNECT */
+#newsletter .email-field {
+  line-height: 1.4em;
+}
+#newsletter .submit {
+  width: 30%;
+  color: #ffffff;
+  background-color: #d40b6b;
+  border: none;
+  text-align: center;
+  line-height: 1.6em;
+  padding: 0.2em;
+}
+@media (min-width: 40.5em) {
+  #connect {
+    /*background: url('../img/logo-a.png') 100% 100% no-repeat; 
+      min-height: 410px;*/
+  
+  }
+  #tweet blockquote {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  #tweet p {
+    text-align: left;
+  }
+  #more {
+    *zoom: 1;
+  }
+  #more:before,
+  #more:after {
+    display: table;
+    content: "";
+  }
+  #more:after {
+    clear: both;
+  }
+  #blog {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+  }
+  #newsletter {
+    float: left;
+    width: 30%;
+  }
+}
+/* Contact */
+@media (min-width: 40.5em) {
+  .contact .page-title {
+    background-image: url('../img/contact.jpg');
+  }
+  #contact-us > div {
+    margin-left: 15px;
+  }
+  #contact-us .title-separation span {
+    margin-left: -15px;
+    margin-bottom: 25px;
+  }
+}
+.works a {
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  position: relative;
+  z-index: 0;
+}
+.works a hgroup {
+  position: absolute;
+  z-index: 0;
+  bottom: 7%;
+  left: 10%;
+  background-color: #ffffff;
+  width: 60%;
+  padding: 8% 10%;
+}
+.works a h3,
+.works a h5 {
+  color: #333333;
+  padding: 0em;
+  margin: 0px;
+}
+.works a h3 {
+  padding-bottom: 0;
+}
+.works a h5 {
+  padding-top: 0;
+}
+.works a:hover h3 {
+  color: #d40b6b;
+}
+.works a:hover h5 {
+  text-decoration: underline;
+}
+.works #uchitomi {
+  background-image: url(../img/portfolio-uchitomi.png);
+}
+.works #tw {
+  background-image: url(../img/portfolio-tw.png);
+}
+.works #rdr {
+  background-image: url(../img/portfolio-rdr.png);
+}
+/*
+# icons
+
+````
+<div class="icons">
+  <ul class="row">
+    <li>
+      <div class="responsive">
+          <img src="/assets/img/ico/ico_responsive.png">
+          <h4 class="title-separation long-sep">
+              <span></span>
+              Responsive Design
+          </h4>
+      </div>
+    </li>
+  </ul>
+</div>
+````
+*/
+.icons .row {
+  margin-top: 3em;
+  padding-left: 0;
+  list-style: none;
+}
+.icons .row li {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+@media (min-width: 40.5em) {
+  .works {
+    margin-top: 0.8em;
+  }
+  .works a {
+    margin-bottom: 1.8em;
+    float: left;
+    width: 32%;
+    height: 360px;
+    margin-right: 2%;
+    background-position: 50% 100%;
+    background-size: 360px;
+  }
+  .works a.last {
+    margin-right: 0;
+  }
+  .works a:hover {
+    background-position: 50% 0;
+  }
+  .icons .row li {
+    width: 17%;
+    margin-right: 3%;
+  }
+}
+#uchitomi {
+  *zoom: 1;
+}
+#uchitomi:before,
+#uchitomi:after {
+  display: table;
+  content: "";
+}
+#uchitomi:after {
+  clear: both;
+}
+@media (min-width: 40.5em) {
+  
+}
+#team {
+  *zoom: 1;
+}
+#team:before,
+#team:after {
+  display: table;
+  content: "";
+}
+#team:after {
+  clear: both;
+}
+.member {
+  clear: both;
+}
+.member .description {
+  float: left;
+  width: 40%;
+  background-color: #ffffff;
+  padding: 5%;
+}
+.member .photo {
+  float: left;
+  width: 50%;
+}
+.member .photo img {
+  max-width: 100%;
+}
+.member:hover {
+  /*        color: @magenta;*/
+
+}
+.member h4 {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+}
+.member p {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+@media (min-width: 40.5em) {
+  .team .title-image {
+    background-image: url('../img/team.jpg');
+  }
+  .web-artisans {
+    margin-top: 2.8em;
+  }
+  .member {
+    clear: none;
+    width: 22%;
+    margin-right: 2%;
+    float: left;
+  }
+  .member .photo,
+  .member .description {
+    float: none;
+    width: auto;
+  }
+  .member .description {
+    min-height: 230px;
+    padding: 0;
+    padding-right: 2em;
+  }
+  .member .photo {
+    overflow: hidden;
+  }
+  .member .photo img {
+    width: 110%;
+    margin-left: -5%;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -transition: all 0.4s ease-in-out;
+  }
+}
+@media (min-width: 1200px) {
+  .member {
+    width: 22%;
+  }
+}
+.blog-title h1 {
+  margin-bottom: 0em;
+}
+.widgettitle {
+  display: none;
+}
+@media (min-width: 40.5em) {
+  .blog .title-image {
+    background-image: url('../img/blog.jpg');
+  }
+}
+.alert-success {
+  color: #30a530;
+  background-color: #b7eab7;
+}
+.alert-error {
+  color: #a6191d;
+  background-color: #f3b1b3;
+}
+.social-links a {
+  display: block;
+  text-decoration: none;
+  line-height: 15px;
+  padding: 0.4em 0;
+}
+.social-links a span {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 15px;
+  margin-right: 0.7em;
+  background: url('../img/ico/ico_social_sprite.png') 0 0 no-repeat;
+}
+.social-links a.facebook span {
+  background-position: 0px -30px;
+}
+.social-links a.facebook span {
+  background-position: 0px -30px;
+}
+.social-links a.linkedin span {
+  background-position: 0px -60px;
+}
+.social-links a.linkedin span {
+  background-position: 0px -60px;
+}
+.social-links a.github span {
+  background-position: 0px -90px;
+}
+.social-links a.github span {
+  background-position: 0px -90px;
+}
+.social-links a.mail span {
+  background-position: 0px -120px;
+}
+.social-links a.mail span {
+  background-position: 0px -120px;
+}
+.social-links a.drupal span {
+  background-position: 0px -150px;
+}
+.social-links a.drupal span {
+  background-position: 0px -150px;
+}
+.social-links a.rss span {
+  background-position: 0px -180px;
+}
+.social-links a.rss span {
+  background-position: 0px -180px;
+}
+hr.title-separation {
+  border: none;
+  height: 1px;
+  background: #333333;
+  width: 50px;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+hr.meta-separation {
+  display: none;
+}
+.title-image {
+  background: none;
+}
+.cover-image {
+  background-color: #ccc;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+.cover-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@media (min-width: 40.5em) {
+  .page-title h1 {
+    margin-left: -30px;
+    padding: 0 100px 5px 30px;
+    font-size: 60px;
+    font-size: 6rem;
+    margin-top: 0px;
+  }
+  .title-image {
+    min-height: 400px;
+    background-color: #ccc;
+    background-color: rgba(240, 240, 240, 0.8);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .title-image h1 {
+    background-color: #ffffff;
+    background-repeat: repeat-x;
+    float: left;
+  }
+  .icon {
+    display: block;
+  }
+  .title-separation span {
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #333333;
+    margin-bottom: 12px;
+  }
+  .long-sep span {
+    width: 100px;
+  }
+  .x-long-sep span {
+    width: 80%;
+  }
+  .magenta-sep span {
+    background-color: #d40b6b;
+  }
+  .aside-border {
+    padding-top: 0.4em;
+  }
+}
+@media (max-height: 700px) and (min-width: 40.5em) {
+  body .title-image {
+    height: 200px;
+    min-height: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .icon {
+    display: block;
+  }
+  .team .title-image {
+    background-position: 10% 0;
+  }
+}
+/*// To remove !
+@import "blog.less";
+@media (min-width: @tabletBreakPoint){
+  @import "blog-tablet.less";
+}
+@media (min-width: @bigBreakPoint){
+  @import "blog-desktop.less";
+}*/
