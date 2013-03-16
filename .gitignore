@@ -1,5 +1,7 @@
 /vendor/
 /cache/
+/blog/wp-content/uploads/
+/blog/wp-config.php
 composer.phar
 antistatique.log
 .DS_Store
