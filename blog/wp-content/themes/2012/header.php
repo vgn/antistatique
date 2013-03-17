@@ -39,7 +39,7 @@
 
     ?></title>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo esc_url( home_url() ); ?>/../assets/css/antistatique.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/assets/css/antistatique.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -74,24 +74,28 @@ _gaq.push(['_trackPageview']);
 </script>
 
 <!--[if lt IE 9]>
-    <script src="<?php echo esc_url( home_url() ); ?>/../assets/js/html5.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 <![endif]-->
 <!--[if IE 7]>
-    <script src="<?php echo esc_url( home_url() ); ?>/../assets/js/respond.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/respond.min.js"></script>
 <![endif]-->
 <!--[if IE 8]>
-    <script src="<?php echo esc_url( home_url() ); ?>/../assets/js/respond.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/respond.min.js"></script>
 <![endif]-->
 
 </head>
 
 <body <?php body_class(); ?>>
-  <div id="page" class="hfeed blog">
+  <div id="page" class="hfeed">
 
     <header class="topbar">
       <section>
-        <a class="brand" href="/"><img src="<?php echo esc_url( home_url() ); ?>/../assets/img/logo-antistatique.png" width="175" height="35"></a>
-        <?php get_template_part( 'aside', 'navigation' ) ?>
+        <a class="brand" href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-antistatique.png" width="175" height="35"></a>
+        <nav id="access" role="navigation">
+          <?php /* @TODO Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
+          <?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
+          <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+         </nav><!-- #access -->
       </section>
     </header>
 
