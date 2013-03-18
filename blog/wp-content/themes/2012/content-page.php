@@ -10,12 +10,6 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<?php if ( has_post_thumbnail() ): ?>
-  <div class="cover-image">
-    <?php the_post_thumbnail(); ?>
-  </div>
-<?php endif; ?>
-
 <div class="page-title title-image">
     <section>
         <h1 class="title-separation magenta-sep">
@@ -23,6 +17,9 @@
             <?php the_title(); ?>
         </h1>
     </section>
+    <?php if ( has_post_thumbnail() ): ?>
+        <?php the_post_thumbnail(); ?>
+    <?php endif; ?>
 </div>
 
 
