@@ -96,6 +96,7 @@ _gaq.push(['_trackPageview']);
           <?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
           <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
          </nav><!-- #access -->
+          <?php do_action('icl_language_selector'); ?>
       </section>
     </header>
 
