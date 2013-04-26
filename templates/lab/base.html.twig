@@ -1,0 +1,30 @@
+{% extends "layout.html.twig" %}
+
+
+{% block body_class %}lab{% endblock %}
+
+{% block baseline %}
+{% block top_navigation %}
+<section>
+  <nav class="page-navigation top">
+    {% block previous %}
+    <span class="previous">
+      <a href="{% block previous_link %}{% endblock %}" rel="prev"><span class="previous-sign">&laquo;</span> {% block previous_work %}Précédent{% endblock %}</a>
+    </span>
+    {% endblock %}
+    {% block next %}
+    <span class="next">
+      <a href="{% block next_link %}{% endblock %}" rel="next">{% block next_work %}Suivant{% endblock %} <span class="next-sign">&raquo;</span></a>
+    </span>
+    {% endblock %}
+  </nav>
+</section>
+{% endblock %}
+{% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
+
+

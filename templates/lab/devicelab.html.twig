@@ -1,0 +1,62 @@
+{% extends "lab/base.html.twig" %}
+
+{% block title %}DeviceLab Antistatique{% endblock %}
+
+{% block body_class %}{{ parent() }} devicelab{% endblock %}
+
+
+{% block previous_work %}{{ 'homepage.work.urturn.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'urturn' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.tehran.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'tehran' }) }}{% endblock %}
+
+{% block baseline %}
+<div class="baseline-space"></div>
+
+{{ parent() }}
+
+<div class="page-title title-image" style="background-image: url('/assets/img/devicelab-title.jpg')">
+  <section>
+    <h1 class="magenta-sep">
+      <span></span>
+      DeviceLab
+    </h1>
+  </section>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="page-content isolated">
+    <aside>
+      <h3>
+        Brief
+      </h3>
+    </aside>
+    <p>
+      De Rham Sotheby's International Realty, régie immobilière de Lausanne a besoin d'un partenaire web pour développer une identité digitale. Celle-ci est déclinée sur le site internet, les sites des projets immobiliers, les newsletters et les publicités.
+    </p>
+    <aside>
+      <h3>
+        Solution
+      </h3>
+    </aside>
+    <p>
+      Antistatique a conçu et réalisé une identité digitale pour la marque. De l'architecture de l'information au graphisme en passant par les développements techniques, le nouveau site de de Rham est centrée sur l'utilisateur.
+    </p>
+    <a href="http://www.derham.ch" class="btn">Visiter le site derham.ch</a>
+  </div>
+</section>
+
+
+  <section class="isolated">
+
+  </section>
+  <section>
+    <div class="page-content">
+
+
+    </div>
+  </section>
+  {% endblock %}

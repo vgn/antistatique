@@ -48,6 +48,13 @@ $app->get('/{_locale}/team', function () use ($app) {
 ->assert('_locale', $localeRegExp);
 ;
 
+$app->get('/{_locale}/lab', function () use ($app) {
+    return $app['twig']->render('lab.html.twig', array());
+})
+->bind('lab')
+->assert('_locale', $localeRegExp);
+;
+
 $app->get('/{_locale}/contact', function () use ($app) {
     return $app['twig']->render('contact.html.twig', array());
 })
@@ -69,6 +76,23 @@ $app->get('/{_locale}/portfolio/{slug}', function ($slug) use ($app) {
     return $response;
 })
 ->bind('portfolio_show')
+->assert('_locale', $localeRegExp)
+->assert('slug', '[a-zA-Z0-9\-]+');
+
+$app->get('/{_locale}/lab/{slug}', function ($slug) use ($app) {
+
+    $template = 'lab/'.$slug.'.html.twig';
+
+    try {
+        $response = $app['twig']->render($template, array());
+    } catch (\Twig_Error_Loader $e) {
+        // like the template is not found
+        $app->abort(404, sprintf('Template "%s" not found', $template)); 
+    }
+
+    return $response;
+})
+->bind('lab_show')
 ->assert('_locale', $localeRegExp)
 ->assert('slug', '[a-zA-Z0-9\-]+');
 
