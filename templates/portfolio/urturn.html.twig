@@ -1,0 +1,121 @@
+{% extends "portfolio/base.html.twig" %}
+
+{% block title %}Engage Urturn - Landing page, présentation de produit, Antistatique{% endblock %}
+
+{% block body_class %}{{ parent() }} urturn{% endblock %}
+
+
+{% block previous_work %}{{ 'homepage.work.tennislausanne.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'tennislausanne' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.derham.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'derham' }) }}{% endblock %}
+
+{% block baseline %}
+<div class="baseline-space"></div>
+
+{{ parent() }}
+
+<div class="page-title title-image" style="background-image: url('/assets/img/urturn-title.jpg')">
+  <section>
+    <h1 class="magenta-sep">
+      <span></span>
+      Engage Urturn
+    </h1>
+  </section>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="page-content isolated">
+    <aside>
+      <h3>
+        Brief
+      </h3>
+    </aside>
+    <p>
+      Urturn est un réseau social qui permet aux fans de s'exprimer pour leurs artistes préférés. Anciennement Webdoc, le lancement de la nouvelle identité s'accompagnait d'un site de présentation du produit destiné aux maisons de disque et manager d'artistes.
+    </p>
+    <aside>
+      <h3>
+        Solution
+      </h3>
+    </aside>
+    <p>
+      Antistatique a réalisé un site responsive de présentation du service de Urturn. Prévu pour augmenter la conversion, le site permet de générer des leads clients.
+    </p>
+    <a href="http://engage.urturn.com" class="btn">Visiter le site engage.urturn.com</a>
+  </div>
+</section>
+
+<div class="highlight">
+  <section>
+    <div class="page-content">
+      <h3>
+        Un aperçu des techniques utilisées :
+      </h3>
+    </div>
+    <div class="icons">
+      <ul class="row">
+        <li>
+          <div class="html dev">
+            <img src="/assets/img/ico/ico_html5.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              HTML 5 / CSS 3
+            </h4>
+          </div>
+        </li>
+        <li>
+          <div class="github dev">
+            <img src="/assets/img/ico/ico_github.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Github
+            </h4>
+          </div>
+        </li>
+
+        <li>
+          <div class="agile">
+            <img src="/assets/img/ico/ico_agile.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Méthode agile de gestion de projet
+            </h4>
+          </div>
+        </li>
+        <li>
+          <div class="responsive">
+            <img src="/assets/img/ico/ico_responsive.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Responsive Design
+            </h4>
+          </div>
+        </li>
+      </ul>
+    </div></section>
+  </div>
+  <section class="isolated">
+  </section>
+  <section>
+    <div class="page-content">
+
+      {# 
+                  Design
+      Respect de la charte graphique de Urturn …
+      Reflet d’un univers musical et social
+      ux, wireframe, réflexion autour de la hièrarchie de contenu
+      #}
+
+      <h2>Animation HTML5/CSS3</h2>
+      <p>Des animations réalisées avec les technologies HTML5/CSS3 permettent de présenter les avantages du projet de manière interactive. Un slideshow explique les applications pour chaque artiste. Afin d'optimiser le temps de chargement de la page, notamment sur mobile, les données sont récupérées en Ajax si l'internaute souhaite consulter plus d'éléments.</p>
+
+      <h2>Responsive web design</h2>
+      <p>Les formulaires de demande de contact et d'inscription à la newsletter sont conçus pour une utilisation optimale sur mobile, tablette et écran. Le public cible de ce site produit est majoritairement connecté via leur smartphone. Avoir un contenu identique et accessible sur tous les terminaux est essentiel.</p>
+
+    </div>
+  </section>
+  {% endblock %}

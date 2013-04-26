@@ -4,6 +4,15 @@ homepage:
     contact: "Contactez-nous"
     work:
         title: Des réalisations soignées
+        derham:
+            title: De Rham
+            baseline: Communication digitale
+        urturn:
+            title: Engage urturn
+            baseline: Landing page de lancement
+        tennislausanne: 
+            title: Tennis Lausanne
+            baseline: Communication globale du Club
         uchitomi:
             title: Uchitomi
             baseline: Boutique en ligne Magento sur-mesure 
@@ -13,6 +22,7 @@ homepage:
         tehran:
             title: Tehran Watch
             baseline: Rebranding complet et Wordpress personnalisé
+
 
 antistatique:
     contact:

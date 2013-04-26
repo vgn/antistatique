@@ -1,0 +1,146 @@
+{% extends "portfolio/base.html.twig" %}
+
+{% block title %}De Rham Immobilier Sotheby's International Realy – Développement Symfony, communication globale, Antistatique{% endblock %}
+
+{% block body_class %}{{ parent() }} derham{% endblock %}
+
+
+{% block previous_work %}{{ 'homepage.work.urturn.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'urturn' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.tehran.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'tehran' }) }}{% endblock %}
+
+{% block baseline %}
+<div class="baseline-space"></div>
+
+{{ parent() }}
+
+<div class="page-title title-image" style="background-image: url('/assets/img/derham-title.jpg')">
+  <section>
+    <h1 class="magenta-sep">
+      <span></span>
+      De Rham
+    </h1>
+  </section>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="page-content isolated">
+    <aside>
+      <h3>
+        Brief
+      </h3>
+    </aside>
+    <p>
+      De Rham Sotheby's International Realty, régie immobilière de Lausanne a besoin d'un partenaire web pour développer une identité digitale. Celle-ci est déclinée sur le site internet, les sites des projets immobiliers, les newsletters et les publicités.
+    </p>
+    <aside>
+      <h3>
+        Solution
+      </h3>
+    </aside>
+    <p>
+      Antistatique a conçu et réalisé une identité digitale pour la marque. De l'architecture de l'information au graphisme en passant par les développements techniques, le nouveau site de de Rham est centrée sur l'utilisateur.
+    </p>
+    <a href="http://www.derham.ch" class="btn">Visiter le site derham.ch</a>
+  </div>
+</section>
+
+<div class="highlight">
+  <section>
+    <div class="page-content">
+      <h3>
+        Un aperçu des techniques utilisées :
+      </h3>
+    </div>
+    <div class="icons">
+      <ul class="row">
+        <li>
+          <div class="symfony">
+            <img src="/assets/img/ico/ico_symfony.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Framework Symfony2
+            </h4>
+          </div>
+        </li>
+        <li>
+          <div class="html dev">
+            <img src="/assets/img/ico/ico_html5.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              HTML 5 / CSS 3
+            </h4>
+          </div>
+        </li>
+        <li>
+          <div class="github dev">
+            <img src="/assets/img/ico/ico_github.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Github
+            </h4>
+          </div>
+        </li>
+
+        <li>
+          <div class="agile">
+            <img src="/assets/img/ico/ico_agile.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Méthode agile de gestion de projet
+            </h4>
+          </div>
+        </li>
+        <li>
+          <div class="responsive">
+            <img src="/assets/img/ico/ico_responsive.png">
+            <h4 class="title-separation long-sep">
+              <span></span>
+              Responsive Design
+            </h4>
+          </div>
+        </li>
+      </ul>
+    </div></section>
+  </div>
+  <section class="isolated">
+
+  </section>
+  <section>
+    <div class="page-content">
+
+      <h2>UX, personas, architecture de l'information</h2>
+
+      <p>La phase de réflexion s’est faite en partenariat avec <a hreg="http://8ratio.ch/">:ratio</a> afin de définir une série de personas ainsi que de penser l’arborescence globale du site. La création de wireframes permet d’élaborer une répartition des différentes zones de contenu et d’établir une architecture de l’information.</p>
+
+      <p>Par la suite, les tests utilisateurs permettent d’affirmer ou de rectifier les décisions prises lors de la phase de réflexion. Ils mettent aussi en lumières des éléments qui n’auraient pas été pris en compte. Cette phase d’analyse passe également par l’étude des statistiques liées au site actuel, permettant également de mettre l’accent sur des éléments perfectibles ou à repenser totalement.</p>
+
+      <p>L’axe de réflexion tant à rendre le site internet le plus profitable. Dans cette optique, la mise en place de chemins de conversion définit les scénarios et objectifs que l’internaute doit effectuer pour arriver à une utilisation optimale du site. Ils permettent également la comptabilisation des prises de contact ainsi que l’établissement de données cruciales lors de l’analyse des performances du site.</p>
+
+      <h2>Gestion des spécificités métiers de l'immobilier</h2>
+
+      <p>Chaque type de bien immobilier à ses propres spécificités et ses caractéristiques varient en fonction de sa nature. Il s’agit de mettre en place un moteur de recherche permettant de filtrer de façon intuitive tous types de biens. L’affichage du bien ainsi que ses détails varie également selon ses caractéristiques. Un terrain n’affichera pas un nombre de pièces et un appartement situé au dernier étage n’arborera pas de surface de jardin.</p>
+
+      <h2>Design, création d'un styleguide déclinable</h2>
+
+      <p>Le design effectué par notre graphiste donne une tonalité visuelle globale et applicable sur tout type de pages et de contenus. La mise en place d’une charte graphique permet de garder une cohérence visuelle dans l’ensemble des sites de la marque. Elle est établie dans le respect de la charte de Sotheby’s International Realty. Le styleguide est un outil de référence destinée aux intégrateurs lors de la création des différentes pages et de la mise en forme du contenu.</p>
+
+      <h2>Responsive webdesign</h2>
+
+      <p>L’utilisation de grilles facilite l’obtention d’une interface qui réagit au redimensionnement de la largeur du navigateur ou du support-écran. Elles facilitent le placement des éléments et leur comportement dans différentes résolutions. Le LESS, compilateur CSS, permet de créer de façon dynamique des grilles paramétrables. Il offre aussi la possibilité de gérer dynamiquement des valeurs telles que les cotes, les couleurs ainsi que les polices de caractères.</p>
+
+      <h2>Symfony</h2>
+
+      <p>Symfony2 est un framework PHP qui facilite et accélère le développement de sites applicatifs. Il permet la mise en place d’un moteur recherche performant qui gère par exemple la recherche géographique. Symfony est également un outil idéal dans la gestion multilingue d’un site internet. L’interface d’administration permet l’édition de contenus.</p>
+
+      <h2>Suivi et amélioration, tests utilisateurs ...</h2>
+
+      <p>La mise en ligne ne signe pas la fin du travail. Le suivi des statistiques est important dans l’analyse quotidienne des performances du site. La réactivité face au flux de données émanant des visites est la garantie d’une optimisation constante du site. Des tests utilisateurs régulier et lors de chaque nouvelle amélioration majeure permettent également d’établir le degré de compréhension de l’interface et d’amélioration le rendement du site internet.</p>
+
+    </div>
+  </section>
+  {% endblock %}

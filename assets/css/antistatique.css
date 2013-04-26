@@ -982,6 +982,15 @@ footer a {
 .works a:hover h5 {
   text-decoration: underline;
 }
+.works #derham {
+  background-image: url(../img/portfolio-derham.png);
+}
+.works #urturn {
+  background-image: url(../img/portfolio-urturn.png);
+}
+.works #tennislausanne {
+  background-image: url(../img/portfolio-tennislausanne.png);
+}
 .works #uchitomi {
   background-image: url(../img/portfolio-uchitomi.png);
 }
@@ -1274,7 +1283,7 @@ hr.meta-separation {
   }
 }
 @media (max-height: 700px) and (min-width: 40.5em) {
-  body .title-image {
+  body.blog .title-image {
     height: 200px;
     min-height: 0;
   }
@@ -1285,5 +1294,11 @@ hr.meta-separation {
   }
   .team .title-image {
     background-position: 10% 0;
+  }
+}
+/* Based on http://csswizardry.com/2013/04/shame-css/ */
+@media (min-width: 40.5em) {
+  .with-aside article {
+    margin-top: 2.2em;
   }
 }

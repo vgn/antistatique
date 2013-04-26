@@ -1,0 +1,78 @@
+{% extends "portfolio/base.html.twig" %}
+
+{% block title %}Club Tennis Lausanne, communication globale – Antistatique{% endblock %}
+
+{% block body_class %}{{ parent() }} tennislausanne{% endblock %}
+
+
+{% block previous_work %}{{ 'homepage.work.uchitomi.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'uchitomi' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.urturn.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'urturn' }) }}{% endblock %}
+
+{% block baseline %}
+<div class="baseline-space"></div>
+
+{{ parent() }}
+
+<div class="page-title title-image" style="background-image: url('/assets/img/tennislausanne-title.jpg')">
+  <section>
+    <h1 class="magenta-sep">
+      <span></span>
+      Tennis Lausanne
+    </h1>
+  </section>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="page-content isolated">
+    <aside>
+      <h3>
+        Brief
+      </h3>
+    </aside>
+    <p>
+      Le Tennis Club de Lausanne nous a mandaté afin de réaliser l’entier de sa communication, digitale, en premier lieu, avec la création de son site web, puis print, avec sa publication annuelle et la signalétique des courts.
+    </p>
+    <aside>
+      <h3>
+        Solution
+      </h3>
+    </aside>
+    <p>
+      Antistatique a pensé et mis en place une identité visuelle déclinable sur tous les supports de communication du club. Du panneau de court au site internet, le but est de donner un caractère visuel à la fois fort et raffiné.
+    </p>
+    <a href="http://www.tennislausanne.ch" class="btn">Visiter le site tennislausanne.ch</a>
+  </div>
+</section>
+  <section>
+    <div class="page-content">
+
+        <h2>Une collaboration de longue date</h2>
+
+        <p>Depuis bientôt 4 ans, Antistatique n’a de cesse d’apporter de nouveaux éléments graphiques afin d’enrichir l’univers visuel du Club. Que ce soit la création de newsletters, une nouvelle signalétique ou l’exemplaire annuel de la liste de membres, l’agence oeuvre pour une communication optimale et visuellement harmonieuse.</p>
+
+
+        <h2>Le projet ID8 </h2>
+
+        <p>Pour l’école de tennis du Club, Antistatique a réaliser un digital Branding adapté et cohérent afin de communiquer au mieux sur l’ensemble de ses activités.</p>
+
+        <p>La création du logo s’est basé sur une réflexion autour de l’idée de l’infini, ainsi que dans les proportions et dispositions de ce qui est la base de l’apprentissage tennistique : le court. L’école disposant de 5 sections bien distinctes, le défi consistait à trouver une manière de différencier chacune par ses caractéristiques propres. L’idée est donc de décliner l’élément 8 du logo afin d’en faire transparaitre et connoter les éléments prédominants qui constitue chaque section.</p>
+
+
+        <h2>La liste des membres</h2>
+
+        <p>Chaque année est publiée la liste des membres du Club comprenant également la liste des événements annuels. L’occasion est aussi de mettre en avant, par une composition graphique astucieuse, les faits marquants de l’année précédente. L’intérêt du document, mis à part les coordonnées de chaque membre, réside dans la publication des photos des différents événements où chaque participant peut se retrouver. Ces photos doivent être soigneusement mises en page afin de susciter un maximum de curiosité auprès du lecteur.</p>
+
+
+        <h2>Une signalétique globale</h2>
+
+        <p>Le site s’étendant sur une surface non négligeable, le Club a besoin d’une signalétique claire et en accord avec sa ligne graphique. Antistatique a réalisé une série de panneaux visant à renseigner l’utilisateur le plus simplement possible. Pour cela, il a été mis en place divers pictogrammes et textes succincts visant à faciliter l’accès à l’information.</p>
+
+        <p>Dernièrement, le club a mandaté Antistatique afin de réaliser une nouvelle signalétique pour ses points de recyclage des déchets. La conception s’est concentrée sur l’élaboration de symboles visuellement forts et rapidement compréhensibles.</p>
+    </div>
+  </section>
+  {% endblock %}

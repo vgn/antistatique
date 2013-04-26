@@ -5,10 +5,10 @@
 {% block body_class %}{{ parent() }} richter{% endblock %}
 
 
-{% block previous_work %}{{ 'homepage.work.uchitomi.title' | trans }}{% endblock %}
-{% block previous_link %}{{ path('portfolio_show', { slug: 'uchitomi' }) }}{% endblock %}
-{% block next_work %}{{ 'homepage.work.tehran.title' | trans }}{% endblock %}
-{% block next_link %}{{ path('portfolio_show', { slug: 'tehran' }) }}{% endblock %}
+{% block previous_work %}{{ 'homepage.work.tehran.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'tehran' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.uchitomi.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'uchitomi' }) }}{% endblock %}
 
 {% block baseline %}
 <div class="baseline-space"></div>
