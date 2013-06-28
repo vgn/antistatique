@@ -15,9 +15,9 @@ get_header(); ?>
 	<?php get_template_part( 'content', 'single' ); ?>
 
 	<section>
-		<article>
+		<div class="page-content">
 			<?php comments_template( '', true ); ?>
-		</article>
+		</div>
 	</section>
 
 	<section>

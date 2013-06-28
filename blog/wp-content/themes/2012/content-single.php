@@ -22,15 +22,17 @@
 
   <section>
     <div class="page-title blog-title">
-      <h1>
-        <?php the_title(); ?>
-      </h1>
-      <?php if ( 'post' == get_post_type() ) : ?>
-      <div class="entry-meta">
-        <hr class="meta-separation">
-        <?php antistatique_posted_on(); ?>
-      </div><!-- .entry-meta -->
-    <?php endif; ?>
+      <div class="page-content">
+        <h1>
+          <?php the_title(); ?>
+        </h1>
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+          <hr class="meta-separation">
+          <?php antistatique_posted_on(); ?>
+        </div><!-- .entry-meta -->
+      <?php endif; ?>
+    </div>
   </div>
 </section>
 
