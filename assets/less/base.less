@@ -74,6 +74,23 @@ h3, h2, h3, h4, h5, h6{
   margin-bottom: 0.1em;
 }
 
+@media (min-width: @tabletBreakPoint){
+  h1{ .font-size(40); }
+  h2{ .font-size(36); }
+  h3{ .font-size(32); }
+  h4{ .font-size(24); }
+  h5{ .font-size(14); }
+  h6{ .font-size(14); }
+}
+@media (min-width: @bigBreakPoint){
+  h1{ .font-size(50); }
+  h2{ .font-size(40); }
+  h3{ .font-size(32); }
+  h4{ .font-size(24); }
+  h5{ .font-size(16); }
+  h6{ .font-size(14); }
+}
+
 /*
 ## Texts and base elements
 
@@ -224,23 +241,8 @@ hr{
 }
 
 @media (min-width: @tabletBreakPoint){
-  h1{ .font-size(40); }
-  h2{ .font-size(36); }
-  h3{ .font-size(32); }
-  h4{ .font-size(24); }
-  h5{ .font-size(14); }
-  h6{ .font-size(14); }
-
   .multi-column{
     margin: 50px 0;
     .textMultiColumn(2, 32px);
   }
-}
-@media (min-width: @bigBreakPoint){
-  h1{ .font-size(50); }
-  h2{ .font-size(40); }
-  h3{ .font-size(32); }
-  h4{ .font-size(24); }
-  h5{ .font-size(16); }
-  h6{ .font-size(14); }
 }

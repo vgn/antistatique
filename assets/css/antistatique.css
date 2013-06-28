@@ -325,6 +325,58 @@ h6 {
   margin-top: 1em;
   margin-bottom: 0.1em;
 }
+@media (min-width: 40.5em) {
+  h1 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+  h4 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  h5 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  h6 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+  h4 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  h5 {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  h6 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
 /*
 ## Texts and base elements
 
@@ -476,30 +528,6 @@ hr {
   font-family: Georgia, Times;
 }
 @media (min-width: 40.5em) {
-  h1 {
-    font-size: 40px;
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 36px;
-    font-size: 3.6rem;
-  }
-  h3 {
-    font-size: 32px;
-    font-size: 3.2rem;
-  }
-  h4 {
-    font-size: 24px;
-    font-size: 2.4rem;
-  }
-  h5 {
-    font-size: 14px;
-    font-size: 1.4rem;
-  }
-  h6 {
-    font-size: 14px;
-    font-size: 1.4rem;
-  }
   .multi-column {
     margin: 50px 0;
     -moz-column-count: 2;
@@ -508,32 +536,6 @@ hr {
     -webkit-column-gap: 32px;
     column-count: 2;
     column-gap: 32px;
-  }
-}
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 50px;
-    font-size: 5rem;
-  }
-  h2 {
-    font-size: 40px;
-    font-size: 4rem;
-  }
-  h3 {
-    font-size: 32px;
-    font-size: 3.2rem;
-  }
-  h4 {
-    font-size: 24px;
-    font-size: 2.4rem;
-  }
-  h5 {
-    font-size: 16px;
-    font-size: 1.6rem;
-  }
-  h6 {
-    font-size: 14px;
-    font-size: 1.4rem;
   }
 }
 /*
