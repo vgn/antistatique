@@ -293,20 +293,20 @@ h6 {
   line-height: 1.2em;
 }
 h1 {
-  font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 32px;
+  font-size: 3.2rem;
 }
 h2 {
   font-size: 26px;
   font-size: 2.6rem;
 }
 h3 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 20px;
+  font-size: 2rem;
 }
 h4 {
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 h5 {
   font-size: 14px;
@@ -327,8 +327,8 @@ h6 {
     font-size: 3.6rem;
   }
   h2 {
-    font-size: 32px;
-    font-size: 3.2rem;
+    font-size: 28px;
+    font-size: 2.8rem;
   }
   h3 {
     font-size: 24px;
