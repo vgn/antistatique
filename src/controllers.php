@@ -48,6 +48,30 @@ $app->get('/{_locale}/team', function () use ($app) {
 ->assert('_locale', $localeRegExp);
 ;
 
+$app->get('/{_locale}/job', function () use ($app) {
+    return $app['twig']->render('job.html.twig', array());
+})
+->bind('job')
+->assert('_locale', $localeRegExp);
+;
+$app->get('/{_locale}/job/{slug}', function ($slug) use ($app) {
+
+    $template = 'job/'.$slug.'.html.twig';
+
+    try {
+        $response = $app['twig']->render($template, array());
+    } catch (\Twig_Error_Loader $e) {
+        // like the template is not found
+        $app->abort(404, sprintf('Template "%s" not found', $template)); 
+    }
+
+    return $response;
+})
+->bind('job_show')
+->assert('_locale', $localeRegExp)
+->assert('slug', '[a-zA-Z0-9\-]+');
+
+
 $app->get('/{_locale}/contact', function () use ($app) {
     return $app['twig']->render('contact.html.twig', array());
 })

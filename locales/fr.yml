@@ -45,6 +45,9 @@ portfolio:
 team:
     title: L'Agence – une équipe de Développeurs, Designer, Marketing, Réseau sociaux, Digital Breading
 
+job:
+    title: Travailler chez Antistatique
+
 contact:
     title: "L'agence web Antistatique se situe à Lausanne, contactez-nous !"
 
@@ -54,6 +57,7 @@ menu:
     team: L'Agence
     blog: Blog
     contact: Contact
+    job: Job
 
 footer:
     newsletter:

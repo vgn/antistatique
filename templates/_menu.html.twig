@@ -9,6 +9,9 @@
         <li {% if is_current_route('team') %}class="active"{% endif %}>
             <a href="{{ path('team') }}">{{ 'menu.team' | trans }}</a>
         </li>
+        <li {% if is_current_route('job') %}class="active"{% endif %}>
+            <a href="{{ path('job') }}">{{ 'menu.job' | trans }}</a>
+        </li>
         <li>
             <a href="/blog">{{ 'menu.blog' | trans }}</a>
         </li>
