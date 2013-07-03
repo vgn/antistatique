@@ -9,6 +9,9 @@
     <li>
       <a href="<?php echo esc_url( home_url() ); ?>/../fr/team">L'Agence</a>
     </li>
+    <li>
+      <a href="<?php echo esc_url( home_url() ); ?>/../fr/job">Job</a>
+    </li>
     <li class="active">
       <a href="/blog">Blog</a>
     </li>
