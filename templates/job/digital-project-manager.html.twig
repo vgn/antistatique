@@ -2,7 +2,12 @@
 
 {% block title %}{{ 'job.title' | trans }} - Digital project manager{% endblock %}
 
-{% block meta_description%}Artisans du web. Notre agence se situe à Lausanne, Suisse.{% endblock %}
+{% block meta_description%}Poste de Chef de projet web à Lausanne, Suisse. Dans une chouette agence.{% endblock %}
+{% block head_scripts %}
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">
+        api_key: lj5b50hfde72
+    </script>
+{% endblock %}
 
 {% block body_class %}job{% endblock %}
 
@@ -65,9 +70,7 @@
 
 <h3>Soumission du dossier</h3>
         <p>Alors, si tu te reconnais dans cette description, contacte-nous sans tarder soit via :</p>
-        <script src="//platform.linkedin.com/in.js" type="text/javascript">
-         api_key: lj5b50hfde72
-        </script>
+
         <script type="IN/Apply"
            data-logo="http://antistatique.net/assets/img/logo-a.png"
            data-themeColor="#d40b6b"
