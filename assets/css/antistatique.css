@@ -1235,6 +1235,11 @@ hr.meta-separation {
   line-height: 1.35em;
 }
 @media (min-width: 40.5em) {
+  .job .title-image {
+    background-image: url('../img/job.jpg');
+  }
+}
+@media (min-width: 40.5em) {
   .page-title h1 {
     margin-left: -30px;
     padding: 0 100px 5px 30px;
