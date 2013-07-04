@@ -6,7 +6,26 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-$localeRegExp = '(fr)'; 
+$localeRegExp = '(fr|en)';
+
+function localized_render($template, $params = array()) {
+    global $app;
+    $locale = $app['request']->getLocale();
+    $defaultLocale = 'fr';
+
+    // first try with the current locale, then default
+    foreach (array($locale, $defaultLocale) as $l) {
+        try {
+            return $app['twig']->render(sprintf('%s/%s', $l, $template), $params);
+        } catch (\Twig_Error_Loader $e) {
+            // template not found, try next
+        }
+    }
+
+    // fallback
+    return $app['twig']->render($template, $params);
+}
+
 
 $app->get('/', function () use ($app) {
     $locale = 'fr';
@@ -26,7 +45,7 @@ $app->get('/{_locale}/', function () use ($app) {
         $latestPost = null;
     }
     
-    return $app['twig']->render('index.html.twig', array(
+    return localized_render('index.html.twig', array(
         'latestBlogpost' => $latestPost,
     ));
 })
@@ -35,31 +54,32 @@ $app->get('/{_locale}/', function () use ($app) {
 ;
 
 $app->get('/{_locale}/portfolio', function () use ($app) {
-    return $app['twig']->render('portfolio.html.twig', array());
+    return localized_render('portfolio.html.twig', array());
 })
 ->bind('portfolio')
 ->assert('_locale', $localeRegExp);
 ;
 
 $app->get('/{_locale}/team', function () use ($app) {
-    return $app['twig']->render('team.html.twig', array());
+    return localized_render('team.html.twig', array());
 })
 ->bind('team')
 ->assert('_locale', $localeRegExp);
 ;
 
 $app->get('/{_locale}/job', function () use ($app) {
-    return $app['twig']->render('job.html.twig', array());
+    return localized_render('job.html.twig', array());
 })
 ->bind('job')
 ->assert('_locale', $localeRegExp);
 ;
+
 $app->get('/{_locale}/job/{slug}', function ($slug) use ($app) {
 
-    $template = 'job/'.$slug.'.html.twig';
+    $template = sprintf('job/%s.html.twig', $slug);
 
     try {
-        $response = $app['twig']->render($template, array());
+        $response = localized_render($template);
     } catch (\Twig_Error_Loader $e) {
         // like the template is not found
         $app->abort(404, sprintf('Template "%s" not found', $template)); 
@@ -73,7 +93,7 @@ $app->get('/{_locale}/job/{slug}', function ($slug) use ($app) {
 
 
 $app->get('/{_locale}/contact', function () use ($app) {
-    return $app['twig']->render('contact.html.twig', array());
+    return localized_render('contact.html.twig', array());
 })
 ->bind('contact')
 ->assert('_locale', $localeRegExp);
@@ -81,10 +101,10 @@ $app->get('/{_locale}/contact', function () use ($app) {
 
 $app->get('/{_locale}/portfolio/{slug}', function ($slug) use ($app) {
 
-    $template = 'portfolio/'.$slug.'.html.twig';
+    $template = sprintf('portfolio/%s.html.twig', $slug);
 
     try {
-        $response = $app['twig']->render($template, array());
+        $response = localized_render($template);
     } catch (\Twig_Error_Loader $e) {
         // like the template is not found
         $app->abort(404, sprintf('Template "%s" not found', $template)); 
