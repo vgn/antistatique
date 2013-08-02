@@ -1,0 +1,92 @@
+{% extends "portfolio/base.html.twig" %}
+
+{% block title %}Engage Urturn - Landing page, présentation de produit, Antistatique{% endblock %}
+
+{% block body_class %}{{ parent() }} urturn{% endblock %}
+
+
+{% block previous_work %}{{ 'homepage.work.urturn.title' | trans }}{% endblock %}
+{% block previous_link %}{{ path('portfolio_show', { slug: 'urturn' }) }}{% endblock %}
+{% block next_work %}{{ 'homepage.work.derham.title' | trans }}{% endblock %}
+{% block next_link %}{{ path('portfolio_show', { slug: 'derham' }) }}{% endblock %}
+
+{% block baseline %}
+<div class="baseline-space"></div>
+
+{{ parent() }}
+
+<div class="page-title title-image" style="background-image: url('/assets/img/faceit-title.jpg')">
+  <section>
+    <h1 class="magenta-sep">
+      <span></span>
+      MSF : Face IT
+    </h1>
+  </section>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="page-content isolated">
+    <aside>
+      <h3>
+        Brief
+      </h3>
+    </aside>
+    <p>
+      Médecins sans Frontières a besoin d’un site internet pour présenter son exposition itinérante en Suisse et à l’étranger. Le concept de l’exposition invite le spectateur à prendre la place d’un médecin au cœur de ses interventions dans des pays en difficulté, la finalité étant d’apporter sa modeste contribution financière à MSF dans son travail sur le terrain.
+    </p>
+    <aside>
+      <h3>
+        Solution
+      </h3>
+    </aside>
+    <p>
+      Antistatique a imaginé un site sortant des conventions de présentations classiques. L’idée était de maximiser l’immersion de l’utilisateur dans l’interface pour lui faire vivre une aventure humaine prenante. MSF proposant trois missions au coeur de crises humanitaires dans différents pays, Antistatique a choisi de décliner ces missions au travers d’interfaces proposant une succession d’effets visant à surprendre et capter l’attention de l’utilisateur à tous les instants. Le choix d’apporter une segmentation en plusieurs chapitres s’est fait en mélangeant navigation horizontale et verticale. De ce fait, nous avons pu apporter un fil conducteur dans la mission et permettre ainsi une meilleure orientation pour l’utilisateur dans la présentation. Nous avons également fait le choix de proposer plusieurs modes de navigation et d’animation à l’utilisateur; par le scroll ou par le clic.
+    </p>
+    <a href="http://face-it.ch/" class="btn">Visiter le site face-it.ch</a>
+  </div>
+</section>
+
+<section>
+  <div class="page-content">
+
+    <img src="/assets/img/faceit/map.png">
+
+    <h2>Les contraintes de départs</h2>
+    <p>
+      Le site devant impérativement fonctionner sur iPad, l’utilisation du Flash, comme lors des précédentes réalisations de Médecins sans Frontières était prohibé d’office. Ne s’arrêtant pas aux tablettes, le site doit également être à la portée des terminaux mobiles, pour cela il a fallu penser une structure permettant d’accéder au contenu avec et sans animations, impossible à mettre en oeuvre sur un trop petit écran.
+    </p>
+    <p>
+      La volonté du multilingue était également au coeur du brief client, il a fallu donc opter pour une technologie permettant cette gestion.
+    </p>
+  </div>
+</section>
+<section>
+  <div class="page-content">
+
+    <img src="/assets/img/faceit/multidevice.png">
+
+    <h2>Des animations répondant au scroll</h2>
+    <p>
+      Notre mode de navigation et d’animation un peu particulière mélangeant horizontalité et verticalité a été au coeur de notre réflexion première. Il nous fallait trouver ou développer une technologie assez robuste pour être fonctionnelles dans tous les cas. C’est donc par une astucieuse combinaison entre SuperScrollorama et la librairie GreenSock que nous avons réussi à rendre un tel résultat possible.
+    </p>
+
+    <h2>Une base de travail solide</h2>
+    <p>
+      Afin de répondre à la contrainte du multilingue, nous avons fait le choix de partir de Silex, un micro-framework PHP basé sur des composants Symfony2, une technologie largement maîtrisée en interne. Et afin de pouvoir proposer des mises à jour rapides et réactives face aux demandes du client, nous avons choisi Capistrano pour faciliter nos déploiements.
+    </p>
+
+    <img src="/assets/img/faceit/about.png">
+
+    <h2>Une fin heureuse</h2>
+    <p>
+      Après un développement passablement rapide et expérimental, nous sommes fiers de proposer un produit qui saura séduire le grand public en lui offrant une expérience riche et touchante. Il permettra ainsi de mieux comprendre le combat que mènent tous les jours les courageux médecins engagés auprès de MSF. Nous sommes honorés d’avoir pu apporter notre contribution dans ce projet humanitaire.
+    </p>
+
+    <iframe src="http://player.vimeo.com/video/69696017?title=0&amp;byline=0&amp;portrait=0&amp;color=d40b6b" width="684" height="384" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+  </div>
+</section>
+  {% endblock %}
