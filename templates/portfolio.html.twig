@@ -33,15 +33,6 @@
                     </h5>
                 </hgroup>
             </a>
-            <a id="derham" href="{{ path('portfolio_show', { slug: 'derham' }) }}">
-                <hgroup>
-                    <h3>{{ 'homepage.work.derham.title' | trans }}</h3>
-                    <h5 class="title-separation x-long-sep magenta-sep">
-                        <span></span>
-                        {{ 'homepage.work.derham.baseline' | trans }}
-                    </h5>
-                </hgroup>
-            </a>
             <a id="urturn" href="{{ path('portfolio_show', { slug: 'urturn' }) }}">
                 <hgroup>
                     <h3>{{ 'homepage.work.urturn.title' | trans }}</h3>
@@ -51,9 +42,18 @@
                     </h5>
                 </hgroup>
             </a>
+            <a id="derham" href="{{ path('portfolio_show', { slug: 'derham' }) }}" class="last">
+                <hgroup>
+                    <h3>{{ 'homepage.work.derham.title' | trans }}</h3>
+                    <h5 class="title-separation x-long-sep magenta-sep">
+                        <span></span>
+                        {{ 'homepage.work.derham.baseline' | trans }}
+                    </h5>
+                </hgroup>
+            </a>
         </div>
         <div class="works">
-            <a id="tennislausanne" href="{{ path('portfolio_show', { slug: 'tennislausanne' }) }}" class="last">
+            <a id="tennislausanne" href="{{ path('portfolio_show', { slug: 'tennislausanne' }) }}">
                 <hgroup>
                     <h3>{{ 'homepage.work.tennislausanne.title' | trans }}</h3>
                     <h5 class="title-separation x-long-sep magenta-sep">
@@ -71,7 +71,7 @@
                     </h5>
                 </hgroup>
             </a>
-            <a id="rdr" href="{{ path('portfolio_show', { slug: 'richter' }) }}">
+            <a id="rdr" href="{{ path('portfolio_show', { slug: 'richter' }) }}" class="last">
                 <hgroup>
                     <h3>{{ 'homepage.work.rdr.title' | trans }}</h3>
                     <h5 class="title-separation x-long-sep magenta-sep">
@@ -82,7 +82,7 @@
             </a>
         </div>
         <div class="works">
-            <a id="tw" href="{{ path('portfolio_show', { slug: 'tehran' }) }}" class="last">
+            <a id="tw" href="{{ path('portfolio_show', { slug: 'tehran' }) }}">
                 <hgroup>
                     <h3>{{ 'homepage.work.tehran.title' | trans }}</h3>
                     <h5 class="title-separation x-long-sep magenta-sep">
