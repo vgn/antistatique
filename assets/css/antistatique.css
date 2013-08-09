@@ -440,7 +440,7 @@ a {
   color: #d40b6b;
 }
 a:hover {
-  color: #ec0c77;
+  color: #73063a;
 }
 /*
 ## Lists
@@ -534,7 +534,7 @@ A simple button
   color: #ffffff;
 }
 .btn:hover {
-  background-color: #ec0c77;
+  background-color: #73063a;
   color: #ffffff;
 }
 .clear {
@@ -1229,6 +1229,9 @@ footer a {
   text-decoration: none;
   line-height: 15px;
   padding: 0.4em 0;
+}
+.social-links a:hover .social-text {
+  text-decoration: underline;
 }
 hr.title-separation {
   border: none;
