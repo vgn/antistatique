@@ -8,11 +8,21 @@
  */
 
 get_header(); ?>
-
+<div class="page-title">
+  <section>
+    <h1 class="title-separation magenta-sep">
+      <span></span>
+      Blog
+    </h1>
+  </section>
+</div>
 <section>
-  <h1><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'as2012' ); ?></h1>
-  <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.', 'as2012' ); ?></p>
-  <?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) ); ?>
+
+    <div class="page-content">
+        <h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'as2012' ); ?></h2>
+        <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.', 'as2012' ); ?></p>
+      <?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) ); ?>
+    </div>
 </section>
 
 <?php get_footer(); ?>

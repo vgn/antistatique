@@ -568,6 +568,13 @@ hr {
   height: 1px;
   margin: 40px 0 30px 0;
 }
+hr.grey {
+  background-color: #cccccc;
+}
+hr.isolated {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
 .previous-sign,
 .next-sign {
   font-style: normal;
@@ -1208,6 +1215,13 @@ footer a {
 .blog-title h1 {
   margin-bottom: 0em;
 }
+.entry-meta {
+  margin-bottom: 0.6em;
+}
+.entry-meta h5 {
+  margin-top: 0;
+  padding-top: 0;
+}
 .widgettitle {
   display: none;
 }
@@ -1250,6 +1264,7 @@ hr.meta-separation {
 .cover-image {
   background-color: #ccc;
   background-color: rgba(240, 240, 240, 0.8);
+  margin: 20px 0;
 }
 .cover-image img {
   display: block;

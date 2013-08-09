@@ -9,9 +9,7 @@
 ?>
 
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="with-aside isolated">
-    <aside class="pull-right aside-border">
+<div id="post-<?php the_ID(); ?>" <?php post_class('page-content isolated'); ?>>
 
       <?php if ( is_sticky() ) : ?>
       <hgroup>
@@ -28,8 +26,7 @@
         <?php antistatique_posted_on(); ?>
       </div><!-- .entry-meta -->
     <?php endif; ?>
-    </aside>
-    <article>
+    
       <?php if ( has_post_thumbnail() ): ?>
       <div class="cover-image">
         <?php the_post_thumbnail(); ?>
@@ -39,6 +36,7 @@
       <div class="entry-summary">
         <?php the_excerpt(); ?>
       </div>
-    </article>
-  </div>
+    
+<hr class="grey isolated"/>
 </div><!-- #post-<?php the_ID(); ?> -->
+
