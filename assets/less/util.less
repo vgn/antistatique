@@ -24,6 +24,12 @@
     clear: both;
   }
 }
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
 .text_shadow (@left:0,@right:0, @blur:4px, @color:""){
     text-shadow: @left @right @blur @color;
 }

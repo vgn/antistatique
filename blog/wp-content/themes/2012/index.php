@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-<div class="page-title title-image">
+<div class="page-title">
   <section>
     <h1 class="title-separation magenta-sep">
       <span></span>
@@ -22,20 +22,9 @@ get_header(); ?>
   </section>
 </div>
 
-<section>
-  <article>
-    <h2>Un blog pour partager notre passion</h2>
-    <p>
-      En plus de notre présence sur <a href="http://twitter.com/antistatique/">twitter</a>, <a href="http://www.facebook.com/Antistatique" title="">facebook</a> ou <a href="github.com/antistatique">github</a> nous publions sur ce blog les activités et sujets qui nous inspires. Nos publications prennent plusieurs formes : articles techniques, liens vers des sites que nous aimons ou événements auxquels nous participons.
-    </p>
-    <p><?php  the_widget( 'WP_Widget_Archives', array('title' => '', 'count' => 1 , 'dropdown' => 1 ));?></p>
-    <p><?php the_widget('WP_Widget_Categories', 'title=&dropdown=1&count=1'); ?> </p>
-  </article>
-
-
-</section>
 
 <section>
+
   <?php if ( have_posts() ) : ?>
 
   <?php /* Start the Loop */ ?>
@@ -61,6 +50,17 @@ get_header(); ?>
 
 <?php endif; ?>
 
+</section>
+
+
+<section>
+  <div class="page-content">
+    <h2>Un blog pour partager notre passion</h2>
+    <p>
+      En plus de notre présence sur <a href="http://twitter.com/antistatique/">twitter</a>, <a href="http://www.facebook.com/Antistatique" title="">facebook</a> ou <a href="github.com/antistatique">github</a> nous publions sur ce blog les activités et sujets qui nous inspires. Nos publications prennent plusieurs formes : articles techniques, liens vers des sites que nous aimons ou événements auxquels nous participons.
+    </p>
+  
+  </div>
 </section>
 
 
