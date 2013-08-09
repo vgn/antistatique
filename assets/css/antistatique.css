@@ -1224,6 +1224,12 @@ footer a {
   color: #a6191d;
   background-color: #f3b1b3;
 }
+.social-links a {
+  display: block;
+  text-decoration: none;
+  line-height: 15px;
+  padding: 0.4em 0;
+}
 hr.title-separation {
   border: none;
   height: 1px;
