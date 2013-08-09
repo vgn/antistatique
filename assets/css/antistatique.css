@@ -381,6 +381,9 @@ h6 {
 */
 .icon {
   font-family: 'Icon';
+  font-size: 20px;
+  font-size: 2rem;
+  padding-right: 7px;
 }
 /*
 ## Texts and base elements
