@@ -23,9 +23,22 @@
 @bgColor:               @white;
 
 // Typography
+
+@font-face {
+    font-family: 'Icon';
+    src: url('../fonts/SOcial-Regular.eot?v2');
+    src: url('../fonts/SOcial-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SOcial-Regular.woff?v2') format('woff'),
+         url('../fonts/SOcial-Regular.ttf?v2') format('truetype'),
+         url('../fonts/SOcial-Regular.svg#icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       "CorporateATOT-MediumItalic", Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@icon:                  'Icon';
 
 // The "grid"
 @tabletBreakPoint:      40.5em;
@@ -87,6 +100,20 @@ h3, h2, h3, h4, h5, h6{
   h4{ .font-size(16); }
   h5{ .font-size(14); }
 }
+
+/*
+## Icon
+
+````
+<p><span class="icon">F</span> Facebook</p>
+````
+*/
+
+.icon {
+  font-family: @icon;
+}
+
+
 
 /*
 ## Texts and base elements
