@@ -532,10 +532,25 @@ A simple button
   font-weight: bold;
   background-color: #d40b6b;
   color: #ffffff;
+  border: 1px solid #bc0a5f;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 .btn:hover {
   background-color: #73063a;
+  border: 1px solid #5b052e;
   color: #ffffff;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  background-color: #bc0a5f;
+  border: 1px solid #a40853;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0);
 }
 .clear {
   *zoom: 1;
@@ -939,16 +954,37 @@ footer a {
 }
 /* CONNECT */
 #newsletter .email-field {
-  line-height: 1.4em;
+  line-height: 2em;
+  padding: 0.5em 0.3em 0.4em;
+  height: 1.2em;
 }
 #newsletter .submit {
-  width: 30%;
-  color: #ffffff;
+  margin-top: 1em;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em 0.8em;
+  font-weight: bold;
   background-color: #d40b6b;
-  border: none;
-  text-align: center;
-  line-height: 1.6em;
-  padding: 0.2em;
+  color: #ffffff;
+  border: 1px solid #bc0a5f;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+#newsletter .submit:hover {
+  background-color: #73063a;
+  border: 1px solid #5b052e;
+  color: #ffffff;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+#newsletter .submit:active {
+  background-color: #bc0a5f;
+  border: 1px solid #a40853;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0);
 }
 @media (min-width: 40.5em) {
   #connect {
@@ -1332,8 +1368,3 @@ hr.meta-separation {
   }
 }
 /* Based on http://csswizardry.com/2013/04/shame-css/ */
-@media (min-width: 40.5em) {
-  .with-aside article {
-    margin-top: 2.2em;
-  }
-}
