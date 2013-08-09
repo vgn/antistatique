@@ -1042,6 +1042,14 @@ footer a {
   width: 45%;
   margin-right: 5%;
 }
+.icons .icon {
+  font-size: 80px;
+  font-size: 8rem;
+  text-align: center;
+}
+.icons h4 {
+  margin-top: 10px;
+}
 @media (min-width: 40.5em) {
   .works {
     margin-top: 0.8em;
